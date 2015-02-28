@@ -13,18 +13,24 @@ import android.widget.ListView;
 
 import com.nomad.internethaber.R;
 import com.nomad.internethaber.adapter.NavigationDrawerListAdapter;
+import com.nomad.internethaber.bean.CategoryResponseBean;
 import com.nomad.internethaber.event.NavigationItemSelectEvent;
 import com.nomad.internethaber.helper.NavigationHelper;
+import com.nomad.internethaber.interfaces.CategoryRestInterface;
 import com.nomad.internethaber.model.NavigationItem;
 import com.nomad.internethaber.provider.BusProvider;
+import com.nomad.internethaber.provider.RestAdapterProvider;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.InjectView;
 import butterknife.OnItemClick;
+import retrofit.Callback;
+import retrofit.RetrofitError;
+import retrofit.client.Response;
 
-public final class NavigationDrawerFragment extends BaseFragment {
+public final class NavigationDrawerFragment extends BaseFragment implements Callback<CategoryResponseBean> {
 
     @InjectView(R.id.fragment_navigation_drawer_list)
     protected ListView mDrawerList;
@@ -49,9 +55,8 @@ public final class NavigationDrawerFragment extends BaseFragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        List<NavigationItem> navigationItems = getMenu();
-        NavigationDrawerListAdapter adapter = new NavigationDrawerListAdapter(getContext(), navigationItems);
-        mDrawerList.setAdapter(adapter);
+        CategoryRestInterface categoryRestInterface = RestAdapterProvider.getInstance().create(CategoryRestInterface.class);
+        categoryRestInterface.send(this);
     }
 
     @OnItemClick(R.id.fragment_navigation_drawer_list)
@@ -111,6 +116,18 @@ public final class NavigationDrawerFragment extends BaseFragment {
         super.onConfigurationChanged(newConfig);
 
         mActionBarDrawerToggle.onConfigurationChanged(newConfig);
+    }
+
+    @Override
+    public void success(CategoryResponseBean categoryResponseBean, Response response) {
+        List<NavigationItem> navigationItems = getMenu();
+        NavigationDrawerListAdapter adapter = new NavigationDrawerListAdapter(getContext(), navigationItems);
+        mDrawerList.setAdapter(adapter);
+    }
+
+    @Override
+    public void failure(RetrofitError error) {
+
     }
 
 
