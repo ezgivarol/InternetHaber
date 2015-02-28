@@ -1,0 +1,12 @@
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cell_drawer_textview"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:drawablePadding="16dp"
+    android:paddingLeft="16dp"
+    android:textSize="14sp"
+    android:alpha="0.87"
+    android:gravity="center_vertical"
+    android:background="@drawable/selector_cell_drawer"
+    android:textColor="#000000"/>

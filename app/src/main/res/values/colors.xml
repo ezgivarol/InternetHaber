@@ -1,0 +1,28 @@
+<resources>
+    <color name="color_home_primary">#FF8F00</color>
+    <color name="color_home_primary_dark">#FF6F00</color>
+    <color name="color_home_accent">#FFFF00</color>
+
+    <color name="color_message_primary">#F5F5F5</color>
+    <color name="color_message_primary_dark">#424242</color>
+    <color name="color_message_accent">#00C853</color>
+
+    <color name="color_home_fab_normal">#FF8F00</color>
+    <color name="color_home_fab_pressed">#FF6F00</color>
+    <color name="color_home_fab_ripple">#FFFF00</color>
+
+    <color name="color_message_fab_normal">#4CAF50</color>
+    <color name="color_message_fab_pressed">#388E3C</color>
+    <color name="color_message_fab_ripple">#00C853</color>
+
+    <color name="color_drawer_background">#F2F2F2</color>
+    <color name="color_window_background">#DEDEDE</color>
+
+    <color name="color_drawer_pressed">#EEEEEE</color>
+    <color name="color_drawer_selected">#E0E0E0</color>
+
+    <color name="color_text_primary">#FFFFFF</color>
+    <color name="color_navigation">#000000</color>
+    <color name="color_selected_navigation">#ffdbdbdb</color>
+
+</resources>
