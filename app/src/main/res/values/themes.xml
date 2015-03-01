@@ -13,15 +13,4 @@
         <item name="android:windowBackground">@color/color_window_background</item>
     </style>
 
-    <style name="SpeechTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/color_message_primary</item>
-        <item name="colorPrimaryDark">@color/color_message_primary_dark</item>
-        <item name="colorAccent">@color/color_message_accent</item>
-
-        <item name="android:textColorPrimary">@android:color/black</item>
-        <item name="android:textColor">@android:color/black</item>
-
-        <item name="android:windowBackground">@color/color_window_background</item>
-    </style>
-
 </resources>

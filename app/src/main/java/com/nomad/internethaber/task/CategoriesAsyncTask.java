@@ -1,7 +1,6 @@
 package com.nomad.internethaber.task;
 
 import android.os.AsyncTask;
-import android.util.Log;
 
 import com.nomad.internethaber.bean.CategoryResponseBean;
 import com.nomad.internethaber.event.CategoriesFailureResponseEvent;
@@ -10,6 +9,8 @@ import com.nomad.internethaber.event.CategoriesSuccessResponseEvent;
 import com.nomad.internethaber.interfaces.CategoryRestInterface;
 import com.nomad.internethaber.provider.BusProvider;
 import com.nomad.internethaber.provider.RestAdapterProvider;
+
+import timber.log.Timber;
 
 public final class CategoriesAsyncTask extends AsyncTask<Void, Void, Boolean> {
 
@@ -23,6 +24,7 @@ public final class CategoriesAsyncTask extends AsyncTask<Void, Void, Boolean> {
         BusProvider.getInstance().post(event);
     }
 
+    
     @Override
     protected Boolean doInBackground(Void... params) {
         try {
@@ -30,8 +32,7 @@ public final class CategoriesAsyncTask extends AsyncTask<Void, Void, Boolean> {
             mBean = categoryRestInterface.get();
             return true;
         } catch (Exception e) {
-            e.printStackTrace();
-            Log.e("HATA", e.getMessage());
+            Timber.e("Categories could not get.");
         }
 
         return false;

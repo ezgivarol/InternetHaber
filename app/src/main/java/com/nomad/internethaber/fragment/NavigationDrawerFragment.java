@@ -28,11 +28,8 @@ import java.util.ArrayList;
 
 import butterknife.InjectView;
 import butterknife.OnItemClick;
-import retrofit.Callback;
-import retrofit.RetrofitError;
-import retrofit.client.Response;
 
-public final class NavigationDrawerFragment extends BaseFragment implements Runnable, Callback<CategoryResponseBean> {
+public final class NavigationDrawerFragment extends BaseFragment implements Runnable {
 
     @InjectView(R.id.fragment_navigation_drawer_list)
     protected ListView mDrawerList;
@@ -131,18 +128,6 @@ public final class NavigationDrawerFragment extends BaseFragment implements Runn
         super.onConfigurationChanged(newConfig);
 
         mActionBarDrawerToggle.onConfigurationChanged(newConfig);
-    }
-
-    @Override
-    public void success(CategoryResponseBean categoryResponseBean, Response response) {
-        ArrayList<Category> categories = categoryResponseBean.getCategories();
-        NavigationDrawerListAdapter adapter = new NavigationDrawerListAdapter(getContext(), categories);
-        mDrawerList.setAdapter(adapter);
-    }
-
-    @Override
-    public void failure(RetrofitError error) {
-
     }
 
     @Override
