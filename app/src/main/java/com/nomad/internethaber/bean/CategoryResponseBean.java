@@ -8,9 +8,13 @@ import java.util.ArrayList;
 public final class CategoryResponseBean {
 
     @SerializedName("item")
-    protected ArrayList<Category> mCategories;
+    private ArrayList<Category> mCategories;
 
     public CategoryResponseBean() {
         mCategories = new ArrayList<>();
+    }
+
+    public ArrayList<Category> getCategories() {
+        return mCategories;
     }
 }

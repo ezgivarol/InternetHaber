@@ -14,15 +14,17 @@ import android.widget.ListView;
 import com.nomad.internethaber.R;
 import com.nomad.internethaber.adapter.NavigationDrawerListAdapter;
 import com.nomad.internethaber.bean.CategoryResponseBean;
+import com.nomad.internethaber.event.CategoriesFailureResponseEvent;
+import com.nomad.internethaber.event.CategoriesRequestEvent;
+import com.nomad.internethaber.event.CategoriesSuccessResponseEvent;
 import com.nomad.internethaber.event.NavigationItemSelectEvent;
 import com.nomad.internethaber.helper.NavigationHelper;
-import com.nomad.internethaber.interfaces.CategoryRestInterface;
-import com.nomad.internethaber.model.NavigationItem;
+import com.nomad.internethaber.model.Category;
 import com.nomad.internethaber.provider.BusProvider;
-import com.nomad.internethaber.provider.RestAdapterProvider;
+import com.nomad.internethaber.task.CategoriesAsyncTask;
+import com.squareup.otto.Subscribe;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.InjectView;
 import butterknife.OnItemClick;
@@ -30,7 +32,7 @@ import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
-public final class NavigationDrawerFragment extends BaseFragment implements Callback<CategoryResponseBean> {
+public final class NavigationDrawerFragment extends BaseFragment implements Runnable, Callback<CategoryResponseBean> {
 
     @InjectView(R.id.fragment_navigation_drawer_list)
     protected ListView mDrawerList;
@@ -38,6 +40,8 @@ public final class NavigationDrawerFragment extends BaseFragment implements Call
     private View mFragmentContainerView;
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mActionBarDrawerToggle;
+
+    private CategoriesAsyncTask mCategoriesAsyncTask;
 
     @NonNull
     @Override
@@ -55,18 +59,42 @@ public final class NavigationDrawerFragment extends BaseFragment implements Call
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        CategoryRestInterface categoryRestInterface = RestAdapterProvider.getInstance().create(CategoryRestInterface.class);
-        categoryRestInterface.send(this);
+        mCategoriesAsyncTask = new CategoriesAsyncTask();
+        mCategoriesAsyncTask.execute();
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+
+        mCategoriesAsyncTask.cancel(true);
+    }
+
+    @Subscribe
+    public void onCategoriesRequestEvent(CategoriesRequestEvent event) {
+        // TODO Animate spinner.
+    }
+
+    @Subscribe
+    public void onCategoriesSuccessResponseEvent(CategoriesSuccessResponseEvent event) {
+        CategoryResponseBean categoryResponseBean = event.getBean();
+        ArrayList<Category> categories = categoryResponseBean.getCategories();
+
+        NavigationDrawerListAdapter adapter = new NavigationDrawerListAdapter(getContext(), categories);
+        mDrawerList.setAdapter(adapter);
+
+        navigate(0);
+    }
+
+    @Subscribe
+    public void onCategoriesFailureResponseEvent(CategoriesFailureResponseEvent event) {
+        // TODO Show error view.
     }
 
     @OnItemClick(R.id.fragment_navigation_drawer_list)
     public void onDrawerListItemSelected(int position) {
-        NavigationItemSelectEvent event = new NavigationItemSelectEvent();
-        event.setPosition(position);
-        BusProvider.getInstance().post(event);
-
+        navigate(position);
         closeDrawer();
-        mDrawerList.setItemChecked(position, true);
     }
 
     public void setup(int fragmentId, DrawerLayout drawerLayout, Toolbar toolbar) {
@@ -74,12 +102,7 @@ public final class NavigationDrawerFragment extends BaseFragment implements Call
         mDrawerLayout = drawerLayout;
         mActionBarDrawerToggle = new ToolbarDrawerToggle(getActivity(), mDrawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
 
-        mDrawerLayout.post(new Runnable() {
-            @Override
-            public void run() {
-                mActionBarDrawerToggle.syncState();
-            }
-        });
+        mDrawerLayout.post(this);
         mDrawerLayout.setDrawerListener(mActionBarDrawerToggle);
     }
 
@@ -99,14 +122,6 @@ public final class NavigationDrawerFragment extends BaseFragment implements Call
         mDrawerLayout.closeDrawer(mFragmentContainerView);
     }
 
-    private List<NavigationItem> getMenu() {
-        ArrayList<NavigationItem> items = new ArrayList<>();
-        items.add(new NavigationItem(R.string.abc_activitychooserview_choose_application, R.drawable.ic_drawer));
-        items.add(new NavigationItem(R.string.abc_activitychooserview_choose_application, R.drawable.ic_drawer));
-        items.add(new NavigationItem(R.string.abc_activitychooserview_choose_application, R.drawable.ic_drawer));
-        return items;
-    }
-
     public boolean isDrawerOpen() {
         return mDrawerLayout != null && mDrawerLayout.isDrawerOpen(mFragmentContainerView);
     }
@@ -120,14 +135,19 @@ public final class NavigationDrawerFragment extends BaseFragment implements Call
 
     @Override
     public void success(CategoryResponseBean categoryResponseBean, Response response) {
-        List<NavigationItem> navigationItems = getMenu();
-        NavigationDrawerListAdapter adapter = new NavigationDrawerListAdapter(getContext(), navigationItems);
+        ArrayList<Category> categories = categoryResponseBean.getCategories();
+        NavigationDrawerListAdapter adapter = new NavigationDrawerListAdapter(getContext(), categories);
         mDrawerList.setAdapter(adapter);
     }
 
     @Override
     public void failure(RetrofitError error) {
 
+    }
+
+    @Override
+    public void run() {
+        mActionBarDrawerToggle.syncState();
     }
 
 

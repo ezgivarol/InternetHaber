@@ -25,4 +25,5 @@ public final class Category {
     public void setName(String name) {
         mName = name;
     }
+
 }

@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.nomad.internethaber.R;
+import com.nomad.internethaber.model.Categories;
+import com.nomad.internethaber.model.Category;
 import com.nomad.internethaber.model.NavigationItem;
 
 import java.util.List;
@@ -15,9 +17,9 @@ import java.util.List;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public final class NavigationDrawerListAdapter extends ArrayAdapter<NavigationItem> {
+public final class NavigationDrawerListAdapter extends ArrayAdapter<Category> {
 
-    public NavigationDrawerListAdapter(Context context, List<NavigationItem> objects) {
+    public NavigationDrawerListAdapter(Context context, List<Category> objects) {
         super(context, 0, objects);
     }
 
@@ -31,12 +33,10 @@ public final class NavigationDrawerListAdapter extends ArrayAdapter<NavigationIt
         } else
             viewHolder = (ViewHolder) convertView.getTag();
 
-        int textResourceId = getItem(position).getTextResource();
-        CharSequence text = getContext().getString(textResourceId);
-        viewHolder.mTextView.setText(text);
-
-        int drawableResourceId = getItem(position).getDrawableResource();
-        viewHolder.mTextView.setCompoundDrawablesWithIntrinsicBounds(drawableResourceId, 0, 0, 0);
+        Category category = getItem(position);
+        
+        CharSequence name = category.getName();
+        viewHolder.mTextView.setText(name);
 
         return convertView;
     }
