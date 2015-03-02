@@ -5,10 +5,10 @@ import com.google.gson.annotations.SerializedName;
 public final class Category {
 
     @SerializedName("id")
-    protected String mId;
+    private String mId;
 
     @SerializedName("name")
-    protected String mName;
+    private String mName;
 
     public String getId() {
         return mId;

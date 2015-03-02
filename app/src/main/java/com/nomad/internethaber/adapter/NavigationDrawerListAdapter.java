@@ -8,9 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.nomad.internethaber.R;
-import com.nomad.internethaber.model.Categories;
 import com.nomad.internethaber.model.Category;
-import com.nomad.internethaber.model.NavigationItem;
 
 import java.util.List;
 
@@ -34,14 +32,14 @@ public final class NavigationDrawerListAdapter extends ArrayAdapter<Category> {
             viewHolder = (ViewHolder) convertView.getTag();
 
         Category category = getItem(position);
-        
+
         CharSequence name = category.getName();
         viewHolder.mTextView.setText(name);
 
         return convertView;
     }
 
-    
+
     protected static class ViewHolder {
 
         @InjectView(R.id.cell_drawer_textview)
