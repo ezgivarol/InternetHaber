@@ -24,7 +24,7 @@ public class PaginationHelper {
         return mRange;
     }
 
-    
+
     public final class Range {
         private int mFrom;
         private int mTo;
@@ -34,12 +34,12 @@ public class PaginationHelper {
             mTo = (mPageCount + 1) * ApplicationConstants.PAGE_SIZE;
         }
 
-        public int getFrom() {
-            return mFrom;
+        public String getFrom() {
+            return mFrom + "";
         }
 
-        public int getTo() {
-            return mTo;
+        public String getTo() {
+            return mTo + "";
         }
     }
 

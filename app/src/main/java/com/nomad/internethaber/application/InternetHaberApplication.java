@@ -9,8 +9,8 @@ public final class InternetHaberApplication extends BaseApplication {
     public void onCreate() {
         super.onCreate();
 
-        PushRestInterface pushRestInterface = RestAdapterProvider.getInstance().create(PushRestInterface.class);
-        pushRestInterface.get();
+//        PushRestInterface pushRestInterface = RestAdapterProvider.getInstance().create(PushRestInterface.class);
+//        pushRestInterface.get();
     }
 
 }

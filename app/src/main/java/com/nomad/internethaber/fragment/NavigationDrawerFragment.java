@@ -104,8 +104,11 @@ public final class NavigationDrawerFragment extends BaseFragment implements Runn
     }
 
     public void navigate(int position) {
+        Category category = (Category) mDrawerList.getAdapter().getItem(position);
+        
         NavigationItemSelectEvent event = new NavigationItemSelectEvent();
         event.setPosition(position);
+        event.setCategory(category);
         BusProvider.getInstance().post(event);
 
         mDrawerList.setItemChecked(position, true);
