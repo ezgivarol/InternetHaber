@@ -2,28 +2,27 @@ package com.nomad.internethaber.task;
 
 import android.os.AsyncTask;
 
-import com.nomad.internethaber.bean.NewsResponseBean;
+import com.nomad.internethaber.bean.NewsDetailResponseBean;
+import com.nomad.internethaber.event.NewsDetailRequestEvent;
+import com.nomad.internethaber.event.NewsDetailSuccessResponseEvent;
 import com.nomad.internethaber.event.NewsFailureResponseEvent;
-import com.nomad.internethaber.event.NewsRequestEvent;
-import com.nomad.internethaber.event.NewsSuccessResponseEvent;
-import com.nomad.internethaber.interfaces.NewsRestInterface;
+import com.nomad.internethaber.interfaces.NewsDetailRestInterface;
 import com.nomad.internethaber.provider.BusProvider;
 import com.nomad.internethaber.provider.RestAdapterProvider;
 
 import timber.log.Timber;
 
-public final class NewsAsyncTask extends AsyncTask<Void, Void, Boolean> {
+public final class NewsDetailAsyncTask extends AsyncTask<Void, Void, Boolean> {
 
-    private NewsResponseBean mBean;
-    private String mCategoryId;
-    private String mFrom;
-    private String mTo;
+    private NewsDetailResponseBean mBean;
+    private String mNewsId;
+    private String mNewsType;
 
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
 
-        NewsRequestEvent event = new NewsRequestEvent();
+        NewsDetailRequestEvent event = new NewsDetailRequestEvent();
         BusProvider.getInstance().post(event);
     }
 
@@ -31,8 +30,8 @@ public final class NewsAsyncTask extends AsyncTask<Void, Void, Boolean> {
     @Override
     protected Boolean doInBackground(Void... params) {
         try {
-            NewsRestInterface newsRestInterface = RestAdapterProvider.getInstance().create(NewsRestInterface.class);
-            mBean = newsRestInterface.get(mCategoryId, mFrom, mTo);
+            NewsDetailRestInterface newsDetailRestInterface = RestAdapterProvider.getInstance().create(NewsDetailRestInterface.class);
+            mBean = newsDetailRestInterface.get(mNewsId, mNewsType);
             return true;
         } catch (Exception e) {
             Timber.e("Categories could not get.");
@@ -47,7 +46,7 @@ public final class NewsAsyncTask extends AsyncTask<Void, Void, Boolean> {
         super.onPostExecute(result);
 
         if (result) {
-            NewsSuccessResponseEvent successEvent = new NewsSuccessResponseEvent();
+            NewsDetailSuccessResponseEvent successEvent = new NewsDetailSuccessResponseEvent();
             successEvent.setBean(mBean);
             BusProvider.getInstance().post(successEvent);
         } else {
@@ -56,15 +55,19 @@ public final class NewsAsyncTask extends AsyncTask<Void, Void, Boolean> {
         }
     }
 
-    public void setCategoryId(String id) {
-        mCategoryId = id;
+    public String getNewsId() {
+        return mNewsId;
     }
 
-    public void setFrom(String from) {
-        mFrom = from;
+    public void setNewsId(String newsId) {
+        mNewsId = newsId;
     }
 
-    public void setTo(String to) {
-        mTo = to;
+    public String getNewsType() {
+        return mNewsType;
+    }
+
+    public void setNewsType(String newsType) {
+        mNewsType = newsType;
     }
 }

@@ -2,8 +2,8 @@ package com.nomad.internethaber.helper;
 
 import com.nomad.internethaber.constant.ApplicationConstants;
 
-public class PaginationHelper {
-    private int mPageCount;
+public final class PaginationHelper {
+    private static int mPageCount;
     private Range mRange;
 
     public PaginationHelper() {
