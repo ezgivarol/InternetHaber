@@ -1,7 +1,15 @@
-<android.support.v7.widget.Toolbar
-    style="@style/style_toolbar"
+<com.h6ah4i.android.materialshadowninepatch.MaterialShadowContainerView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?attr/colorPrimary"
-    android:minHeight="@dimen/abc_action_bar_default_height_material"/>
+    app:shadowTranslationZ="2dp"
+    app:shadowElevation="4dp">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/style_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="@dimen/abc_action_bar_default_height_material"/>
+</com.h6ah4i.android.materialshadowninepatch.MaterialShadowContainerView>

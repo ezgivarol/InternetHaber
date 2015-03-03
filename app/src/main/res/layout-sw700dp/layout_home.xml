@@ -17,12 +17,25 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/activity_home_toolbar">
 
-        <fragment
-            android:name="com.nomad.internethaber.fragment.NewsFragment"
-            android:layout_width="wrap_content"
-            android:layout_weight="1"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:layout="@layout/fragment_news"/>
+            android:orientation="horizontal">
+
+            <fragment
+                android:name="com.nomad.internethaber.fragment.NewsFragment"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                tools:layout="@layout/cell_news"/>
+
+            <fragment
+                android:name="com.nomad.internethaber.fragment.NewsDetailFragment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                tools:layout="@layout/fragment_news_detail"/>
+        </LinearLayout>
 
         <fragment
             android:id="@+id/activity_home_fragment_drawer"

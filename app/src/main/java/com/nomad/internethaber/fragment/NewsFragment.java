@@ -10,22 +10,27 @@ import com.nomad.internethaber.R;
 import com.nomad.internethaber.adapter.NewsListAdapter;
 import com.nomad.internethaber.bean.NewsResponseBean;
 import com.nomad.internethaber.event.NavigationItemSelectEvent;
+import com.nomad.internethaber.event.NewsSelectEvent;
 import com.nomad.internethaber.event.NewsSuccessResponseEvent;
 import com.nomad.internethaber.helper.PaginationHelper;
 import com.nomad.internethaber.helper.PaginationHelper.Range;
 import com.nomad.internethaber.model.Category;
 import com.nomad.internethaber.model.News;
+import com.nomad.internethaber.provider.BusProvider;
 import com.nomad.internethaber.task.NewsAsyncTask;
 import com.squareup.otto.Subscribe;
 
 import java.util.ArrayList;
 
 import butterknife.InjectView;
+import butterknife.OnItemClick;
 
 public final class NewsFragment extends BaseFragment {
 
     @InjectView(R.id.fragment_news_listview)
     protected ListView mListView;
+
+    private NewsListAdapter mAdapter;
 
     private PaginationHelper mPaginationHelper;
     private NewsAsyncTask mAsyncTask;
@@ -77,7 +82,16 @@ public final class NewsFragment extends BaseFragment {
         NewsResponseBean bean = event.getBean();
         ArrayList<News> news = bean.getNews();
 
-        NewsListAdapter adapter = new NewsListAdapter(getContext(), news);
-        mListView.setAdapter(adapter);
+        mAdapter = new NewsListAdapter(getContext(), news);
+        mListView.setAdapter(mAdapter);
+    }
+
+    @OnItemClick(R.id.fragment_news_listview)
+    public void onNewsItemClicked(int position) {
+        News news = mAdapter.getItem(position);
+
+        NewsSelectEvent event = new NewsSelectEvent();
+        event.setNews(news);
+        BusProvider.getInstance().post(event);
     }
 }

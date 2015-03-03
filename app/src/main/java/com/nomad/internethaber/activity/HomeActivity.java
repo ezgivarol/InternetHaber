@@ -1,6 +1,5 @@
 package com.nomad.internethaber.activity;
 
-import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
