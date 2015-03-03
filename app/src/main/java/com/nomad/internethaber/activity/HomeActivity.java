@@ -7,9 +7,14 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.Toolbar;
 
 import com.nomad.internethaber.R;
+import com.nomad.internethaber.bean.CategoryResponseBean;
+import com.nomad.internethaber.event.CategoriesSuccessResponseEvent;
+import com.nomad.internethaber.event.DrawerClosedEvent;
+import com.nomad.internethaber.event.DrawerOpenedEvent;
 import com.nomad.internethaber.event.NavigationItemSelectEvent;
 import com.nomad.internethaber.fragment.NavigationDrawerFragment;
 import com.nomad.internethaber.helper.NavigationHelper;
+import com.nomad.internethaber.model.Category;
 import com.squareup.otto.Subscribe;
 
 import butterknife.InjectView;
@@ -44,7 +49,6 @@ public final class HomeActivity extends BaseActivity {
 
         mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.activity_home_fragment_drawer);
         mNavigationDrawerFragment.setup(R.id.activity_home_fragment_drawer, mDrawerLayout, mToolbar);
-//        mNavigationDrawerFragment.navigate(BellFragment.POSITION);
     }
 
     @Subscribe
@@ -53,31 +57,39 @@ public final class HomeActivity extends BaseActivity {
         if (NavigationHelper.getPosition() == position)
             return;
 
-//        switch (position) {
-//            case BellFragment.POSITION:
-//                getSupportFragmentManager()
-//                        .beginTransaction()
-//                        .replace(R.id.activity_home_container, new BellFragment())
-//                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-//                        .commit();
-//                break;
-//            case SnapshotFragment.POSITION:
-//                getSupportFragmentManager()
-//                        .beginTransaction()
-//                        .replace(R.id.activity_home_container, new SnapshotFragment())
-//                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-//                        .commit();
-//                break;
-//            case SettingsFragment.POSITION:
-//                getSupportFragmentManager()
-//                        .beginTransaction()
-//                        .replace(R.id.activity_home_container, new SettingsFragment())
-//                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-//                        .commit();
-//                break;
-//        }
-
         NavigationHelper.setPosition(position);
+
+        String subtitle = event.getCategory().getName();
+        NavigationHelper.setSubtitle(subtitle);
+    }
+
+    @Subscribe
+    public void onDrawerOpenedEvent(DrawerOpenedEvent event) {
+        mToolbar.setTitle(R.string.categories);
+        mToolbar.setSubtitle("");
+
+        invalidateOptionsMenu();
+    }
+
+    @Subscribe
+    public void onDrawerClosedEvent(DrawerClosedEvent event) {
+        mToolbar.setTitle(R.string.app_name);
+
+        CharSequence subtitle = NavigationHelper.getSubtitle();
+        mToolbar.setSubtitle(subtitle);
+
+        invalidateOptionsMenu();
+    }
+
+    @Subscribe
+    public void onCategoriesSuccessResponseEvent(CategoriesSuccessResponseEvent event) {
+        CategoryResponseBean bean = event.getBean();
+        Category category = bean.getCategories().get(0);
+
+        CharSequence subtitle = category.getName();
+        mToolbar.setSubtitle(subtitle);
+
+        invalidateOptionsMenu();
     }
 
 

@@ -17,6 +17,8 @@ import com.nomad.internethaber.bean.CategoryResponseBean;
 import com.nomad.internethaber.event.CategoriesFailureResponseEvent;
 import com.nomad.internethaber.event.CategoriesRequestEvent;
 import com.nomad.internethaber.event.CategoriesSuccessResponseEvent;
+import com.nomad.internethaber.event.DrawerClosedEvent;
+import com.nomad.internethaber.event.DrawerOpenedEvent;
 import com.nomad.internethaber.event.NavigationItemSelectEvent;
 import com.nomad.internethaber.helper.NavigationHelper;
 import com.nomad.internethaber.model.Category;
@@ -105,7 +107,7 @@ public final class NavigationDrawerFragment extends BaseFragment implements Runn
 
     public void navigate(int position) {
         Category category = (Category) mDrawerList.getAdapter().getItem(position);
-        
+
         NavigationItemSelectEvent event = new NavigationItemSelectEvent();
         event.setPosition(position);
         event.setCategory(category);
@@ -152,10 +154,8 @@ public final class NavigationDrawerFragment extends BaseFragment implements Runn
             if (!isAdded())
                 return;
 
-            CharSequence mTitle = NavigationHelper.getTitle();
-
-            getActivity().setTitle(mTitle);
-            getActivity().invalidateOptionsMenu();
+            DrawerClosedEvent event = new DrawerClosedEvent();
+            BusProvider.getInstance().post(event);
         }
 
         @Override
@@ -165,8 +165,8 @@ public final class NavigationDrawerFragment extends BaseFragment implements Runn
             if (!isAdded())
                 return;
 
-            getActivity().setTitle(R.string.app_name);
-            getActivity().invalidateOptionsMenu();
+            DrawerOpenedEvent event = new DrawerOpenedEvent();
+            BusProvider.getInstance().post(event);
         }
     }
 
