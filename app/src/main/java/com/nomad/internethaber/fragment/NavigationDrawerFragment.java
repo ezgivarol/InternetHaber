@@ -82,7 +82,7 @@ public final class NavigationDrawerFragment extends BaseFragment implements Runn
         NavigationDrawerListAdapter adapter = new NavigationDrawerListAdapter(getContext(), categories);
         mDrawerList.setAdapter(adapter);
 
-        navigate(0);
+        onDrawerListItemSelected(0);
     }
 
     @Subscribe
@@ -92,8 +92,15 @@ public final class NavigationDrawerFragment extends BaseFragment implements Runn
 
     @OnItemClick(R.id.fragment_navigation_drawer_list)
     public void onDrawerListItemSelected(int position) {
+        if (NavigationHelper.getPosition() == position)
+            return;
+
+        mDrawerList.setItemChecked(position, true);
+        NavigationHelper.setPosition(position);
+
         navigate(position);
         closeDrawer();
+
     }
 
     public void setup(int fragmentId, DrawerLayout drawerLayout, Toolbar toolbar) {
@@ -105,15 +112,13 @@ public final class NavigationDrawerFragment extends BaseFragment implements Runn
         mDrawerLayout.setDrawerListener(mActionBarDrawerToggle);
     }
 
-    public void navigate(int position) {
+    private void navigate(int position) {
         Category category = (Category) mDrawerList.getAdapter().getItem(position);
 
         NavigationItemSelectEvent event = new NavigationItemSelectEvent();
         event.setPosition(position);
         event.setCategory(category);
         BusProvider.getInstance().post(event);
-
-        mDrawerList.setItemChecked(position, true);
     }
 
     public void openDrawer() {
@@ -141,7 +146,7 @@ public final class NavigationDrawerFragment extends BaseFragment implements Runn
     }
 
 
-    private class ToolbarDrawerToggle extends ActionBarDrawerToggle {
+    private final class ToolbarDrawerToggle extends ActionBarDrawerToggle {
 
         public ToolbarDrawerToggle(Activity activity, DrawerLayout drawerLayout, Toolbar toolbar, int openDrawerContentDescRes, int closeDrawerContentDescRes) {
             super(activity, drawerLayout, toolbar, openDrawerContentDescRes, closeDrawerContentDescRes);

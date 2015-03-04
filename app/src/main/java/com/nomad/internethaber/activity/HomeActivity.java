@@ -53,12 +53,6 @@ public final class HomeActivity extends BaseActivity {
 
     @Subscribe
     public void onNavigationDrawerItemSelected(NavigationItemSelectEvent event) {
-        int position = event.getPosition();
-        if (NavigationHelper.getPosition() == position)
-            return;
-
-        NavigationHelper.setPosition(position);
-
         String subtitle = event.getCategory().getName();
         NavigationHelper.setSubtitle(subtitle);
     }
