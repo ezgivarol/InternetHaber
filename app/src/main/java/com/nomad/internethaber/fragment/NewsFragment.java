@@ -180,7 +180,6 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         ArrayList<News> news = bean.getNews();
 
         mAdapter.addAll(news);
-
         mListView.setHasMoreItems(false);
     }
 
