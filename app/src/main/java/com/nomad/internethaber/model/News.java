@@ -1,6 +1,8 @@
 package com.nomad.internethaber.model;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
 
 public final class News {
 

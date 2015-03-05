@@ -6,5 +6,6 @@
     android:layout_height="match_parent"
     android:listSelector="@android:color/transparent"
     android:clickable="true"
-    android:divider="@android:color/transparent"
+    android:dividerHeight="1dp"
+    android:divider="@drawable/drawable_divider"
     tools:listitem="@layout/cell_bell"/>

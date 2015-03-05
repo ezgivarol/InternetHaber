@@ -9,12 +9,15 @@
 
     <color name="color_drawer_background">#F2F2F2</color>
     <color name="color_window_background">#DEDEDE</color>
+    <color name="color_window_light_background">#F5F5F5</color>
 
     <color name="color_drawer_pressed">#EEEEEE</color>
     <color name="color_drawer_selected">#E0E0E0</color>
 
     <color name="color_text_primary">#FFFFFF</color>
+    <color name="color_text_secondry">#727272</color>
     <color name="color_navigation">#000000</color>
+    <color name="color_divider">#B6B6B6</color>
     <color name="color_selected_navigation">#ffdbdbdb</color>
 
 </resources>

@@ -100,7 +100,6 @@ public final class NavigationDrawerFragment extends BaseFragment implements Runn
 
         navigate(position);
         closeDrawer();
-
     }
 
     public void setup(int fragmentId, DrawerLayout drawerLayout, Toolbar toolbar) {

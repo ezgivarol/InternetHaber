@@ -29,6 +29,11 @@
                 android:layout_height="match_parent"
                 tools:layout="@layout/cell_news"/>
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_divider"/>
+
             <fragment
                 android:name="com.nomad.internethaber.fragment.NewsDetailFragment"
                 android:layout_width="0dp"

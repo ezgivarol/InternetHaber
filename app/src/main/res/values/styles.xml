@@ -10,4 +10,14 @@
         <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
     </style>
 
+    <style name="style_title" parent="">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="style_spot" parent="">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/color_text_secondry</item>
+    </style>
+
 </resources>

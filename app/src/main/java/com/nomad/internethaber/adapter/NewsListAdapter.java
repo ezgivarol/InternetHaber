@@ -39,10 +39,13 @@ public class NewsListAdapter extends ArrayAdapter<News> {
         News news = getItem(position);
 
         String thumbnailUrl = news.getThumbnail();
-        mPicasso.load(thumbnailUrl).into(viewHolder.mThumbnailImageView);
+        mPicasso.load(thumbnailUrl).fit().centerCrop().into(viewHolder.mThumbnailImageView);
 
         CharSequence title = news.getTitle();
         viewHolder.mTitleTextView.setText(title);
+
+        CharSequence spot = news.getSpot();
+        viewHolder.mSpotTextView.setText(spot);
 
         return convertView;
     }
@@ -52,6 +55,9 @@ public class NewsListAdapter extends ArrayAdapter<News> {
 
         @InjectView(R.id.cell_news_title_textview)
         TextView mTitleTextView;
+
+        @InjectView(R.id.cell_news_spot_textview)
+        TextView mSpotTextView;
 
         @InjectView(R.id.cell_news_thumbnail_imageview)
         ImageView mThumbnailImageView;

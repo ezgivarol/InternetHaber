@@ -8,9 +8,10 @@
         <item name="drawerArrowStyle">@style/style_drawer_arrow</item>
 
         <item name="android:textColorPrimary">@color/color_text_primary</item>
+        <item name="android:textColorSecondary">@color/color_text_secondry</item>
         <item name="android:textColor">@android:color/black</item>
 
-        <item name="android:windowBackground">@color/color_window_background</item>
+        <item name="android:windowBackground">@color/color_window_light_background</item>
     </style>
 
 </resources>

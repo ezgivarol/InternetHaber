@@ -1,31 +1,30 @@
-<android.support.v7.widget.CardView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_view"
     android:layout_gravity="center"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    card_view:cardUseCompatPadding="true"
-    card_view:cardCornerRadius="2dp"
-    card_view:cardElevation="1dp">
+    android:padding="16dp"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <com.nomad.internethaber.view.RectangularImageView
+        android:id="@+id/cell_news_thumbnail_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <com.devspark.robototextview.widget.RobotoTextView
+        android:id="@+id/cell_news_title_textview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        app:typeface="roboto_bold"
+        style="@style/style_title"/>
 
-        <ImageView
-            android:id="@+id/cell_news_thumbnail_imageview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="centerCrop"/>
+    <com.devspark.robototextview.widget.RobotoTextView
+        android:id="@+id/cell_news_spot_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:typeface="roboto_regular"
+        style="@style/style_spot"/>
 
-        <TextView
-            android:id="@+id/cell_news_title_textview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:textColor="@android:color/darker_gray"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
-    </LinearLayout>
-</android.support.v7.widget.CardView>
+</LinearLayout>

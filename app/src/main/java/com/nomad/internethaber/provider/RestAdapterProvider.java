@@ -24,7 +24,6 @@ public final class RestAdapterProvider {
                     .build();
         }
 
-
         return sAdapter;
     }
 }
