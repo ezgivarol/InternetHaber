@@ -20,6 +20,13 @@ public final class PaginationHelper {
         return mRange;
     }
 
+    public Range resetPage() {
+        mPageCount = 0;
+        mRange.calculate();
+
+        return mRange;
+    }
+
     public Range getRange() {
         return mRange;
     }

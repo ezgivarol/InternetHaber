@@ -1,13 +1,32 @@
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    
-    <com.nomad.internethaber.view.RectangularImageView
-        android:id="@+id/fragment_news_detail_photo"
+
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="0dp"/>
+        android:layout_height="match_parent"
+        android:padding="56dp">
 
+        <com.nomad.internethaber.view.RectangularImageView
+            android:id="@+id/fragment_news_detail_photo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
 
-</LinearLayout>
+        <com.devspark.robototextview.widget.RobotoTextView
+            android:id="@+id/fragment_news_detail_title_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:typeface="roboto_bold"
+            style="@style/style_title"/>
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            android:id="@+id/fragment_news_detail_content_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:typeface="roboto_regular"
+            style="@style/style_spot"/>
+    </LinearLayout>
+</ScrollView>

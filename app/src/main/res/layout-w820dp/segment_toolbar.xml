@@ -1,4 +1,4 @@
-<android.support.v7.widget.Toolbar
+<com.nomad.internethaber.view.StyledToolbar
     style="@style/style_toolbar"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"

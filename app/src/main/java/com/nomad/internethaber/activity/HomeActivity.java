@@ -15,6 +15,7 @@ import com.nomad.internethaber.event.NavigationItemSelectEvent;
 import com.nomad.internethaber.fragment.NavigationDrawerFragment;
 import com.nomad.internethaber.helper.NavigationHelper;
 import com.nomad.internethaber.model.Category;
+import com.nomad.internethaber.view.StyledToolbar;
 import com.squareup.otto.Subscribe;
 
 import butterknife.InjectView;
@@ -22,7 +23,7 @@ import butterknife.InjectView;
 public final class HomeActivity extends BaseActivity {
 
     @InjectView(R.id.activity_home_toolbar)
-    protected Toolbar mToolbar;
+    protected StyledToolbar mToolbar;
 
     @InjectView(R.id.activity_home_drawerlayout)
     protected DrawerLayout mDrawerLayout;

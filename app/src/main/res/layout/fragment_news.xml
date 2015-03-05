@@ -1,11 +1,17 @@
-<ListView
+<android.support.v4.widget.SwipeRefreshLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/fragment_news_listview"
+    android:id="@+id/fragment_news_swipe_refresh_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:listSelector="@android:color/transparent"
-    android:clickable="true"
-    android:dividerHeight="1dp"
-    android:divider="@drawable/drawable_divider"
-    tools:listitem="@layout/cell_bell"/>
+    android:layout_height="wrap_content">
+
+    <com.paging.listview.PagingListView
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/fragment_news_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@android:color/transparent"
+        android:clickable="true"
+        android:dividerHeight="1dp"
+        android:divider="@drawable/drawable_divider"
+        tools:listitem="@layout/cell_bell"/>
+</android.support.v4.widget.SwipeRefreshLayout>
