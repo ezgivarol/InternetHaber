@@ -80,6 +80,15 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         ThreadUtils.kill(mNewsMoreAsyncTask);
     }
 
+    @OnItemClick(R.id.fragment_news_listview)
+    public void onNewsItemClicked(int position) {
+        News news = mAdapter.getItem(position);
+
+        NewsSelectEvent event = new NewsSelectEvent();
+        event.setNews(news);
+        BusProvider.getInstance().post(event);
+    }
+
     @Subscribe
     public void onNavigationItemSelectEvent(NavigationItemSelectEvent event) {
         mListView.startPreload();
@@ -127,17 +136,28 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         // TODO Set empty view.
     }
 
-    @OnItemClick(R.id.fragment_news_listview)
-    public void onNewsItemClicked(int position) {
-        News news = mAdapter.getItem(position);
 
-        NewsSelectEvent event = new NewsSelectEvent();
-        event.setNews(news);
-        BusProvider.getInstance().post(event);
+    @Override
+    public void onLoadMoreItems() {
+        mListView.setIsLoading(true);
+        mListView.setHasMoreItems(true);
+
+        mRange.nextPage();
+
+        String id = mCategory.getId();
+        String from = mRange.getFrom();
+        String to = mRange.getTo();
+
+        mNewsMoreAsyncTask = new NewsMoreAsyncTask();
+        mNewsMoreAsyncTask.setCategoryId(id);
+        mNewsMoreAsyncTask.setFrom(from);
+        mNewsMoreAsyncTask.setTo(to);
+        mNewsMoreAsyncTask.execute();
     }
 
     @Subscribe
     public void onNewsMoreResponseEvent(NewsMoreResponseEvent event) {
+        mListView.setIsLoading(false);
         // TODO Stop pre-loader animating.
     }
 
@@ -162,21 +182,6 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         mAdapter.addAll(news);
 
         mListView.setHasMoreItems(false);
-    }
-
-    @Override
-    public void onLoadMoreItems() {
-        mRange.nextPage();
-
-        String id = mCategory.getId();
-        String from = mRange.getFrom();
-        String to = mRange.getTo();
-
-        mNewsMoreAsyncTask = new NewsMoreAsyncTask();
-        mNewsMoreAsyncTask.setCategoryId(id);
-        mNewsMoreAsyncTask.setFrom(from);
-        mNewsMoreAsyncTask.setTo(to);
-        mNewsMoreAsyncTask.execute();
     }
 
     @Override
