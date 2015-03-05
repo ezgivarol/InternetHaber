@@ -14,16 +14,18 @@ import com.nomad.internethaber.event.NewsFailureResponseEvent;
 import com.nomad.internethaber.event.NewsMoreFailureResponseEvent;
 import com.nomad.internethaber.event.NewsMoreResponseEvent;
 import com.nomad.internethaber.event.NewsMoreSuccessResponseEvent;
+import com.nomad.internethaber.event.NewsNoItemResponseEvent;
 import com.nomad.internethaber.event.NewsResponseEvent;
 import com.nomad.internethaber.event.NewsSelectEvent;
 import com.nomad.internethaber.event.NewsSuccessResponseEvent;
-import com.nomad.internethaber.helper.PaginationHelper;
-import com.nomad.internethaber.helper.PaginationHelper.Range;
 import com.nomad.internethaber.model.Category;
 import com.nomad.internethaber.model.News;
+import com.nomad.internethaber.model.Range;
 import com.nomad.internethaber.provider.BusProvider;
 import com.nomad.internethaber.task.NewsAsyncTask;
 import com.nomad.internethaber.task.NewsMoreAsyncTask;
+import com.nomad.internethaber.util.ThreadUtils;
+import com.nomad.internethaber.view.ExtendedPagingListView;
 import com.paging.listview.PagingListView;
 import com.squareup.otto.Subscribe;
 
@@ -35,7 +37,7 @@ import butterknife.OnItemClick;
 public final class NewsFragment extends BaseFragment implements PagingListView.Pagingable, SwipeRefreshLayout.OnRefreshListener {
 
     @InjectView(R.id.fragment_news_listview)
-    protected PagingListView mListView;
+    protected ExtendedPagingListView mListView;
 
     @InjectView(R.id.fragment_news_swipe_refresh_layout)
     protected SwipeRefreshLayout mRefreshLayout;
@@ -45,7 +47,7 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
     private NewsAsyncTask mNewsAsyncTask;
     private NewsMoreAsyncTask mNewsMoreAsyncTask;
 
-    private PaginationHelper mPaginationHelper;
+    private Range mRange;
     private Category mCategory;
 
     @NonNull
@@ -64,12 +66,9 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        mRange = new Range();
+
         mRefreshLayout.setOnRefreshListener(this);
-
-        mPaginationHelper = new PaginationHelper();
-
-        mListView.setHasMoreItems(true);
-        mListView.setIsLoading(true);
         mListView.setPagingableListener(this);
     }
 
@@ -77,18 +76,26 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
     public void onDestroyView() {
         super.onDestroyView();
 
-        mNewsAsyncTask.cancel(true);
-        mNewsMoreAsyncTask.cancel(true);
+        ThreadUtils.kill(mNewsAsyncTask);
+        ThreadUtils.kill(mNewsMoreAsyncTask);
     }
 
     @Subscribe
     public void onNavigationItemSelectEvent(NavigationItemSelectEvent event) {
-        Range range = mPaginationHelper.getRange();
+        mListView.startPreload();
+        mListView.setHasMoreItems(true);
+        mListView.setIsLoading(true);
+        mListView.setAdapter(null);
+
+        ThreadUtils.kill(mNewsAsyncTask);
+        ThreadUtils.kill(mNewsMoreAsyncTask);
+
+        mRange.resetPage();
         mCategory = event.getCategory();
 
         String id = mCategory.getId();
-        String from = range.getFrom();
-        String to = range.getTo();
+        String from = mRange.getFrom();
+        String to = mRange.getTo();
 
         mNewsAsyncTask = new NewsAsyncTask();
         mNewsAsyncTask.setCategoryId(id);
@@ -99,7 +106,9 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
 
     @Subscribe
     public void onNewsResponseEvent(NewsResponseEvent event) {
+        mListView.stopPreload();
         mListView.setIsLoading(false);
+
         mRefreshLayout.setRefreshing(false);
     }
 
@@ -110,7 +119,7 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
 
         mAdapter = new NewsListAdapter(getContext(), news);
         mListView.setAdapter(mAdapter);
-
+        mListView.setHasMoreItems(true);
     }
 
     @Subscribe
@@ -138,7 +147,6 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         ArrayList<News> news = bean.getNews();
 
         mAdapter.addAll(news);
-        mAdapter.notifyDataSetChanged();
     }
 
     @Subscribe
@@ -146,14 +154,23 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         // TODO Set empty view.
     }
 
+    @Subscribe
+    public void onNewsNoItemResponseEvent(NewsNoItemResponseEvent event) {
+        NewsResponseBean bean = event.getBean();
+        ArrayList<News> news = bean.getNews();
+
+        mAdapter.addAll(news);
+
+        mListView.setHasMoreItems(false);
+    }
+
     @Override
     public void onLoadMoreItems() {
-        mPaginationHelper.nextPage();
-        Range range = mPaginationHelper.getRange();
+        mRange.nextPage();
 
         String id = mCategory.getId();
-        String from = range.getFrom();
-        String to = range.getTo();
+        String from = mRange.getFrom();
+        String to = mRange.getTo();
 
         mNewsMoreAsyncTask = new NewsMoreAsyncTask();
         mNewsMoreAsyncTask.setCategoryId(id);
@@ -164,15 +181,14 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
 
     @Override
     public void onRefresh() {
-        mNewsMoreAsyncTask.cancel(true);
-        mListView.setIsLoading(true);
+        ThreadUtils.kill(mNewsAsyncTask);
+        ThreadUtils.kill(mNewsMoreAsyncTask);
 
-        mPaginationHelper.resetPage();
-        Range range = mPaginationHelper.getRange();
+        mRange.resetPage();
 
         String id = mCategory.getId();
-        String from = range.getFrom();
-        String to = range.getTo();
+        String from = mRange.getFrom();
+        String to = mRange.getTo();
 
         mNewsAsyncTask = new NewsAsyncTask();
         mNewsAsyncTask.setCategoryId(id);
@@ -180,4 +196,5 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         mNewsAsyncTask.setTo(to);
         mNewsAsyncTask.execute();
     }
+
 }
