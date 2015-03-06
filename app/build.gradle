@@ -1,19 +1,56 @@
 apply plugin: 'com.android.application'
 
 android {
+
+    signingConfigs {
+
+        signingTest {
+            keyAlias 'emre'
+            keyPassword 'emrebey559831'
+            storeFile file('keystore/test.jks')
+            storePassword 'emrebey559831'
+        }
+    }
+
     compileSdkVersion 21
     buildToolsVersion "21.1.1"
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'AndroidManifest.xml'
+        exclude 'commons-lang3-3.1.jar:META-INF/LICENSE.txt'
+        exclude 'commons-lang3-3.1.jar:META-INF/NOTICE.txt'
+        exclude 'commons-io-2.4.jar:META-INF/LICENSE.txt'
+        exclude 'commons-io-2.4.jar:META-INF/NOTICE.txt'
+    }
 
     defaultConfig {
         applicationId "com.nomad.internethaber"
         minSdkVersion 16
         targetSdkVersion 21
         versionCode 1
-        versionName "1.0"
+        versionName "0.4"
     }
     buildTypes {
         release {
+            debuggable false
             minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        develop {
+            debuggable true
+            signingConfig signingConfigs.signingTest
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }

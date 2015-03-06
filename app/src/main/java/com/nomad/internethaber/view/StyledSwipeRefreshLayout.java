@@ -7,10 +7,10 @@ import android.util.AttributeSet;
 import com.nomad.internethaber.R;
 
 public class StyledSwipeRefreshLayout extends SwipeRefreshLayout {
-    
+
     public StyledSwipeRefreshLayout(Context context) {
         super(context);
-        
+
         init();
     }
 
@@ -19,8 +19,8 @@ public class StyledSwipeRefreshLayout extends SwipeRefreshLayout {
 
         init();
     }
-    
-    private void init(){
-        setColorScheme(R.color.color_home_primary, android.R.color.white, R.color.color_home_primary_dark, android.R.color.white);
+
+    private void init() {
+        setColorScheme(R.color.color_home_primary_dark, R.color.color_home_accent);
     }
 }
