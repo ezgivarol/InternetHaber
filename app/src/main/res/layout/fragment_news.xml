@@ -2,16 +2,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/fragment_news_swipe_refresh_layout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
-    <com.nomad.internethaber.view.ResponsivePagingListView
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/fragment_news_listview"
+    <com.nomad.internethaber.view.CompositePagingListView
+        android:id="@+id/fragment_news_composite_listview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:listSelector="@android:color/transparent"
-        android:clickable="true"
-        android:dividerHeight="0dp"
-        android:divider="@android:color/transparent"
-        tools:listitem="@layout/cell_news"/>
+        android:layout_height="match_parent"/>
+
 </com.nomad.internethaber.view.StyledSwipeRefreshLayout>
+

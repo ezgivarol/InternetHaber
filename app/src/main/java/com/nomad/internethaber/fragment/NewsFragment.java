@@ -29,7 +29,7 @@ import com.nomad.internethaber.provider.BusProvider;
 import com.nomad.internethaber.task.NewsAsyncTask;
 import com.nomad.internethaber.task.NewsMoreAsyncTask;
 import com.nomad.internethaber.util.ThreadUtils;
-import com.nomad.internethaber.view.ResponsivePagingListView;
+import com.nomad.internethaber.view.CompositePagingListView;
 import com.nomad.internethaber.view.StyledSwipeRefreshLayout;
 import com.paging.listview.PagingListView;
 import com.squareup.otto.Subscribe;
@@ -37,11 +37,12 @@ import com.squareup.otto.Subscribe;
 import java.util.ArrayList;
 
 import butterknife.InjectView;
+import tr.xip.errorview.RetryListener;
 
-public final class NewsFragment extends BaseFragment implements PagingListView.Pagingable, SwipeRefreshLayout.OnRefreshListener {
+public final class NewsFragment extends BaseFragment implements PagingListView.Pagingable, SwipeRefreshLayout.OnRefreshListener, RetryListener {
 
-    @InjectView(R.id.fragment_news_listview)
-    protected ResponsivePagingListView mListView;
+    @InjectView(R.id.fragment_news_composite_listview)
+    protected CompositePagingListView mListView;
 
     @InjectView(R.id.fragment_news_swipe_refresh_layout)
     protected StyledSwipeRefreshLayout mRefreshLayout;
@@ -73,7 +74,8 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         mRange = new Range();
 
         mRefreshLayout.setOnRefreshListener(this);
-        mListView.setPagingableListener(this);
+        mListView.getListView().setPagingableListener(this);
+        mListView.getErrorView().setOnRetryListener(this);
     }
 
     @Override
@@ -104,9 +106,12 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
     @Platform(device = Platform.Device.BOTH)
     @Subscribe
     public void onNavigationItemSelectEvent(NavigationItemSelectEvent event) {
-        mListView.setHasMoreItems(true);
-        mListView.setIsLoading(true);
-        mListView.setAdapter(null);
+        mListView.getListView().setHasMoreItems(true);
+        mListView.getListView().setIsLoading(true);
+        mListView.getListView().setAdapter(null);
+        mListView.hideEmptyView();
+
+        mRefreshLayout.setEnabled(true);
 
         ThreadUtils.kill(mNewsAsyncTask);
         ThreadUtils.kill(mNewsMoreAsyncTask);
@@ -128,7 +133,7 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
     @Platform(device = Platform.Device.BOTH)
     @Subscribe
     public void onNewsResponseEvent(NewsResponseEvent event) {
-        mListView.setIsLoading(false);
+        mListView.getListView().setIsLoading(false);
 
         mRefreshLayout.setRefreshing(false);
     }
@@ -140,22 +145,26 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         ArrayList<News> news = bean.getNews();
 
         mAdapter = new NewsListAdapter(getContext(), news);
-        mListView.setAdapter(mAdapter);
-        mListView.setHasMoreItems(true);
+        mListView.getListView().setAdapter(mAdapter);
+        mListView.getListView().setHasMoreItems(true);
     }
 
     @Platform(device = Platform.Device.BOTH)
     @Subscribe
     public void onNewsFailureSuccessResponseEvent(NewsFailureResponseEvent event) {
-        // TODO Set empty view.
+        mListView.getListView().setIsLoading(false);
+        mListView.getListView().setHasMoreItems(false);
+        mListView.showEmptyView();
+
+        mRefreshLayout.setEnabled(false);
     }
 
 
     @Platform(device = Platform.Device.BOTH)
     @Override
     public void onLoadMoreItems() {
-        mListView.setIsLoading(true);
-        mListView.setHasMoreItems(true);
+        mListView.getListView().setIsLoading(true);
+        mListView.getListView().setHasMoreItems(true);
 
         mRange.nextPage();
 
@@ -173,8 +182,7 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
     @Platform(device = Platform.Device.BOTH)
     @Subscribe
     public void onNewsMoreResponseEvent(NewsMoreResponseEvent event) {
-        mListView.setIsLoading(false);
-        // TODO Stop pre-loader animating.
+        mListView.getListView().setIsLoading(false);
     }
 
     @Platform(device = Platform.Device.BOTH)
@@ -188,7 +196,7 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
 
     @Platform(device = Platform.Device.BOTH)
     @Subscribe
-    public void onNewsMoreFailureSuccessResponseEvent(NewsMoreFailureResponseEvent event) {
+    public void onNewsMoreFailureResponseEvent(NewsMoreFailureResponseEvent event) {
         // TODO Set empty view.
     }
 
@@ -199,7 +207,7 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         ArrayList<News> news = bean.getNews();
 
         mAdapter.addMoreItems(news);
-        mListView.setHasMoreItems(false);
+        mListView.getListView().setHasMoreItems(false);
     }
 
     @Platform(device = Platform.Device.BOTH)
@@ -221,4 +229,10 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         mNewsAsyncTask.execute();
     }
 
+    @Override
+    public void onRetry() {
+        mListView.hideEmptyView();
+        mRefreshLayout.setEnabled(true);
+        onRefresh();
+    }
 }

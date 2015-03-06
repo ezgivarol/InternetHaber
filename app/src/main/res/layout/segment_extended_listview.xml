@@ -1,0 +1,29 @@
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.nomad.internethaber.view.ResponsivePagingListView
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/segment_extended_listview_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@android:color/transparent"
+        android:clickable="true"
+        android:dividerHeight="0dp"
+        android:divider="@android:color/transparent"
+        tools:listitem="@layout/cell_news"/>
+
+    <tr.xip.errorview.ErrorView
+        xmlns:errorview="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/segment_extended_listview_error"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        errorview:ev_errorSubtitle="Test"
+        errorview:ev_errorTitle="Test"
+        errorview:ev_showRetryButton="true"
+        errorview:ev_showSubtitle="true"
+        errorview:ev_showTitle="true"/>
+</FrameLayout>
