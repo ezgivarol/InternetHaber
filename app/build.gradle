@@ -38,6 +38,8 @@ dependencies {
     compile 'com.nispok:snackbar:2.7.3'
     compile 'com.github.johnkil.android-robototextview:robototextview:2.3.0'
     compile 'com.github.nicolasjafelle:paginglistview:1.2'
+    compile 'it.sephiroth.android.library.imagezoom:imagezoom:+'
+
 
     // Log Mechanism
     compile 'com.jakewharton.timber:timber:2.7.1'

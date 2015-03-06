@@ -20,4 +20,8 @@
     <color name="color_divider">#B6B6B6</color>
     <color name="color_selected_navigation">#ffdbdbdb</color>
 
+    <color name="color_image_primary">#616161</color>
+    <color name="color_image_primary_dark">#424242</color>
+    <color name="color_image_accent">#FFFFFF</color>
+
 </resources>

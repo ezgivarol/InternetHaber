@@ -1,20 +1,20 @@
 package com.nomad.internethaber.fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.nomad.internethaber.R;
 import com.nomad.internethaber.adapter.NewsListAdapter;
+import com.nomad.internethaber.annotation.Platform;
 import com.nomad.internethaber.bean.NewsResponseBean;
 import com.nomad.internethaber.event.NavigationItemSelectEvent;
 import com.nomad.internethaber.event.NewsFailureResponseEvent;
+import com.nomad.internethaber.event.NewsItemClickEventOnPhone;
+import com.nomad.internethaber.event.NewsItemClickEventOnTablet;
 import com.nomad.internethaber.event.NewsMoreFailureResponseEvent;
 import com.nomad.internethaber.event.NewsMoreResponseEvent;
 import com.nomad.internethaber.event.NewsMoreSuccessResponseEvent;
@@ -29,6 +29,7 @@ import com.nomad.internethaber.provider.BusProvider;
 import com.nomad.internethaber.task.NewsAsyncTask;
 import com.nomad.internethaber.task.NewsMoreAsyncTask;
 import com.nomad.internethaber.util.ThreadUtils;
+import com.nomad.internethaber.view.ResponsivePagingListView;
 import com.nomad.internethaber.view.StyledSwipeRefreshLayout;
 import com.paging.listview.PagingListView;
 import com.squareup.otto.Subscribe;
@@ -36,12 +37,11 @@ import com.squareup.otto.Subscribe;
 import java.util.ArrayList;
 
 import butterknife.InjectView;
-import butterknife.OnItemClick;
 
 public final class NewsFragment extends BaseFragment implements PagingListView.Pagingable, SwipeRefreshLayout.OnRefreshListener {
 
     @InjectView(R.id.fragment_news_listview)
-    protected PagingListView mListView;
+    protected ResponsivePagingListView mListView;
 
     @InjectView(R.id.fragment_news_swipe_refresh_layout)
     protected StyledSwipeRefreshLayout mRefreshLayout;
@@ -69,7 +69,7 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        
+
         mRange = new Range();
 
         mRefreshLayout.setOnRefreshListener(this);
@@ -84,15 +84,24 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         ThreadUtils.kill(mNewsMoreAsyncTask);
     }
 
-    @OnItemClick(R.id.fragment_news_listview)
-    public void onNewsItemClicked(int position) {
-        News news = mAdapter.getItem(position);
-
-        NewsSelectEvent event = new NewsSelectEvent();
-        event.setNews(news);
-        BusProvider.getInstance().post(event);
+    @Platform(device = Platform.Device.PHONE)
+    @Subscribe
+    public void onNewsItemClickedOnPhone(NewsItemClickEventOnPhone event) {
+        Toast.makeText(getContext(), event.getPosition() + "", Toast.LENGTH_SHORT).show();
     }
 
+    @Platform(device = Platform.Device.TABLET)
+    @Subscribe
+    public void onNewsItemClickedOnTablet(NewsItemClickEventOnTablet event) {
+        int position = event.getPosition();
+        News news = mAdapter.getItem(position);
+
+        NewsSelectEvent eventNewsSelect = new NewsSelectEvent();
+        eventNewsSelect.setNews(news);
+        BusProvider.getInstance().post(eventNewsSelect);
+    }
+
+    @Platform(device = Platform.Device.BOTH)
     @Subscribe
     public void onNavigationItemSelectEvent(NavigationItemSelectEvent event) {
         mListView.setHasMoreItems(true);
@@ -116,6 +125,7 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         mNewsAsyncTask.execute();
     }
 
+    @Platform(device = Platform.Device.BOTH)
     @Subscribe
     public void onNewsResponseEvent(NewsResponseEvent event) {
         mListView.setIsLoading(false);
@@ -123,6 +133,7 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         mRefreshLayout.setRefreshing(false);
     }
 
+    @Platform(device = Platform.Device.BOTH)
     @Subscribe
     public void onNewsSuccessResponseEvent(NewsSuccessResponseEvent event) {
         NewsResponseBean bean = event.getBean();
@@ -133,12 +144,14 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         mListView.setHasMoreItems(true);
     }
 
+    @Platform(device = Platform.Device.BOTH)
     @Subscribe
     public void onNewsFailureSuccessResponseEvent(NewsFailureResponseEvent event) {
         // TODO Set empty view.
     }
 
 
+    @Platform(device = Platform.Device.BOTH)
     @Override
     public void onLoadMoreItems() {
         mListView.setIsLoading(true);
@@ -157,12 +170,14 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         mNewsMoreAsyncTask.execute();
     }
 
+    @Platform(device = Platform.Device.BOTH)
     @Subscribe
     public void onNewsMoreResponseEvent(NewsMoreResponseEvent event) {
         mListView.setIsLoading(false);
         // TODO Stop pre-loader animating.
     }
 
+    @Platform(device = Platform.Device.BOTH)
     @Subscribe
     public void onNewsMoreSuccessResponseEvent(NewsMoreSuccessResponseEvent event) {
         NewsResponseBean bean = event.getBean();
@@ -171,11 +186,13 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         mAdapter.addMoreItems(news);
     }
 
+    @Platform(device = Platform.Device.BOTH)
     @Subscribe
     public void onNewsMoreFailureSuccessResponseEvent(NewsMoreFailureResponseEvent event) {
         // TODO Set empty view.
     }
 
+    @Platform(device = Platform.Device.BOTH)
     @Subscribe
     public void onNewsNoItemResponseEvent(NewsNoItemResponseEvent event) {
         NewsResponseBean bean = event.getBean();
@@ -185,6 +202,7 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         mListView.setHasMoreItems(false);
     }
 
+    @Platform(device = Platform.Device.BOTH)
     @Override
     public void onRefresh() {
         ThreadUtils.kill(mNewsAsyncTask);

@@ -29,10 +29,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Home Activity ! -->
         <activity
             android:name=".activity.ImageActivity"
-            android:label="@string/title_activity_image" >
+            android:label=""
+            android:theme="@style/ImageTheme">
         </activity>
+
+
     </application>
 
 </manifest>

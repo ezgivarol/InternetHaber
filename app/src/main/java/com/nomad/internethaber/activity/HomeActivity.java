@@ -4,17 +4,13 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.widget.Toolbar;
 
 import com.nomad.internethaber.R;
-import com.nomad.internethaber.bean.CategoryResponseBean;
-import com.nomad.internethaber.event.CategoriesSuccessResponseEvent;
 import com.nomad.internethaber.event.DrawerClosedEvent;
 import com.nomad.internethaber.event.DrawerOpenedEvent;
 import com.nomad.internethaber.event.NavigationItemSelectEvent;
 import com.nomad.internethaber.fragment.NavigationDrawerFragment;
 import com.nomad.internethaber.helper.NavigationHelper;
-import com.nomad.internethaber.model.Category;
 import com.nomad.internethaber.view.StyledToolbar;
 import com.squareup.otto.Subscribe;
 
@@ -56,6 +52,9 @@ public final class HomeActivity extends BaseActivity {
     public void onNavigationDrawerItemSelected(NavigationItemSelectEvent event) {
         String subtitle = event.getCategory().getName();
         NavigationHelper.setSubtitle(subtitle);
+
+        mToolbar.setSubtitle(subtitle);
+        invalidateOptionsMenu();
     }
 
     @Subscribe
@@ -75,18 +74,6 @@ public final class HomeActivity extends BaseActivity {
 
         invalidateOptionsMenu();
     }
-
-    @Subscribe
-    public void onCategoriesSuccessResponseEvent(CategoriesSuccessResponseEvent event) {
-        CategoryResponseBean bean = event.getBean();
-        Category category = bean.getCategories().get(0);
-
-        CharSequence subtitle = category.getName();
-        mToolbar.setSubtitle(subtitle);
-
-        invalidateOptionsMenu();
-    }
-
 
     @Override
     public void onBackPressed() {

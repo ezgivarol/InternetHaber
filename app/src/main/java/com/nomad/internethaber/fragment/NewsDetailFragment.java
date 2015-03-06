@@ -1,9 +1,12 @@
 package com.nomad.internethaber.fragment;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.text.Html;
 import android.text.Spanned;
 import android.view.Menu;
@@ -13,6 +16,7 @@ import android.view.View;
 
 import com.devspark.robototextview.widget.RobotoTextView;
 import com.nomad.internethaber.R;
+import com.nomad.internethaber.activity.ImageActivity;
 import com.nomad.internethaber.bean.NewsDetailResponseBean;
 import com.nomad.internethaber.bean.NewsResponseBean;
 import com.nomad.internethaber.event.NewsDetailFailureResponseEvent;
@@ -20,6 +24,7 @@ import com.nomad.internethaber.event.NewsDetailSuccessResponseEvent;
 import com.nomad.internethaber.event.NewsFailureResponseEvent;
 import com.nomad.internethaber.event.NewsSelectEvent;
 import com.nomad.internethaber.event.NewsSuccessResponseEvent;
+import com.nomad.internethaber.helper.SelectedImageHelper;
 import com.nomad.internethaber.model.News;
 import com.nomad.internethaber.model.NewsDetail;
 import com.nomad.internethaber.task.NewsDetailAsyncTask;
@@ -28,6 +33,7 @@ import com.squareup.otto.Subscribe;
 import com.squareup.picasso.Picasso;
 
 import butterknife.InjectView;
+import butterknife.OnClick;
 
 
 public final class NewsDetailFragment extends BaseFragment {
@@ -149,6 +155,19 @@ public final class NewsDetailFragment extends BaseFragment {
     @Subscribe
     public void onNewsDetailFailureResponseEvent(NewsDetailFailureResponseEvent event) {
         // TODO Set empty view.
+    }
+
+    @OnClick(R.id.fragment_news_detail_photo)
+    public void onPhotoClicked(RectangularImageView view) {
+        Drawable drawable = view.getDrawable();
+        if (drawable == null)
+            return;
+
+        SelectedImageHelper.setPhoto(drawable);
+
+        Intent intent = new Intent(getContext(), ImageActivity.class);
+        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), view, "image");
+        ActivityCompat.startActivity(getActivity(), intent, options.toBundle());
     }
 
 }
