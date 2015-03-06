@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:listSelector="@android:color/transparent"
         android:clickable="true"
-        android:dividerHeight="1dp"
-        android:divider="@drawable/drawable_divider"
-        tools:listitem="@layout/cell_bell"/>
+        android:dividerHeight="0dp"
+        android:divider="@android:color/transparent"
+        tools:listitem="@layout/cell_news"/>
 </android.support.v4.widget.SwipeRefreshLayout>

@@ -166,7 +166,7 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         NewsResponseBean bean = event.getBean();
         ArrayList<News> news = bean.getNews();
 
-        mAdapter.addAll(news);
+        mAdapter.addMoreItems(news);
     }
 
     @Subscribe
@@ -179,7 +179,7 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         NewsResponseBean bean = event.getBean();
         ArrayList<News> news = bean.getNews();
 
-        mAdapter.addAll(news);
+        mAdapter.addMoreItems(news);
         mListView.setHasMoreItems(false);
     }
 

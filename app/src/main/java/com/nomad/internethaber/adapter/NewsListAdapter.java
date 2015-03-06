@@ -4,12 +4,12 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.nomad.internethaber.R;
 import com.nomad.internethaber.model.News;
+import com.paging.listview.PagingBaseAdapter;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -17,20 +17,37 @@ import java.util.List;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class NewsListAdapter extends ArrayAdapter<News> {
+public class NewsListAdapter extends PagingBaseAdapter<News> {
     private Picasso mPicasso;
+    private Context mContext;
 
-    public NewsListAdapter(Context context, List<News> objects) {
-        super(context, 0, objects);
+    public NewsListAdapter(Context context, List<News> items) {
+        super(items);
 
+        mContext = context;
         mPicasso = Picasso.with(context);
+    }
+
+    @Override
+    public int getCount() {
+        return items.size();
+    }
+
+    @Override
+    public News getItem(int position) {
+        return items.get(position);
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return 0;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder;
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.cell_news, parent, false);
+            convertView = LayoutInflater.from(mContext).inflate(R.layout.cell_news_extended, parent, false);
             viewHolder = new ViewHolder(convertView);
             convertView.setTag(viewHolder);
         } else

@@ -82,7 +82,7 @@ public final class NavigationDrawerFragment extends BaseFragment implements Runn
         NavigationDrawerListAdapter adapter = new NavigationDrawerListAdapter(getContext(), categories);
         mDrawerList.setAdapter(adapter);
 
-        onDrawerListItemSelected(0);
+        onDrawerListItemSelected(1);
     }
 
     @Subscribe

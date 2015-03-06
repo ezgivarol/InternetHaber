@@ -39,7 +39,7 @@ public final class ExtendedPagingListView extends PagingListView {
 
     private void init() {
         mSmoothProgressBar = (SmoothProgressBar) LayoutInflater.from(getContext()).inflate(R.layout.segment_loading, this, false);
-        addHeaderView(mSmoothProgressBar);
+//        addHeaderView(mSmoothProgressBar);
     }
 
     public void startPreload() {
