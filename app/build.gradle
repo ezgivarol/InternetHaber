@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.nomad.internethaber"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
@@ -38,7 +38,6 @@ dependencies {
     compile 'com.nispok:snackbar:2.7.3'
     compile 'com.github.johnkil.android-robototextview:robototextview:2.3.0'
     compile 'com.github.nicolasjafelle:paginglistview:1.2'
-    compile 'com.github.castorflex.smoothprogressbar:library:1.0.0'
 
     // Log Mechanism
     compile 'com.jakewharton.timber:timber:2.7.1'

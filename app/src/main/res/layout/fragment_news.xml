@@ -1,10 +1,10 @@
-<android.support.v4.widget.SwipeRefreshLayout
+<com.nomad.internethaber.view.StyledSwipeRefreshLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/fragment_news_swipe_refresh_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.nomad.internethaber.view.ExtendedPagingListView
+    <com.paging.listview.PagingListView
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/fragment_news_listview"
         android:layout_width="match_parent"
@@ -14,4 +14,4 @@
         android:dividerHeight="0dp"
         android:divider="@android:color/transparent"
         tools:listitem="@layout/cell_news"/>
-</android.support.v4.widget.SwipeRefreshLayout>
+</com.nomad.internethaber.view.StyledSwipeRefreshLayout>

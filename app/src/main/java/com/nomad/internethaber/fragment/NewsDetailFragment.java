@@ -1,6 +1,15 @@
 package com.nomad.internethaber.fragment;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.text.Html;
+import android.text.Spanned;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
 
 import com.devspark.robototextview.widget.RobotoTextView;
 import com.nomad.internethaber.R;
@@ -33,6 +42,7 @@ public final class NewsDetailFragment extends BaseFragment {
     protected RobotoTextView mContentTextView;
 
     private NewsDetailAsyncTask mAsyncTask;
+    private NewsDetail mNewsDetail;
 
     @NonNull
     @Override
@@ -47,10 +57,44 @@ public final class NewsDetailFragment extends BaseFragment {
     }
 
     @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        setHasOptionsMenu(true);
+    }
+
+    @Override
     public void onDestroyView() {
         super.onDestroyView();
 
         mAsyncTask.cancel(true);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        getActivity().getMenuInflater().inflate(R.menu.menu_news_detail, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        switch (id) {
+            case R.id.action_share:
+                String url = mNewsDetail.getUrl();
+                String title = mNewsDetail.getTitle();
+
+                Intent shareIntent = new Intent();
+                shareIntent.setAction(Intent.ACTION_SEND);
+                shareIntent.setType(url);
+                shareIntent.putExtra(Intent.EXTRA_TEXT, "titlet");
+                startActivity(Intent.createChooser(shareIntent, "Share your thoughts"));
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
     }
 
     @Subscribe
@@ -88,16 +132,18 @@ public final class NewsDetailFragment extends BaseFragment {
     @Subscribe
     public void onNewsDetailSuccessResponseEvent(NewsDetailSuccessResponseEvent event) {
         NewsDetailResponseBean bean = event.getBean();
-        NewsDetail newsDetail = bean.getNewsDetail();
+        mNewsDetail = bean.getNewsDetail();
 
-        String photo = newsDetail.getThumbnail();
+        String photo = mNewsDetail.getThumbnail();
         Picasso.with(getContext()).load(photo).fit().centerCrop().into(mImageView);
 
-        CharSequence title = newsDetail.getTitle();
-        mTitleTextView.setText(title);
+        String title = mNewsDetail.getTitle();
+        Spanned spannedTitle = Html.fromHtml(title);
+        mTitleTextView.setText(spannedTitle);
 
-        CharSequence content = newsDetail.getContent();
-        mContentTextView.setText(content);
+        String content = mNewsDetail.getContent();
+        Spanned spannedContent = Html.fromHtml(content);
+        mContentTextView.setText(spannedContent);
     }
 
     @Subscribe

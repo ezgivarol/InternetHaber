@@ -1,6 +1,8 @@
 package com.nomad.internethaber.adapter;
 
 import android.content.Context;
+import android.text.Html;
+import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,11 +60,13 @@ public class NewsListAdapter extends PagingBaseAdapter<News> {
         String thumbnailUrl = news.getThumbnail();
         mPicasso.load(thumbnailUrl).fit().centerCrop().into(viewHolder.mThumbnailImageView);
 
-        CharSequence title = news.getTitle();
-        viewHolder.mTitleTextView.setText(title);
+        String title = news.getTitle();
+        Spanned spannedTitle = Html.fromHtml(title);
+        viewHolder.mTitleTextView.setText(spannedTitle);
 
-        CharSequence spot = news.getSpot();
-        viewHolder.mSpotTextView.setText(spot);
+        String spot = news.getSpot();
+        Spanned spannedSpot = Html.fromHtml(spot);
+        viewHolder.mSpotTextView.setText(spannedSpot);
 
         return convertView;
     }

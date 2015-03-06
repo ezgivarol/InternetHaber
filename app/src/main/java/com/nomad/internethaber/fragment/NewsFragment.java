@@ -1,9 +1,13 @@
 package com.nomad.internethaber.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.nomad.internethaber.R;
@@ -25,7 +29,7 @@ import com.nomad.internethaber.provider.BusProvider;
 import com.nomad.internethaber.task.NewsAsyncTask;
 import com.nomad.internethaber.task.NewsMoreAsyncTask;
 import com.nomad.internethaber.util.ThreadUtils;
-import com.nomad.internethaber.view.ExtendedPagingListView;
+import com.nomad.internethaber.view.StyledSwipeRefreshLayout;
 import com.paging.listview.PagingListView;
 import com.squareup.otto.Subscribe;
 
@@ -37,10 +41,10 @@ import butterknife.OnItemClick;
 public final class NewsFragment extends BaseFragment implements PagingListView.Pagingable, SwipeRefreshLayout.OnRefreshListener {
 
     @InjectView(R.id.fragment_news_listview)
-    protected ExtendedPagingListView mListView;
+    protected PagingListView mListView;
 
     @InjectView(R.id.fragment_news_swipe_refresh_layout)
-    protected SwipeRefreshLayout mRefreshLayout;
+    protected StyledSwipeRefreshLayout mRefreshLayout;
 
     private NewsListAdapter mAdapter;
 
@@ -65,7 +69,7 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        
         mRange = new Range();
 
         mRefreshLayout.setOnRefreshListener(this);
@@ -91,7 +95,6 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
 
     @Subscribe
     public void onNavigationItemSelectEvent(NavigationItemSelectEvent event) {
-        mListView.startPreload();
         mListView.setHasMoreItems(true);
         mListView.setIsLoading(true);
         mListView.setAdapter(null);
@@ -115,7 +118,6 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
 
     @Subscribe
     public void onNewsResponseEvent(NewsResponseEvent event) {
-        mListView.stopPreload();
         mListView.setIsLoading(false);
 
         mRefreshLayout.setRefreshing(false);
