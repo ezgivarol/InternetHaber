@@ -30,7 +30,6 @@ import com.nomad.internethaber.task.NewsAsyncTask;
 import com.nomad.internethaber.task.NewsMoreAsyncTask;
 import com.nomad.internethaber.util.ThreadUtils;
 import com.nomad.internethaber.view.CompositePagingListView;
-import com.nomad.internethaber.view.StyledSwipeRefreshLayout;
 import com.paging.listview.PagingListView;
 import com.squareup.otto.Subscribe;
 
@@ -43,9 +42,6 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
 
     @InjectView(R.id.fragment_news_composite_listview)
     protected CompositePagingListView mListView;
-
-    @InjectView(R.id.fragment_news_swipe_refresh_layout)
-    protected StyledSwipeRefreshLayout mRefreshLayout;
 
     private NewsListAdapter mAdapter;
 
@@ -73,7 +69,7 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
 
         mRange = new Range();
 
-        mRefreshLayout.setOnRefreshListener(this);
+        mListView.getSwipeRefreshLayout().setOnRefreshListener(this);
         mListView.getListView().setPagingableListener(this);
         mListView.getErrorView().setOnRetryListener(this);
     }
@@ -111,7 +107,7 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         mListView.getListView().setAdapter(null);
         mListView.hideEmptyView();
 
-        mRefreshLayout.setEnabled(true);
+        mListView.getSwipeRefreshLayout().setEnabled(true);
 
         ThreadUtils.kill(mNewsAsyncTask);
         ThreadUtils.kill(mNewsMoreAsyncTask);
@@ -135,7 +131,7 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
     public void onNewsResponseEvent(NewsResponseEvent event) {
         mListView.getListView().setIsLoading(false);
 
-        mRefreshLayout.setRefreshing(false);
+        mListView.getSwipeRefreshLayout().setRefreshing(false);
     }
 
     @Platform(device = Platform.Device.BOTH)
@@ -156,7 +152,7 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         mListView.getListView().setHasMoreItems(false);
         mListView.showEmptyView();
 
-        mRefreshLayout.setEnabled(false);
+        mListView.getSwipeRefreshLayout().setEnabled(false);
     }
 
 
@@ -232,7 +228,7 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
     @Override
     public void onRetry() {
         mListView.hideEmptyView();
-        mRefreshLayout.setEnabled(true);
+        mListView.getSwipeRefreshLayout().setEnabled(true);
         onRefresh();
     }
 }

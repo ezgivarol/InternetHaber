@@ -3,16 +3,22 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <com.nomad.internethaber.view.ResponsivePagingListView
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/segment_extended_listview_list"
+    <com.nomad.internethaber.view.StyledSwipeRefreshLayout
+        android:id="@+id/segment_extended_refreshlayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:listSelector="@android:color/transparent"
-        android:clickable="true"
-        android:dividerHeight="0dp"
-        android:divider="@android:color/transparent"
-        tools:listitem="@layout/cell_news"/>
+        android:layout_height="match_parent">
+
+        <com.nomad.internethaber.view.ResponsivePagingListView
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/segment_extended_listview_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:listSelector="@android:color/transparent"
+            android:clickable="true"
+            android:dividerHeight="0dp"
+            android:divider="@android:color/transparent"
+            tools:listitem="@layout/cell_news"/>
+    </com.nomad.internethaber.view.StyledSwipeRefreshLayout>
 
     <tr.xip.errorview.ErrorView
         xmlns:errorview="http://schemas.android.com/apk/res-auto"
