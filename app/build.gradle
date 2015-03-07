@@ -77,7 +77,7 @@ dependencies {
     compile 'com.github.nicolasjafelle:paginglistview:1.2'
     compile 'it.sephiroth.android.library.imagezoom:imagezoom:+'
     compile 'com.github.xiprox.errorview:library:1.0.0'
-    compile 'com.github.mrengineer13:snackbar:0.5.0'
+    compile 'com.balysv:material-ripple:1.0.1'
 
     // Log Mechanism
     compile 'com.jakewharton.timber:timber:2.7.1'

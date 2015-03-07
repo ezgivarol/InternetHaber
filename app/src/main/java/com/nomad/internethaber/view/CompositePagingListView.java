@@ -40,10 +40,12 @@ public final class CompositePagingListView extends FrameLayout {
 
     public void showEmptyView() {
         mErrorView.setVisibility(VISIBLE);
+        mSwipeRefreshLayout.setEnabled(false);
     }
 
     public void hideEmptyView() {
         mErrorView.setVisibility(GONE);
+        mSwipeRefreshLayout.setEnabled(true);
     }
 
     public ErrorView getErrorView() {

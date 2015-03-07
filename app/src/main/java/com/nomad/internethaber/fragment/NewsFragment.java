@@ -7,6 +7,8 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.View;
 import android.widget.Toast;
 
+import com.nispok.snackbar.Snackbar;
+import com.nispok.snackbar.listeners.ActionClickListener;
 import com.nomad.internethaber.R;
 import com.nomad.internethaber.adapter.NewsListAdapter;
 import com.nomad.internethaber.annotation.Platform;
@@ -38,7 +40,7 @@ import java.util.ArrayList;
 import butterknife.InjectView;
 import tr.xip.errorview.RetryListener;
 
-public final class NewsFragment extends BaseFragment implements PagingListView.Pagingable, SwipeRefreshLayout.OnRefreshListener, RetryListener {
+public final class NewsFragment extends BaseFragment implements PagingListView.Pagingable, SwipeRefreshLayout.OnRefreshListener, RetryListener, ActionClickListener {
 
     @InjectView(R.id.fragment_news_composite_listview)
     protected CompositePagingListView mListView;
@@ -107,8 +109,6 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         mListView.getListView().setAdapter(null);
         mListView.hideEmptyView();
 
-        mListView.getSwipeRefreshLayout().setEnabled(true);
-
         ThreadUtils.kill(mNewsAsyncTask);
         ThreadUtils.kill(mNewsMoreAsyncTask);
 
@@ -151,10 +151,7 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         mListView.getListView().setIsLoading(false);
         mListView.getListView().setHasMoreItems(false);
         mListView.showEmptyView();
-
-        mListView.getSwipeRefreshLayout().setEnabled(false);
     }
-
 
     @Platform(device = Platform.Device.BOTH)
     @Override
@@ -193,7 +190,19 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
     @Platform(device = Platform.Device.BOTH)
     @Subscribe
     public void onNewsMoreFailureResponseEvent(NewsMoreFailureResponseEvent event) {
-        // TODO Set empty view.
+        mListView.getListView().setIsLoading(false);
+        mListView.getListView().setHasMoreItems(false);
+
+        Snackbar
+                .with(getContext())
+                .actionColor(R.color.color_home_accent)
+                .actionListener(this)
+                .actionLabel("Retry")
+                .text("Could not get more news")
+                .animation(true)
+                .attachToAbsListView(mListView.getListView())
+                .duration(Snackbar.SnackbarDuration.LENGTH_INDEFINITE)
+                .show(getActivity());
     }
 
     @Platform(device = Platform.Device.BOTH)
@@ -227,8 +236,26 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
 
     @Override
     public void onRetry() {
+        mListView.getListView().setIsLoading(true);
+        mListView.getListView().setHasMoreItems(true);
         mListView.hideEmptyView();
-        mListView.getSwipeRefreshLayout().setEnabled(true);
+
         onRefresh();
+    }
+
+    @Override
+    public void onActionClicked(Snackbar snackbar) {
+        mListView.getListView().setIsLoading(true);
+        mListView.getListView().setHasMoreItems(true);
+
+        String id = mCategory.getId();
+        String from = mRange.getFrom();
+        String to = mRange.getTo();
+
+        mNewsMoreAsyncTask = new NewsMoreAsyncTask();
+        mNewsMoreAsyncTask.setCategoryId(id);
+        mNewsMoreAsyncTask.setFrom(from);
+        mNewsMoreAsyncTask.setTo(to);
+        mNewsMoreAsyncTask.execute();
     }
 }

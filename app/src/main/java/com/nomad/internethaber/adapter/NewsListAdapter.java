@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.balysv.materialripple.MaterialRippleLayout;
 import com.nomad.internethaber.R;
 import com.nomad.internethaber.model.News;
 import com.paging.listview.PagingBaseAdapter;
