@@ -104,9 +104,6 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
     @Platform(device = Platform.Device.BOTH)
     @Subscribe
     public void onNavigationItemSelectEvent(NavigationItemSelectEvent event) {
-        mListView.getListView().setHasMoreItems(true);
-        mListView.getListView().setIsLoading(true);
-        mListView.getListView().setAdapter(null);
         mListView.hideEmptyView();
 
         ThreadUtils.kill(mNewsAsyncTask);
@@ -148,8 +145,6 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
     @Platform(device = Platform.Device.BOTH)
     @Subscribe
     public void onNewsFailureSuccessResponseEvent(NewsFailureResponseEvent event) {
-        mListView.getListView().setIsLoading(false);
-        mListView.getListView().setHasMoreItems(false);
         mListView.showEmptyView();
     }
 
@@ -236,8 +231,6 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
 
     @Override
     public void onRetry() {
-        mListView.getListView().setIsLoading(true);
-        mListView.getListView().setHasMoreItems(true);
         mListView.hideEmptyView();
 
         onRefresh();

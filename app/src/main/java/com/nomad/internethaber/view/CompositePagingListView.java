@@ -39,11 +39,18 @@ public final class CompositePagingListView extends FrameLayout {
     }
 
     public void showEmptyView() {
+        mListView.setHasMoreItems(false);
+        mListView.setIsLoading(false);
+
         mErrorView.setVisibility(VISIBLE);
         mSwipeRefreshLayout.setEnabled(false);
     }
 
     public void hideEmptyView() {
+        mListView.setHasMoreItems(true);
+        mListView.setIsLoading(true);
+        mListView.setAdapter(null);
+
         mErrorView.setVisibility(GONE);
         mSwipeRefreshLayout.setEnabled(true);
     }
