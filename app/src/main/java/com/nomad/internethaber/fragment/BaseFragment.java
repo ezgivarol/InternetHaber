@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 
 import com.nomad.internethaber.helper.NavigationHelper;
 import com.nomad.internethaber.provider.BusProvider;
+import com.squareup.otto.Bus;
 
 import butterknife.ButterKnife;
 
@@ -61,6 +62,10 @@ abstract class BaseFragment extends Fragment {
 
         getActivity().setTitle(getTitleResource());
         NavigationHelper.setTitle(getActivity().getTitle());
+    }
+
+    protected Bus getBus() {
+        return BusProvider.getInstance();
     }
 
     protected abstract

@@ -56,6 +56,12 @@ android {
     }
 }
 
+repositories {
+    maven {
+        url "https://jitpack.io"
+    }
+}
+
 dependencies {
     // Android
     compile 'com.android.support:appcompat-v7:21.0.3'
@@ -78,6 +84,7 @@ dependencies {
     compile 'it.sephiroth.android.library.imagezoom:imagezoom:+'
     compile 'com.github.xiprox.errorview:library:1.0.0'
     compile 'com.balysv:material-ripple:1.0.1'
+    compile 'com.github.ozodrukh:CircularReveal:1.0@aar'
 
     // Log Mechanism
     compile 'com.jakewharton.timber:timber:2.7.1'

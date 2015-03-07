@@ -24,10 +24,10 @@ import com.nomad.internethaber.event.NewsNoItemResponseEvent;
 import com.nomad.internethaber.event.NewsResponseEvent;
 import com.nomad.internethaber.event.NewsSelectEvent;
 import com.nomad.internethaber.event.NewsSuccessResponseEvent;
+import com.nomad.internethaber.helper.NavigationHelper;
 import com.nomad.internethaber.model.Category;
 import com.nomad.internethaber.model.News;
 import com.nomad.internethaber.model.Range;
-import com.nomad.internethaber.provider.BusProvider;
 import com.nomad.internethaber.task.NewsAsyncTask;
 import com.nomad.internethaber.task.NewsMoreAsyncTask;
 import com.nomad.internethaber.util.ThreadUtils;
@@ -94,11 +94,15 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
     @Subscribe
     public void onNewsItemClickedOnTablet(NewsItemClickEventOnTablet event) {
         int position = event.getPosition();
+        if (NavigationHelper.getSelectedNewsPosition() == position)
+            return;
+
+        NavigationHelper.setSelectedNewsPosition(position);
         News news = mAdapter.getItem(position);
 
         NewsSelectEvent eventNewsSelect = new NewsSelectEvent();
         eventNewsSelect.setNews(news);
-        BusProvider.getInstance().post(eventNewsSelect);
+        getBus().post(eventNewsSelect);
     }
 
     @Platform(device = Platform.Device.BOTH)

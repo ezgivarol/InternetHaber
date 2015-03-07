@@ -34,7 +34,7 @@ public final class NewsDetailAsyncTask extends AsyncTask<Void, Void, Boolean> {
             mBean = newsDetailRestInterface.get(mNewsId, mNewsType);
             return true;
         } catch (Exception e) {
-            Timber.e("Categories could not get.");
+            Timber.e("News detail could not get.");
         }
 
         return false;

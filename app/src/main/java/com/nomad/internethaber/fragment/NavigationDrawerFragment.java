@@ -22,7 +22,6 @@ import com.nomad.internethaber.event.DrawerOpenedEvent;
 import com.nomad.internethaber.event.NavigationItemSelectEvent;
 import com.nomad.internethaber.helper.NavigationHelper;
 import com.nomad.internethaber.model.Category;
-import com.nomad.internethaber.provider.BusProvider;
 import com.nomad.internethaber.task.CategoriesAsyncTask;
 import com.squareup.otto.Subscribe;
 
@@ -92,11 +91,11 @@ public final class NavigationDrawerFragment extends BaseFragment implements Runn
 
     @OnItemClick(R.id.fragment_navigation_drawer_list)
     public void onDrawerListItemSelected(int position) {
-        if (NavigationHelper.getPosition() == position)
+        if (NavigationHelper.getDrawerPosition() == position)
             return;
 
         mDrawerList.setItemChecked(position, true);
-        NavigationHelper.setPosition(position);
+        NavigationHelper.setDrawerPosition(position);
 
         navigate(position);
         closeDrawer();
@@ -117,7 +116,7 @@ public final class NavigationDrawerFragment extends BaseFragment implements Runn
         NavigationItemSelectEvent event = new NavigationItemSelectEvent();
         event.setPosition(position);
         event.setCategory(category);
-        BusProvider.getInstance().post(event);
+        getBus().post(event);
     }
 
     public void openDrawer() {
@@ -159,7 +158,7 @@ public final class NavigationDrawerFragment extends BaseFragment implements Runn
                 return;
 
             DrawerClosedEvent event = new DrawerClosedEvent();
-            BusProvider.getInstance().post(event);
+            getBus().post(event);
         }
 
         @Override
@@ -170,7 +169,7 @@ public final class NavigationDrawerFragment extends BaseFragment implements Runn
                 return;
 
             DrawerOpenedEvent event = new DrawerOpenedEvent();
-            BusProvider.getInstance().post(event);
+            getBus().post(event);
         }
     }
 

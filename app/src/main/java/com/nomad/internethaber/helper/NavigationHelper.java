@@ -1,16 +1,25 @@
 package com.nomad.internethaber.helper;
 
 public final class NavigationHelper {
-    private static int sPosition = -1;
+    private static int sDrawerPosition = -1;
+    private static int sSelectedNewsPosition = -1;
     private static CharSequence sTitle;
     private static CharSequence sSubtitle;
 
-    public static int getPosition() {
-        return sPosition;
+    public static int getDrawerPosition() {
+        return sDrawerPosition;
     }
 
-    public static void setPosition(int position) {
-        sPosition = position;
+    public static void setDrawerPosition(int position) {
+        sDrawerPosition = position;
+    }
+
+    public static int getSelectedNewsPosition() {
+        return sSelectedNewsPosition;
+    }
+
+    public static void setSelectedNewsPosition(int selectedNewsPosition) {
+        sSelectedNewsPosition = selectedNewsPosition;
     }
 
     public static CharSequence getTitle() {

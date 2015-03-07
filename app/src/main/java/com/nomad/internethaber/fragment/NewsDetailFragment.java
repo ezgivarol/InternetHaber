@@ -13,8 +13,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
+import android.widget.ScrollView;
 
 import com.devspark.robototextview.widget.RobotoTextView;
+import com.nineoldandroids.animation.Animator;
 import com.nomad.internethaber.R;
 import com.nomad.internethaber.activity.ImageActivity;
 import com.nomad.internethaber.bean.NewsDetailResponseBean;
@@ -34,6 +37,7 @@ import com.squareup.picasso.Picasso;
 
 import butterknife.InjectView;
 import butterknife.OnClick;
+import io.codetail.animation.ViewAnimationUtils;
 
 
 public final class NewsDetailFragment extends BaseFragment {
@@ -46,6 +50,9 @@ public final class NewsDetailFragment extends BaseFragment {
 
     @InjectView(R.id.fragment_news_detail_content_textview)
     protected RobotoTextView mContentTextView;
+
+    @InjectView(R.id.fragment_news_detail_scrollview)
+    protected ScrollView mScrollView;
 
     private NewsDetailAsyncTask mAsyncTask;
     private NewsDetail mNewsDetail;
@@ -137,6 +144,11 @@ public final class NewsDetailFragment extends BaseFragment {
 
     @Subscribe
     public void onNewsDetailSuccessResponseEvent(NewsDetailSuccessResponseEvent event) {
+        float finalRadius = Math.max(mScrollView.getWidth(), mScrollView.getHeight());
+        Animator circularReveal = ViewAnimationUtils.createCircularReveal(mScrollView, 0, 0, 0, finalRadius);
+        circularReveal.setInterpolator(new AccelerateDecelerateInterpolator());
+        circularReveal.start();
+
         NewsDetailResponseBean bean = event.getBean();
         mNewsDetail = bean.getNewsDetail();
 

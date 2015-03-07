@@ -1,33 +1,39 @@
-<ScrollView
+<io.codetail.widget.RevealFrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/color_window_light_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
+        android:background="@color/color_window_light_background"
+        android:id="@+id/fragment_news_detail_scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="22dp">
+        xmlns:app="http://schemas.android.com/apk/res-auto">
 
-        <com.devspark.robototextview.widget.RobotoTextView
-            android:id="@+id/fragment_news_detail_title_textview"
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:typeface="roboto_bold"
-            style="@style/style_title"/>
+            android:layout_height="match_parent"
+            android:padding="22dp">
 
-        <com.nomad.internethaber.view.RectangularImageView
-            android:id="@+id/fragment_news_detail_photo"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"/>
+            <com.devspark.robototextview.widget.RobotoTextView
+                android:id="@+id/fragment_news_detail_title_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:typeface="roboto_bold"
+                style="@style/style_title"/>
 
-        <com.devspark.robototextview.widget.RobotoTextView
-            android:id="@+id/fragment_news_detail_content_textview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:typeface="roboto_regular"
-            style="@style/style_spot"/>
-    </LinearLayout>
-</ScrollView>
+            <com.nomad.internethaber.view.RectangularImageView
+                android:id="@+id/fragment_news_detail_photo"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                android:id="@+id/fragment_news_detail_content_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:typeface="roboto_regular"
+                style="@style/style_spot"/>
+        </LinearLayout>
+    </ScrollView>
+</io.codetail.widget.RevealFrameLayout>
