@@ -1,4 +1,4 @@
 package com.nomad.internethaber.event;
 
-public class NewsResponseEvent {
+public abstract class NewsResponseEvent {
 }

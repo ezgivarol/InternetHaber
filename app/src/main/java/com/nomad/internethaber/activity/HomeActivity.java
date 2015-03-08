@@ -1,8 +1,6 @@
 package com.nomad.internethaber.activity;
 
-import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v4.widget.DrawerLayout;
 
 import com.nomad.internethaber.R;
@@ -33,8 +31,8 @@ public final class HomeActivity extends BaseActivity {
     }
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onSupportContentChanged() {
+        super.onSupportContentChanged();
 
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);

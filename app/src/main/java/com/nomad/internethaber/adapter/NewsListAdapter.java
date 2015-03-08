@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.balysv.materialripple.MaterialRippleLayout;
 import com.nomad.internethaber.R;
 import com.nomad.internethaber.model.News;
 import com.paging.listview.PagingBaseAdapter;
@@ -20,7 +19,7 @@ import java.util.List;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class NewsListAdapter extends PagingBaseAdapter<News> {
+public final class NewsListAdapter extends PagingBaseAdapter<News> {
     private Picasso mPicasso;
     private Context mContext;
 

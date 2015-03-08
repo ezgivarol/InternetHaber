@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 
 import com.nomad.internethaber.R;
 
-public class StyledSwipeRefreshLayout extends SwipeRefreshLayout {
+public final class StyledSwipeRefreshLayout extends SwipeRefreshLayout {
 
     public StyledSwipeRefreshLayout(Context context) {
         super(context);

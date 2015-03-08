@@ -22,13 +22,6 @@ public final class ImageActivity extends BaseActivity {
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-    }
-
-    @Override
     public void onSupportContentChanged() {
         super.onSupportContentChanged();
 
@@ -37,4 +30,12 @@ public final class ImageActivity extends BaseActivity {
         mImageView = (ImageViewTouch) findViewById(R.id.layout_image_imageview);
         mImageView.setImageDrawable(photo);
     }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+    }
+
 }
