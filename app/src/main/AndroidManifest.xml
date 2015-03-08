@@ -16,13 +16,13 @@
     <application
         android:name=".application.InternetHaberApplication"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/HomeTheme">
+        android:label="@string/app_name">
 
         <!-- Home Activity ! -->
         <activity
             android:name=".activity.HomeActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:theme="@style/HomeTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -30,13 +30,18 @@
             </intent-filter>
         </activity>
 
-        <!-- Home Activity ! -->
+        <!-- Image Activity ! -->
         <activity
             android:name=".activity.ImageActivity"
             android:label=""
             android:theme="@style/ImageTheme">
         </activity>
 
+        <!-- News Detail Activity ! -->
+        <activity
+            android:name=".activity.NewsDetailActivity"
+            android:label=""
+            android:theme="@style/HomeTheme"/>
 
     </application>
 

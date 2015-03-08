@@ -1,15 +1,16 @@
 package com.nomad.internethaber.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.View;
-import android.widget.Toast;
 
 import com.nispok.snackbar.Snackbar;
 import com.nispok.snackbar.listeners.ActionClickListener;
 import com.nomad.internethaber.R;
+import com.nomad.internethaber.activity.NewsDetailActivity;
 import com.nomad.internethaber.adapter.NewsListAdapter;
 import com.nomad.internethaber.annotation.Platform;
 import com.nomad.internethaber.bean.NewsResponseBean;
@@ -18,9 +19,9 @@ import com.nomad.internethaber.event.NewsFailureResponseEvent;
 import com.nomad.internethaber.event.NewsItemClickEventOnPhone;
 import com.nomad.internethaber.event.NewsItemClickEventOnTablet;
 import com.nomad.internethaber.event.NewsMoreFailureResponseEvent;
+import com.nomad.internethaber.event.NewsMoreNoItemResponseEvent;
 import com.nomad.internethaber.event.NewsMoreResponseEvent;
 import com.nomad.internethaber.event.NewsMoreSuccessResponseEvent;
-import com.nomad.internethaber.event.NewsNoItemResponseEvent;
 import com.nomad.internethaber.event.NewsResponseEvent;
 import com.nomad.internethaber.event.NewsSelectEvent;
 import com.nomad.internethaber.event.NewsSuccessResponseEvent;
@@ -36,6 +37,7 @@ import com.paging.listview.PagingListView;
 import com.squareup.otto.Subscribe;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.InjectView;
 import tr.xip.errorview.RetryListener;
@@ -87,7 +89,19 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
     @Platform(device = Platform.Device.PHONE)
     @Subscribe
     public void onNewsItemClickedOnPhone(NewsItemClickEventOnPhone event) {
-        Toast.makeText(getContext(), event.getPosition() + "", Toast.LENGTH_SHORT).show();
+        ThreadUtils.kill(mNewsAsyncTask);
+        ThreadUtils.kill(mNewsMoreAsyncTask);
+
+        int position = event.getPosition();
+        NavigationHelper.setSelectedNewsPosition(position);
+
+        List<News> items = mAdapter.getItems();
+        ArrayList list = new ArrayList(items);
+
+        Intent intent = new Intent(getActivity(), NewsDetailActivity.class);
+        intent.putExtra("list", list);
+        intent.putExtra("category", mCategory);
+        startActivity(intent);
     }
 
     @Platform(device = Platform.Device.TABLET)
@@ -108,10 +122,10 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
     @Platform(device = Platform.Device.BOTH)
     @Subscribe
     public void onNavigationItemSelectEvent(NavigationItemSelectEvent event) {
-        mListView.hideEmptyView();
-
         ThreadUtils.kill(mNewsAsyncTask);
         ThreadUtils.kill(mNewsMoreAsyncTask);
+
+        mListView.hideEmptyView();
 
         mRange.resetPage();
         mCategory = event.getCategory();
@@ -206,12 +220,9 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
 
     @Platform(device = Platform.Device.BOTH)
     @Subscribe
-    public void onNewsNoItemResponseEvent(NewsNoItemResponseEvent event) {
-        NewsResponseBean bean = event.getBean();
-        ArrayList<News> news = bean.getNews();
-
-        mAdapter.addMoreItems(news);
+    public void onNewsNoItemResponseEvent(NewsMoreNoItemResponseEvent event) {
         mListView.getListView().setHasMoreItems(false);
+        mListView.getListView().setIsLoading(false);
     }
 
     @Platform(device = Platform.Device.BOTH)

@@ -1,10 +1,11 @@
 package com.nomad.internethaber.model;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 
-public final class News {
+
+public final class News implements Serializable {
 
     @SerializedName("id")
     private String mId;

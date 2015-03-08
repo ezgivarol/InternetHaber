@@ -25,10 +25,7 @@ public final class ImageActivity extends BaseActivity {
     public void onSupportContentChanged() {
         super.onSupportContentChanged();
 
-        Drawable photo = SelectedImageHelper.getPhoto();
-
         mImageView = (ImageViewTouch) findViewById(R.id.layout_image_imageview);
-        mImageView.setImageDrawable(photo);
     }
 
     @Override
@@ -36,6 +33,9 @@ public final class ImageActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        Drawable photo = SelectedImageHelper.getPhoto();
+        mImageView.setImageDrawable(photo);
     }
 
 }

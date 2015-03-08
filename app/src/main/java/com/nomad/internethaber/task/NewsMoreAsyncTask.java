@@ -4,6 +4,7 @@ import android.os.AsyncTask;
 
 import com.nomad.internethaber.bean.NewsResponseBean;
 import com.nomad.internethaber.event.NewsMoreFailureResponseEvent;
+import com.nomad.internethaber.event.NewsMoreNoItemResponseEvent;
 import com.nomad.internethaber.event.NewsMoreRequestEvent;
 import com.nomad.internethaber.event.NewsMoreSuccessResponseEvent;
 import com.nomad.internethaber.interfaces.NewsRestInterface;
@@ -62,8 +63,7 @@ public final class NewsMoreAsyncTask extends AsyncTask<Void, Void, NewsMoreAsync
                 BusProvider.getInstance().post(successEvent);
                 return;
             case NO_ITEM:
-                NewsMoreSuccessResponseEvent noItemEvent = new NewsMoreSuccessResponseEvent();
-                noItemEvent.setBean(mBean);
+                NewsMoreNoItemResponseEvent noItemEvent = new NewsMoreNoItemResponseEvent();
                 BusProvider.getInstance().post(noItemEvent);
                 return;
             case FAILURE:

@@ -2,7 +2,9 @@ package com.nomad.internethaber.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public final class Category {
+import java.io.Serializable;
+
+public final class Category implements Serializable {
 
     @SerializedName("id")
     private String mId;

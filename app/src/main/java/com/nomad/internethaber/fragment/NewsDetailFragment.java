@@ -25,6 +25,7 @@ import com.nomad.internethaber.bean.NewsResponseBean;
 import com.nomad.internethaber.event.NewsDetailFailureResponseEvent;
 import com.nomad.internethaber.event.NewsDetailSuccessResponseEvent;
 import com.nomad.internethaber.event.NewsFailureResponseEvent;
+import com.nomad.internethaber.event.NewsMoreNoItemResponseEvent;
 import com.nomad.internethaber.event.NewsSelectEvent;
 import com.nomad.internethaber.event.NewsSuccessResponseEvent;
 import com.nomad.internethaber.helper.SelectedImageHelper;

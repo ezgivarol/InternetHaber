@@ -34,15 +34,17 @@ public final class HomeActivity extends BaseActivity {
     public void onSupportContentChanged() {
         super.onSupportContentChanged();
 
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        mToolbar = (StyledToolbar) findViewById(R.id.activity_home_toolbar);
+        mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.activity_home_fragment_drawer);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
 
-        mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.activity_home_fragment_drawer);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         mNavigationDrawerFragment.setup(R.id.activity_home_fragment_drawer, mDrawerLayout, mToolbar);
     }
 

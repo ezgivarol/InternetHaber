@@ -14,6 +14,8 @@ import com.nomad.internethaber.model.News;
 import com.paging.listview.PagingBaseAdapter;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import butterknife.ButterKnife;
@@ -42,7 +44,11 @@ public final class NewsListAdapter extends PagingBaseAdapter<News> {
 
     @Override
     public long getItemId(int position) {
-        return 0;
+        return items.get(position).hashCode();
+    }
+
+    public List<News> getItems() {
+        return items;
     }
 
     @Override

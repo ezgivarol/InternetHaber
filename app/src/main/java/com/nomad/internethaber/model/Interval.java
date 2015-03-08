@@ -24,12 +24,12 @@ public final class Interval {
         return this;
     }
 
-    public int getFrom() {
-        return mFrom;
+    public String getFrom() {
+        return mFrom + "";
     }
 
-    public int getTo() {
-        return mTo;
+    public String getTo() {
+        return mTo + "";
     }
 
 }

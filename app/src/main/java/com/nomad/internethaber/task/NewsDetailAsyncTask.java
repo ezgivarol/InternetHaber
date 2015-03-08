@@ -3,6 +3,7 @@ package com.nomad.internethaber.task;
 import android.os.AsyncTask;
 
 import com.nomad.internethaber.bean.NewsDetailResponseBean;
+import com.nomad.internethaber.event.NewsDetailFailureResponseEvent;
 import com.nomad.internethaber.event.NewsDetailRequestEvent;
 import com.nomad.internethaber.event.NewsDetailSuccessResponseEvent;
 import com.nomad.internethaber.event.NewsFailureResponseEvent;
@@ -50,7 +51,7 @@ public final class NewsDetailAsyncTask extends AsyncTask<Void, Void, Boolean> {
             successEvent.setBean(mBean);
             BusProvider.getInstance().post(successEvent);
         } else {
-            NewsFailureResponseEvent failureResponseEvent = new NewsFailureResponseEvent();
+            NewsDetailFailureResponseEvent failureResponseEvent = new NewsDetailFailureResponseEvent();
             BusProvider.getInstance().post(failureResponseEvent);
         }
     }

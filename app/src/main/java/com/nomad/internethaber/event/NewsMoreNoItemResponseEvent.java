@@ -2,7 +2,7 @@ package com.nomad.internethaber.event;
 
 import com.nomad.internethaber.bean.NewsResponseBean;
 
-public final class NewsNoItemResponseEvent extends NewsMoreResponseEvent {
+public final class NewsMoreNoItemResponseEvent extends NewsMoreResponseEvent {
     private NewsResponseBean mBean;
 
     public void setBean(NewsResponseBean bean) {

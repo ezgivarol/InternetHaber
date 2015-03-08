@@ -1,25 +1,38 @@
 package com.nomad.internethaber.adapter;
 
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.nomad.internethaber.fragment.NewsDetailPagerFragment;
-import com.nomad.internethaber.model.NewsDetail;
+import com.nomad.internethaber.model.News;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public final class NewsDetailPagerAdapter extends FragmentStatePagerAdapter {
-    private ArrayList<NewsDetail> mList;
+    private ArrayList<News> mList;
+    private OnPagingListener mListener;
+    private boolean isLoading;
+    private boolean hasMoreItems = true;
 
-    public NewsDetailPagerAdapter(FragmentManager fm) {
+    public NewsDetailPagerAdapter(@NonNull FragmentManager fm) {
         super(fm);
+    }
+
+    public NewsDetailPagerAdapter(@NonNull FragmentManager fm, @NonNull ArrayList<News> list) {
+        super(fm);
+        mList = list;
     }
 
     @Override
     public Fragment getItem(int position) {
-        NewsDetail newsDetail = mList.get(position);
-        return NewsDetailPagerFragment.getInstance(newsDetail);
+        checkPage(position);
+
+        News news = mList.get(position);
+        return NewsDetailPagerFragment.getInstance(news);
     }
 
     @Override
@@ -27,7 +40,46 @@ public final class NewsDetailPagerAdapter extends FragmentStatePagerAdapter {
         return mList.size();
     }
 
-    public void setNewsDetailList(ArrayList<NewsDetail> list) {
+    private void checkPage(@NonNull int position) {
+        if (!hasMoreItems)
+            return;
+
+        if (mListener == null)
+            return;
+
+        int diff = getCount() - position;
+        if (!isLoading && diff < 5) {
+            isLoading = true;
+            mListener.onMorePageLoad(position);
+        }
+    }
+
+    public void addMoreItems(List<News> list) {
+        mList.addAll(list);
+        notifyDataSetChanged();
+    }
+
+    public void setNewsList(@NonNull ArrayList<News> list) {
         mList = list;
+    }
+
+    public void setOnPagingListener(@Nullable OnPagingListener listener) {
+        mListener = listener;
+    }
+
+    public boolean isLoading() {
+        return isLoading;
+    }
+
+    public void setHasMoreItems(boolean hasMoreItems) {
+        this.hasMoreItems = hasMoreItems;
+    }
+
+    public void setLoading(@NonNull boolean isLoading) {
+        this.isLoading = isLoading;
+    }
+
+    public interface OnPagingListener {
+        public void onMorePageLoad(@NonNull int position);
     }
 }
