@@ -1,5 +1,6 @@
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.nomad.internethaber">
 
     <!-- Permissions ! -->
@@ -16,7 +17,8 @@
     <application
         android:name=".application.InternetHaberApplication"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name">
+        android:label="@string/app_name"
+        tools:replace="android:icon">
 
         <!-- Home Activity ! -->
         <activity

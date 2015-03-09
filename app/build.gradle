@@ -85,6 +85,7 @@ dependencies {
     compile 'com.github.xiprox.errorview:library:1.0.0'
     compile 'com.balysv:material-ripple:1.0.1'
     compile 'com.github.ozodrukh:CircularReveal:1.0@aar'
+    compile 'com.xgc1986.android:parallaxpagertransformer:1.0.0'
 
     // Log Mechanism
     compile 'com.jakewharton.timber:timber:2.7.1'

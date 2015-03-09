@@ -21,6 +21,7 @@ import com.nomad.internethaber.model.Interval;
 import com.nomad.internethaber.model.News;
 import com.nomad.internethaber.task.NewsMoreAsyncTask;
 import com.squareup.otto.Subscribe;
+import com.xgc1986.parallaxPagerTransformer.ParallaxPagerTransformer;
 
 import java.util.ArrayList;
 
@@ -53,20 +54,24 @@ public final class NewsDetailActivity extends BaseActivity implements NewsDetail
 
         mInterval = new Interval();
 
+
         mPagerAdapter = new NewsDetailPagerAdapter(getSupportFragmentManager());
         mPagerAdapter.setOnPagingListener(this);
         mPagerAdapter.setNewsList(mList);
 
+        ParallaxPagerTransformer parallaxPagerTransformer = new ParallaxPagerTransformer(R.id.fragment_news_detail_pager_photo_view);
+
         int position = NavigationHelper.getSelectedNewsPosition();
         mViewPager.setAdapter(mPagerAdapter);
         mViewPager.setCurrentItem(position);
+        mViewPager.setPageTransformer(true, parallaxPagerTransformer);
     }
 
     @Override
-    public void onMorePageLoad(@NonNull int position) {
+    public void onMorePageLoad(@NonNull int page) {
         mPagerAdapter.setLoading(true);
 
-        mInterval.getNextPager(position);
+        mInterval.calculate(page);
         String from = mInterval.getFrom();
         String to = mInterval.getTo();
         String category = mCategory.getId();

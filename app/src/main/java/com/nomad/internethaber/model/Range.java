@@ -31,6 +31,15 @@ public final class Range {
         return this;
     }
 
+    public static int getPage() {
+        return mPageCount;
+    }
+
+    public static int turnPage() {
+        mPageCount++;
+        return mPageCount;
+    }
+
     public String getFrom() {
         return mFrom + "";
     }
