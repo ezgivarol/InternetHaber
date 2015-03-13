@@ -4,8 +4,10 @@ import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 
 import com.nispok.snackbar.Snackbar;
 import com.nispok.snackbar.listeners.ActionClickListener;
@@ -79,6 +81,19 @@ public final class NewsDetailActivity extends BaseActivity implements NewsDetail
         mViewPager.setPageTransformer(true, parallaxPagerTransformer);
 
         mInsetsFrameLayout.setOnInsetsCallback(this);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case android.R.id.home:
+                onBackPressed();
+                // TODO Use "NavUtils.navigateUpFromSameTask(this)" and restore states.
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     @Override

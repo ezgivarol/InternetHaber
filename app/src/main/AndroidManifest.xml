@@ -43,7 +43,11 @@
         <activity
             android:name=".activity.NewsDetailActivity"
             android:label=""
-            android:theme="@style/NewsDetailTheme"/>
+            android:theme="@style/NewsDetailTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.HomeActivity"/>
+        </activity>
 
     </application>
 

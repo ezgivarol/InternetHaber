@@ -16,10 +16,10 @@
 
     <color name="color_text_primary">#FFFFFF</color>
     <color name="color_text_secondry">#727272</color>
+    <color name="color_text_inverse">#CCCCCC</color>
     <color name="color_navigation">#000000</color>
     <color name="color_divider">#B6B6B6</color>
     <color name="color_selected_navigation">#ffdbdbdb</color>
-
     <color name="color_image_primary">#616161</color>
     <color name="color_image_primary_dark">#424242</color>
     <color name="color_image_accent">#FFFFFF</color>

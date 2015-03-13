@@ -9,7 +9,7 @@
         android:id="@+id/fragment_news_detail_pager_statusbar_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="?attr/colorPrimaryDark"/>
+        android:background="@color/color_home_primary_dark"/>
 
     <com.emilsjolander.components.StickyScrollViewItems.StickyScrollView
         android:layout_width="match_parent"
