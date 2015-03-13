@@ -43,7 +43,7 @@
         <activity
             android:name=".activity.NewsDetailActivity"
             android:label=""
-            android:theme="@style/HomeTheme"/>
+            android:theme="@style/NewsDetailTheme"/>
 
     </application>
 

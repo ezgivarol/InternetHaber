@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
 
+    compileOptions.encoding = 'UTF-8'
     signingConfigs {
 
         signingTest {
@@ -86,6 +87,7 @@ dependencies {
     compile 'com.balysv:material-ripple:1.0.1'
     compile 'com.github.ozodrukh:CircularReveal:1.0@aar'
     compile 'com.xgc1986.android:parallaxpagertransformer:1.0.0'
+    compile 'se.emilsjolander:StickyScrollViewItems:+'
 
     // Log Mechanism
     compile 'com.jakewharton.timber:timber:2.7.1'

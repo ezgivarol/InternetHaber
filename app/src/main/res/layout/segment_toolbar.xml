@@ -1,8 +1,8 @@
 <merge>
 
-    <com.nomad.internethaber.view.StyledToolbar
+    <com.nomad.internethaber.view.SubtitledToolbar
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/activity_home_toolbar"
+        android:id="@+id/activity_toolbar"
         style="@style/style_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

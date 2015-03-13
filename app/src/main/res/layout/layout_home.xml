@@ -14,7 +14,7 @@
         android:id="@+id/activity_home_drawerlayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/activity_home_toolbar">
+        android:layout_below="@+id/activity_toolbar">
 
         <fragment
             android:name="com.nomad.internethaber.fragment.NewsFragment"
@@ -37,6 +37,6 @@
         android:layout_width="match_parent"
         android:layout_height="4dp"
         android:background="@drawable/drawable_shadow"
-        android:layout_below="@id/activity_home_toolbar"/>
+        android:layout_below="@id/activity_toolbar"/>
 
 </RelativeLayout>

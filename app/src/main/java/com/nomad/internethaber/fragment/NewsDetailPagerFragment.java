@@ -161,9 +161,6 @@ public final class NewsDetailPagerFragment extends BaseFragment implements Callb
 
         int backgroundColor = vibrantSwatch.getRgb();
         mTitleTextView.setBackgroundColor(backgroundColor);
-
-        int titleTextColor = vibrantSwatch.getTitleTextColor();
-        mTitleTextView.setTextColor(titleTextColor);
     }
 
 }

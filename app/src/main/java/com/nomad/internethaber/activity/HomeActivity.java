@@ -9,15 +9,15 @@ import com.nomad.internethaber.event.DrawerOpenedEvent;
 import com.nomad.internethaber.event.NavigationItemSelectEvent;
 import com.nomad.internethaber.fragment.NavigationDrawerFragment;
 import com.nomad.internethaber.helper.NavigationHelper;
-import com.nomad.internethaber.view.StyledToolbar;
+import com.nomad.internethaber.view.SubtitledToolbar;
 import com.squareup.otto.Subscribe;
 
 import butterknife.InjectView;
 
 public final class HomeActivity extends BaseActivity {
 
-    @InjectView(R.id.activity_home_toolbar)
-    protected StyledToolbar mToolbar;
+    @InjectView(R.id.activity_toolbar)
+    protected SubtitledToolbar mToolbar;
 
     @InjectView(R.id.activity_home_drawerlayout)
     protected DrawerLayout mDrawerLayout;
@@ -34,7 +34,7 @@ public final class HomeActivity extends BaseActivity {
     public void onSupportContentChanged() {
         super.onSupportContentChanged();
 
-        mToolbar = (StyledToolbar) findViewById(R.id.activity_home_toolbar);
+        mToolbar = (SubtitledToolbar) findViewById(R.id.activity_toolbar);
         mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.activity_home_fragment_drawer);
     }
 

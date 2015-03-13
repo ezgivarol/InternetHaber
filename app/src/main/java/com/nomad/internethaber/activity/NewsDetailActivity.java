@@ -1,9 +1,11 @@
 package com.nomad.internethaber.activity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.Toolbar;
 
 import com.nispok.snackbar.Snackbar;
 import com.nispok.snackbar.listeners.ActionClickListener;
@@ -20,6 +22,7 @@ import com.nomad.internethaber.model.Category;
 import com.nomad.internethaber.model.Interval;
 import com.nomad.internethaber.model.News;
 import com.nomad.internethaber.task.NewsMoreAsyncTask;
+import com.nomad.internethaber.view.TransparentToolbar;
 import com.squareup.otto.Subscribe;
 import com.xgc1986.parallaxPagerTransformer.ParallaxPagerTransformer;
 
@@ -31,6 +34,9 @@ public final class NewsDetailActivity extends BaseActivity implements NewsDetail
 
     @InjectView(R.id.layout_news_detail_pagerview)
     protected ViewPager mViewPager;
+
+    @InjectView(R.id.activity_toolbar)
+    protected Toolbar mToolbar;
 
     private NewsDetailPagerAdapter mPagerAdapter;
     private Interval mInterval;
@@ -49,11 +55,13 @@ public final class NewsDetailActivity extends BaseActivity implements NewsDetail
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         mList = (ArrayList<News>) getIntent().getExtras().get("list");
         mCategory = (Category) getIntent().getExtras().get("category");
 
         mInterval = new Interval();
-
 
         mPagerAdapter = new NewsDetailPagerAdapter(getSupportFragmentManager());
         mPagerAdapter.setOnPagingListener(this);
