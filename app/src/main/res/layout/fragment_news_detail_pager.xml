@@ -1,53 +1,67 @@
-<com.emilsjolander.components.StickyScrollViewItems.StickyScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <com.nomad.internethaber.view.StatusBarView
+        android:id="@+id/fragment_news_detail_pager_statusbar_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="0dp"
+        android:background="?attr/colorPrimaryDark"/>
 
-        <com.nomad.internethaber.view.RectangularImageView
-            android:id="@+id/fragment_news_detail_pager_photo_view"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"/>
+    <com.emilsjolander.components.StickyScrollViewItems.StickyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:tag="sticky">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <com.devspark.robototextview.widget.RobotoTextView
-            android:id="@+id/fragment_news_detail_pager_title_view"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:minHeight="?attr/actionBarSize"
-            android:maxHeight="128dp"
-            android:paddingLeft="72dp"
-            app:typeface="roboto_medium"
-            android:background="@color/color_home_primary_dark"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"/>
-
-            <View
+            <com.nomad.internethaber.view.RectangularImageView
+                android:id="@+id/fragment_news_detail_pager_photo_view"
                 android:layout_width="match_parent"
-                android:layout_height="4dp"
-                android:background="@drawable/drawable_shadow"/>
-        </LinearLayout>
+                android:layout_height="0dp"/>
 
-        <com.devspark.robototextview.widget.RobotoTextView
-            android:id="@+id/fragment_news_detail_pager_content_view"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            app:typeface="roboto_light"
-            android:textSize="16sp"/>
-    </LinearLayout>
-</com.emilsjolander.components.StickyScrollViewItems.StickyScrollView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:tag="sticky">
+
+                <com.devspark.robototextview.widget.RobotoTextView
+                    android:id="@+id/fragment_news_detail_pager_title_view"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="?attr/actionBarSize"
+                    android:maxHeight="128dp"
+                    android:paddingLeft="72dp"
+                    android:paddingRight="16dp"
+                    app:typeface="roboto_medium"
+                    android:background="@color/color_home_primary_dark"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="@drawable/drawable_shadow"/>
+            </LinearLayout>
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                android:id="@+id/fragment_news_detail_pager_content_view"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:typeface="roboto_light"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </com.emilsjolander.components.StickyScrollViewItems.StickyScrollView>
+</LinearLayout>

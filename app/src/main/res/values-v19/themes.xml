@@ -1,0 +1,19 @@
+<resources>
+
+        <style name="NewsDetailTheme" parent="Theme.AppCompat.NoActionBar">
+                <item name="colorPrimary">@android:color/transparent</item>
+                <item name="colorPrimaryDark">@color/color_home_primary_dark</item>
+                <item name="colorAccent">@color/color_home_accent</item>
+
+                <item name="drawerArrowStyle">@style/style_drawer_arrow</item>
+
+                <item name="android:textColorPrimary">@color/color_text_primary</item>
+                <item name="android:textColorSecondary">@color/color_text_secondry</item>
+                <item name="android:textColor">@android:color/black</item>
+
+                <item name="android:windowBackground">@color/color_window_background</item>
+                <item name="android:windowActionBarOverlay">true</item>
+                <item name="android:windowTranslucentStatus">true</item>
+                <item name="android:windowTranslucentNavigation">false</item>
+        </style>
+</resources>

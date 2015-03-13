@@ -13,7 +13,6 @@ import android.support.v7.graphics.Palette;
 import android.text.Html;
 import android.text.Spanned;
 import android.view.View;
-import android.widget.TextView;
 
 import com.devspark.robototextview.widget.RobotoTextView;
 import com.nomad.internethaber.R;
@@ -25,6 +24,7 @@ import com.nomad.internethaber.model.News;
 import com.nomad.internethaber.model.NewsDetail;
 import com.nomad.internethaber.provider.RestAdapterProvider;
 import com.nomad.internethaber.view.RectangularImageView;
+import com.nomad.internethaber.view.StatusBarView;
 import com.squareup.picasso.Picasso;
 
 import butterknife.InjectView;
@@ -44,6 +44,9 @@ public final class NewsDetailPagerFragment extends BaseFragment implements Callb
 
     @InjectView(R.id.fragment_news_detail_pager_content_view)
     protected RobotoTextView mContentTextView;
+
+    @InjectView(R.id.fragment_news_detail_pager_statusbar_view)
+    protected StatusBarView mStatusBarView;
 
     private News mNews;
     private NewsDetail mNewsDetail;
@@ -161,6 +164,7 @@ public final class NewsDetailPagerFragment extends BaseFragment implements Callb
 
         int backgroundColor = vibrantSwatch.getRgb();
         mTitleTextView.setBackgroundColor(backgroundColor);
+        mStatusBarView.setBackgroundColor(backgroundColor);
     }
 
 }

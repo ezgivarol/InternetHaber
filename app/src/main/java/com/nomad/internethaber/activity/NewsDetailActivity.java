@@ -1,6 +1,6 @@
 package com.nomad.internethaber.activity;
 
-import android.graphics.Color;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -22,7 +22,7 @@ import com.nomad.internethaber.model.Category;
 import com.nomad.internethaber.model.Interval;
 import com.nomad.internethaber.model.News;
 import com.nomad.internethaber.task.NewsMoreAsyncTask;
-import com.nomad.internethaber.view.TransparentToolbar;
+import com.nomad.internethaber.view.DrawInsetsFrameLayout;
 import com.squareup.otto.Subscribe;
 import com.xgc1986.parallaxPagerTransformer.ParallaxPagerTransformer;
 
@@ -30,13 +30,16 @@ import java.util.ArrayList;
 
 import butterknife.InjectView;
 
-public final class NewsDetailActivity extends BaseActivity implements NewsDetailPagerAdapter.OnPagingListener, ActionClickListener {
+public final class NewsDetailActivity extends BaseActivity implements NewsDetailPagerAdapter.OnPagingListener, ActionClickListener, DrawInsetsFrameLayout.OnInsetsCallback {
 
     @InjectView(R.id.layout_news_detail_pagerview)
     protected ViewPager mViewPager;
 
     @InjectView(R.id.activity_toolbar)
     protected Toolbar mToolbar;
+
+    @InjectView(R.id.layout_news_detail_inset_framelayout)
+    protected DrawInsetsFrameLayout mInsetsFrameLayout;
 
     private NewsDetailPagerAdapter mPagerAdapter;
     private Interval mInterval;
@@ -58,6 +61,7 @@ public final class NewsDetailActivity extends BaseActivity implements NewsDetail
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+
         mList = (ArrayList<News>) getIntent().getExtras().get("list");
         mCategory = (Category) getIntent().getExtras().get("category");
 
@@ -73,6 +77,8 @@ public final class NewsDetailActivity extends BaseActivity implements NewsDetail
         mViewPager.setAdapter(mPagerAdapter);
         mViewPager.setCurrentItem(position);
         mViewPager.setPageTransformer(true, parallaxPagerTransformer);
+
+        mInsetsFrameLayout.setOnInsetsCallback(this);
     }
 
     @Override
@@ -129,5 +135,10 @@ public final class NewsDetailActivity extends BaseActivity implements NewsDetail
     @Override
     public void onActionClicked(Snackbar snackbar) {
 
+    }
+
+    @Override
+    public void onInsetsChanged(Rect insets) {
+        mToolbar.setPadding(insets.left, insets.top, insets.right, insets.bottom);
     }
 }
