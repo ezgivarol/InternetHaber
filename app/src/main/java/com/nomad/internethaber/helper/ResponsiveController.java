@@ -4,10 +4,10 @@ import android.content.res.Resources;
 
 import com.nomad.internethaber.R;
 
-public final class ResponsiveControler {
+public final class ResponsiveController {
     private boolean isTablet;
 
-    public ResponsiveControler(Resources resources) {
+    public ResponsiveController(Resources resources) {
         isTablet = resources.getBoolean(R.bool.is_tablet);
     }
 

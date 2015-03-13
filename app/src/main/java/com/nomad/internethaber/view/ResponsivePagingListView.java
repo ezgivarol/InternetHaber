@@ -38,7 +38,7 @@ public final class ResponsivePagingListView extends PagingListView implements Ad
     @Platform(device = Platform.Device.BOTH)
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        boolean isTablet = InternetHaberApplication.getResponsiveControler().isTablet();
+        boolean isTablet = InternetHaberApplication.getResponsiveController().isTablet();
 
         NewsItemClickEvent event = NewsItemClickEvent.newInstance(isTablet);
         event.setPosition(position);
