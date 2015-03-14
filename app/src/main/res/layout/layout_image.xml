@@ -1,11 +1,35 @@
-<it.sephiroth.android.library.imagezoom.ImageViewTouch
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/layout_image_imageview"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:transitionName="image"
-    tools:context="com.nomad.internethaber.activity.ImageActivity"/>
+    android:layout_height="match_parent">
+
+    <it.sephiroth.android.library.imagezoom.ImageViewTouch
+        android:id="@+id/layout_image_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:transitionName="image"
+        tools:context="com.nomad.internethaber.activity.ImageActivity"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.nomad.internethaber.view.StatusBarView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="?attr/colorPrimary"/>
+
+        <include
+            layout="@layout/segment_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"/>
+
+    </LinearLayout>
+
+</FrameLayout>
 
 
 

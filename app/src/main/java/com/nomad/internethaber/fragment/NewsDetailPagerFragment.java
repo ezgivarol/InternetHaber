@@ -3,7 +3,6 @@ package com.nomad.internethaber.fragment;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -18,7 +17,6 @@ import com.devspark.robototextview.widget.RobotoTextView;
 import com.nomad.internethaber.R;
 import com.nomad.internethaber.activity.ImageActivity;
 import com.nomad.internethaber.bean.NewsDetailResponseBean;
-import com.nomad.internethaber.helper.SelectedImageHelper;
 import com.nomad.internethaber.interfaces.NewsDetailPagerRestInterface;
 import com.nomad.internethaber.model.News;
 import com.nomad.internethaber.model.NewsDetail;
@@ -51,6 +49,7 @@ public final class NewsDetailPagerFragment extends BaseFragment implements Callb
     private News mNews;
     private NewsDetail mNewsDetail;
     private boolean shouldRun;
+    private Picasso mPicasso;
 
     public static NewsDetailPagerFragment getInstance(News news) {
         NewsDetailPagerFragment fragment = new NewsDetailPagerFragment();
@@ -74,6 +73,8 @@ public final class NewsDetailPagerFragment extends BaseFragment implements Callb
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        mPicasso = Picasso.with(getContext());
+
         String id = mNews.getId();
         String type = mNews.getType();
 
@@ -95,13 +96,10 @@ public final class NewsDetailPagerFragment extends BaseFragment implements Callb
 
     @OnClick(R.id.fragment_news_detail_pager_photo_view)
     public void onPhotoClicked(RectangularImageView view) {
-        Drawable drawable = view.getDrawable();
-        if (drawable == null)
-            return;
-
-        SelectedImageHelper.setPhoto(drawable);
-
+        String photoUrl = mNewsDetail.getPhoto();
         Intent intent = new Intent(getContext(), ImageActivity.class);
+        intent.putExtra("url", photoUrl);
+
         ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), view, "image");
         ActivityCompat.startActivity(getActivity(), intent, options.toBundle());
     }
@@ -120,8 +118,8 @@ public final class NewsDetailPagerFragment extends BaseFragment implements Callb
 
         mNewsDetail = bean.getNewsDetail();
 
-        String photo = mNewsDetail.getThumbnail();
-        Picasso.with(getContext()).load(photo).fit().centerCrop().into(mPhotoView, this);
+        String photoUrl = mNewsDetail.getThumbnail();
+        mPicasso.load(photoUrl).fit().centerCrop().into(mPhotoView, this);
 
         String title = mNewsDetail.getTitle();
         Spanned spannedTitle = Html.fromHtml(title);
