@@ -1085,6 +1085,23 @@ android.support.v7.widget.Toolbar$LayoutParams:
     static final int CUSTOM
     static final int SYSTEM
     static final int EXPANDED
+com.balysv.materialripple.MaterialRippleLayout:
+    private static final int DEFAULT_DURATION
+    private static final int DEFAULT_FADE_DURATION
+    private static final float DEFAULT_DIAMETER_DP
+    private static final float DEFAULT_ALPHA
+    private static final int DEFAULT_COLOR
+    private static final int DEFAULT_BACKGROUND
+    private static final boolean DEFAULT_HOVER
+    private static final boolean DEFAULT_DELAY_CLICK
+    private static final boolean DEFAULT_PERSISTENT
+    private static final boolean DEFAULT_SEARCH_ADAPTER
+    private static final boolean DEFAULT_RIPPLE_OVERLAY
+    private static final int DEFAULT_ROUNDED_CORNERS
+    private static final int FADE_EXTRA_DELAY
+    private static final long HOVER_DURATION
+com.emilsjolander.components.StickyScrollViewItems.StickyScrollView:
+    private static final int DEFAULT_SHADOW_HEIGHT
 com.google.gson.DefaultDateTypeAdapter:
     53:54:DefaultDateTypeAdapter(int)
 com.google.gson.FieldAttributes:
@@ -1327,6 +1344,20 @@ com.squareup.picasso.Utils$BitmapHoneycombMR1:
     413:413:private Utils$BitmapHoneycombMR1()
 com.squareup.picasso.Utils$OkHttpLoaderCreator:
     419:419:private Utils$OkHttpLoaderCreator()
+io.codetail.animation.RevealAnimator$RevealFinishedGingerbread:
+    35:38:RevealAnimator$RevealFinishedGingerbread(io.codetail.animation.RevealAnimator,android.graphics.Rect)
+io.codetail.animation.RevealAnimator$RevealFinishedIceCreamSandwich:
+    64:69:RevealAnimator$RevealFinishedIceCreamSandwich(io.codetail.animation.RevealAnimator,android.graphics.Rect)
+io.codetail.animation.RevealAnimator$RevealFinishedJellyBeanMr1:
+    104:109:RevealAnimator$RevealFinishedJellyBeanMr1(io.codetail.animation.RevealAnimator,android.graphics.Rect)
+io.codetail.animation.SupportAnimatorLollipop
+io.codetail.animation.SupportAnimatorLollipop$1
+io.codetail.animation.SupportAnimatorPreL
+io.codetail.animation.SupportAnimatorPreL$1
+io.codetail.widget.FrameLayoutCompat:
+    private static final int DEFAULT_CHILD_GRAVITY
+io.codetail.widget.RevealLinearLayout:
+    42:44:private void setCenter(float,float)
 it.sephiroth.android.library.imagezoom.ImageViewTouch:
     static final float SCROLL_DELTA_THRESHOLD
 timber.log.Timber$DebugTree:

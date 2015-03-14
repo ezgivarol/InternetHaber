@@ -6720,6 +6720,95 @@ butterknife.internal.ViewInjector: void emitHumanDescription(java.lang.StringBui
 butterknife.internal.ViewInjector$1
 butterknife.internal.ViewInjector$1: int[] $SwitchMap$butterknife$internal$CollectionBinding$Kind
 butterknife.internal.ViewInjector$1: void <clinit>()
+com.balysv.materialripple.BuildConfig
+com.balysv.materialripple.BuildConfig: boolean DEBUG
+com.balysv.materialripple.BuildConfig: java.lang.String APPLICATION_ID
+com.balysv.materialripple.BuildConfig: java.lang.String BUILD_TYPE
+com.balysv.materialripple.BuildConfig: java.lang.String FLAVOR
+com.balysv.materialripple.BuildConfig: int VERSION_CODE
+com.balysv.materialripple.BuildConfig: java.lang.String VERSION_NAME
+com.balysv.materialripple.BuildConfig: BuildConfig()
+com.balysv.materialripple.MaterialRippleLayout
+com.balysv.materialripple.MaterialRippleLayout: com.balysv.materialripple.MaterialRippleLayout$RippleBuilder on(android.view.View)
+com.balysv.materialripple.MaterialRippleLayout: MaterialRippleLayout(android.content.Context)
+com.balysv.materialripple.MaterialRippleLayout: MaterialRippleLayout(android.content.Context,android.util.AttributeSet)
+com.balysv.materialripple.MaterialRippleLayout: MaterialRippleLayout(android.content.Context,android.util.AttributeSet,int)
+com.balysv.materialripple.MaterialRippleLayout: android.view.View getChildView()
+com.balysv.materialripple.MaterialRippleLayout: void addView(android.view.View,int,android.view.ViewGroup$LayoutParams)
+com.balysv.materialripple.MaterialRippleLayout: void setOnClickListener(android.view.View$OnClickListener)
+com.balysv.materialripple.MaterialRippleLayout: boolean onInterceptTouchEvent(android.view.MotionEvent)
+com.balysv.materialripple.MaterialRippleLayout: boolean onTouchEvent(android.view.MotionEvent)
+com.balysv.materialripple.MaterialRippleLayout: float getEndRadius()
+com.balysv.materialripple.MaterialRippleLayout: void onSizeChanged(int,int,int,int)
+com.balysv.materialripple.MaterialRippleLayout: boolean isInEditMode()
+com.balysv.materialripple.MaterialRippleLayout: void draw(android.graphics.Canvas)
+com.balysv.materialripple.MaterialRippleLayout: float getRadius()
+com.balysv.materialripple.MaterialRippleLayout: void setRadius(float)
+com.balysv.materialripple.MaterialRippleLayout: int getRippleAlpha()
+com.balysv.materialripple.MaterialRippleLayout: void setRippleAlpha(java.lang.Integer)
+com.balysv.materialripple.MaterialRippleLayout: void setRippleColor(int)
+com.balysv.materialripple.MaterialRippleLayout: void setRippleOverlay(boolean)
+com.balysv.materialripple.MaterialRippleLayout: void setRippleDiameter(int)
+com.balysv.materialripple.MaterialRippleLayout: void setRippleDuration(int)
+com.balysv.materialripple.MaterialRippleLayout: void setRippleBackground(int)
+com.balysv.materialripple.MaterialRippleLayout: void setRippleHover(boolean)
+com.balysv.materialripple.MaterialRippleLayout: void setRippleDelayClick(boolean)
+com.balysv.materialripple.MaterialRippleLayout: void setRippleFadeDuration(int)
+com.balysv.materialripple.MaterialRippleLayout: void setRipplePersistent(boolean)
+com.balysv.materialripple.MaterialRippleLayout: void setRippleInAdapter(boolean)
+com.balysv.materialripple.MaterialRippleLayout: void setRippleRoundedCorners(int)
+com.balysv.materialripple.MaterialRippleLayout: void setDefaultRippleAlpha(int)
+com.balysv.materialripple.MaterialRippleLayout: void performRipple()
+com.balysv.materialripple.MaterialRippleLayout: void performRipple(android.graphics.Point)
+com.balysv.materialripple.MaterialRippleLayout$RippleBuilder
+com.balysv.materialripple.MaterialRippleLayout$RippleBuilder: MaterialRippleLayout$RippleBuilder(android.view.View)
+com.balysv.materialripple.MaterialRippleLayout$RippleBuilder: com.balysv.materialripple.MaterialRippleLayout$RippleBuilder rippleColor(int)
+com.balysv.materialripple.MaterialRippleLayout$RippleBuilder: com.balysv.materialripple.MaterialRippleLayout$RippleBuilder rippleOverlay(boolean)
+com.balysv.materialripple.MaterialRippleLayout$RippleBuilder: com.balysv.materialripple.MaterialRippleLayout$RippleBuilder rippleHover(boolean)
+com.balysv.materialripple.MaterialRippleLayout$RippleBuilder: com.balysv.materialripple.MaterialRippleLayout$RippleBuilder rippleDiameterDp(int)
+com.balysv.materialripple.MaterialRippleLayout$RippleBuilder: com.balysv.materialripple.MaterialRippleLayout$RippleBuilder rippleDuration(int)
+com.balysv.materialripple.MaterialRippleLayout$RippleBuilder: com.balysv.materialripple.MaterialRippleLayout$RippleBuilder rippleAlpha(float)
+com.balysv.materialripple.MaterialRippleLayout$RippleBuilder: com.balysv.materialripple.MaterialRippleLayout$RippleBuilder rippleDelayClick(boolean)
+com.balysv.materialripple.MaterialRippleLayout$RippleBuilder: com.balysv.materialripple.MaterialRippleLayout$RippleBuilder rippleFadeDuration(int)
+com.balysv.materialripple.MaterialRippleLayout$RippleBuilder: com.balysv.materialripple.MaterialRippleLayout$RippleBuilder ripplePersistent(boolean)
+com.balysv.materialripple.MaterialRippleLayout$RippleBuilder: com.balysv.materialripple.MaterialRippleLayout$RippleBuilder rippleBackground(int)
+com.balysv.materialripple.MaterialRippleLayout$RippleBuilder: com.balysv.materialripple.MaterialRippleLayout$RippleBuilder rippleInAdapter(boolean)
+com.balysv.materialripple.MaterialRippleLayout$RippleBuilder: com.balysv.materialripple.MaterialRippleLayout$RippleBuilder rippleRoundedCorners(int)
+com.balysv.materialripple.MaterialRippleLayout$RippleBuilder: com.balysv.materialripple.MaterialRippleLayout create()
+com.balysv.materialripple.R
+com.balysv.materialripple.R: R()
+com.balysv.materialripple.R$attr
+com.balysv.materialripple.R$attr: int mrl_rippleAlpha
+com.balysv.materialripple.R$attr: int mrl_rippleBackground
+com.balysv.materialripple.R$attr: int mrl_rippleColor
+com.balysv.materialripple.R$attr: int mrl_rippleDelayClick
+com.balysv.materialripple.R$attr: int mrl_rippleDimension
+com.balysv.materialripple.R$attr: int mrl_rippleDuration
+com.balysv.materialripple.R$attr: int mrl_rippleFadeDuration
+com.balysv.materialripple.R$attr: int mrl_rippleHover
+com.balysv.materialripple.R$attr: int mrl_rippleInAdapter
+com.balysv.materialripple.R$attr: int mrl_rippleOverlay
+com.balysv.materialripple.R$attr: int mrl_ripplePersistent
+com.balysv.materialripple.R$attr: int mrl_rippleRoundedCorners
+com.balysv.materialripple.R$attr: R$attr()
+com.balysv.materialripple.R$color
+com.balysv.materialripple.R$color: int transparent
+com.balysv.materialripple.R$color: R$color()
+com.balysv.materialripple.R$styleable
+com.balysv.materialripple.R$styleable: int[] MaterialRippleLayout
+com.balysv.materialripple.R$styleable: int MaterialRippleLayout_mrl_rippleAlpha
+com.balysv.materialripple.R$styleable: int MaterialRippleLayout_mrl_rippleBackground
+com.balysv.materialripple.R$styleable: int MaterialRippleLayout_mrl_rippleColor
+com.balysv.materialripple.R$styleable: int MaterialRippleLayout_mrl_rippleDelayClick
+com.balysv.materialripple.R$styleable: int MaterialRippleLayout_mrl_rippleDimension
+com.balysv.materialripple.R$styleable: int MaterialRippleLayout_mrl_rippleDuration
+com.balysv.materialripple.R$styleable: int MaterialRippleLayout_mrl_rippleFadeDuration
+com.balysv.materialripple.R$styleable: int MaterialRippleLayout_mrl_rippleHover
+com.balysv.materialripple.R$styleable: int MaterialRippleLayout_mrl_rippleInAdapter
+com.balysv.materialripple.R$styleable: int MaterialRippleLayout_mrl_rippleOverlay
+com.balysv.materialripple.R$styleable: int MaterialRippleLayout_mrl_ripplePersistent
+com.balysv.materialripple.R$styleable: int MaterialRippleLayout_mrl_rippleRoundedCorners
+com.balysv.materialripple.R$styleable: R$styleable()
 com.devspark.robototextview.BuildConfig
 com.devspark.robototextview.BuildConfig: boolean DEBUG
 com.devspark.robototextview.BuildConfig: java.lang.String APPLICATION_ID
@@ -7915,6 +8004,38 @@ com.devspark.robototextview.widget.RobotoToggleButton
 com.devspark.robototextview.widget.RobotoToggleButton: RobotoToggleButton(android.content.Context)
 com.devspark.robototextview.widget.RobotoToggleButton: RobotoToggleButton(android.content.Context,android.util.AttributeSet)
 com.devspark.robototextview.widget.RobotoToggleButton: RobotoToggleButton(android.content.Context,android.util.AttributeSet,int)
+com.emilsjolander.components.StickyScrollViewItems.R
+com.emilsjolander.components.StickyScrollViewItems.R: R()
+com.emilsjolander.components.StickyScrollViewItems.R$attr
+com.emilsjolander.components.StickyScrollViewItems.R$attr: int stuckShadowDrawable
+com.emilsjolander.components.StickyScrollViewItems.R$attr: int stuckShadowHeight
+com.emilsjolander.components.StickyScrollViewItems.R$attr: R$attr()
+com.emilsjolander.components.StickyScrollViewItems.R$styleable
+com.emilsjolander.components.StickyScrollViewItems.R$styleable: int[] StickyScrollView
+com.emilsjolander.components.StickyScrollViewItems.R$styleable: int StickyScrollView_stuckShadowDrawable
+com.emilsjolander.components.StickyScrollViewItems.R$styleable: int StickyScrollView_stuckShadowHeight
+com.emilsjolander.components.StickyScrollViewItems.R$styleable: R$styleable()
+com.emilsjolander.components.StickyScrollViewItems.StickyScrollView
+com.emilsjolander.components.StickyScrollViewItems.StickyScrollView: java.lang.String STICKY_TAG
+com.emilsjolander.components.StickyScrollViewItems.StickyScrollView: java.lang.String FLAG_NONCONSTANT
+com.emilsjolander.components.StickyScrollViewItems.StickyScrollView: java.lang.String FLAG_HASTRANSPARANCY
+com.emilsjolander.components.StickyScrollViewItems.StickyScrollView: StickyScrollView(android.content.Context)
+com.emilsjolander.components.StickyScrollViewItems.StickyScrollView: StickyScrollView(android.content.Context,android.util.AttributeSet)
+com.emilsjolander.components.StickyScrollViewItems.StickyScrollView: StickyScrollView(android.content.Context,android.util.AttributeSet,int)
+com.emilsjolander.components.StickyScrollViewItems.StickyScrollView: void setShadowHeight(int)
+com.emilsjolander.components.StickyScrollViewItems.StickyScrollView: void setup()
+com.emilsjolander.components.StickyScrollViewItems.StickyScrollView: void onLayout(boolean,int,int,int,int)
+com.emilsjolander.components.StickyScrollViewItems.StickyScrollView: void setClipToPadding(boolean)
+com.emilsjolander.components.StickyScrollViewItems.StickyScrollView: void addView(android.view.View)
+com.emilsjolander.components.StickyScrollViewItems.StickyScrollView: void addView(android.view.View,int)
+com.emilsjolander.components.StickyScrollViewItems.StickyScrollView: void addView(android.view.View,int,android.view.ViewGroup$LayoutParams)
+com.emilsjolander.components.StickyScrollViewItems.StickyScrollView: void addView(android.view.View,int,int)
+com.emilsjolander.components.StickyScrollViewItems.StickyScrollView: void addView(android.view.View,android.view.ViewGroup$LayoutParams)
+com.emilsjolander.components.StickyScrollViewItems.StickyScrollView: void dispatchDraw(android.graphics.Canvas)
+com.emilsjolander.components.StickyScrollViewItems.StickyScrollView: boolean dispatchTouchEvent(android.view.MotionEvent)
+com.emilsjolander.components.StickyScrollViewItems.StickyScrollView: boolean onTouchEvent(android.view.MotionEvent)
+com.emilsjolander.components.StickyScrollViewItems.StickyScrollView: void onScrollChanged(int,int,int,int)
+com.emilsjolander.components.StickyScrollViewItems.StickyScrollView: void notifyStickyAttributeChanged()
 com.google.gson.ExclusionStrategy
 com.google.gson.ExclusionStrategy: boolean shouldSkipField(com.google.gson.FieldAttributes)
 com.google.gson.ExclusionStrategy: boolean shouldSkipClass(java.lang.Class)
@@ -8981,8 +9102,21 @@ com.nomad.internethaber.R$attr: int dropdownListPreferredItemHeight
 com.nomad.internethaber.R$attr: int editTextBackground
 com.nomad.internethaber.R$attr: int editTextColor
 com.nomad.internethaber.R$attr: int elevation
+com.nomad.internethaber.R$attr: int ev_errorImage
+com.nomad.internethaber.R$attr: int ev_errorSubtitle
+com.nomad.internethaber.R$attr: int ev_errorTitle
+com.nomad.internethaber.R$attr: int ev_retryButtonBackground
+com.nomad.internethaber.R$attr: int ev_retryButtonTextColor
+com.nomad.internethaber.R$attr: int ev_showRetryButton
+com.nomad.internethaber.R$attr: int ev_showSubtitle
+com.nomad.internethaber.R$attr: int ev_showTitle
 com.nomad.internethaber.R$attr: int expandActivityOverflowButtonDrawable
 com.nomad.internethaber.R$attr: int fontFamily
+com.nomad.internethaber.R$attr: int foreground
+com.nomad.internethaber.R$attr: int foregroundGravity
+com.nomad.internethaber.R$attr: int foregroundInsidePadding
+com.nomad.internethaber.R$attr: int foregroundTint
+com.nomad.internethaber.R$attr: int foregroundTintMode
 com.nomad.internethaber.R$attr: int gapBetweenBars
 com.nomad.internethaber.R$attr: int goIcon
 com.nomad.internethaber.R$attr: int height
@@ -8993,6 +9127,7 @@ com.nomad.internethaber.R$attr: int icon
 com.nomad.internethaber.R$attr: int iconifiedByDefault
 com.nomad.internethaber.R$attr: int indeterminateProgressStyle
 com.nomad.internethaber.R$attr: int initialActivityCount
+com.nomad.internethaber.R$attr: int insetBackground
 com.nomad.internethaber.R$attr: int isLightTheme
 com.nomad.internethaber.R$attr: int itemPadding
 com.nomad.internethaber.R$attr: int layout
@@ -9005,8 +9140,21 @@ com.nomad.internethaber.R$attr: int listPreferredItemPaddingLeft
 com.nomad.internethaber.R$attr: int listPreferredItemPaddingRight
 com.nomad.internethaber.R$attr: int logo
 com.nomad.internethaber.R$attr: int maxButtonHeight
+com.nomad.internethaber.R$attr: int measureAllChildren
 com.nomad.internethaber.R$attr: int measureWithLargestChild
 com.nomad.internethaber.R$attr: int middleBarArrowSize
+com.nomad.internethaber.R$attr: int mrl_rippleAlpha
+com.nomad.internethaber.R$attr: int mrl_rippleBackground
+com.nomad.internethaber.R$attr: int mrl_rippleColor
+com.nomad.internethaber.R$attr: int mrl_rippleDelayClick
+com.nomad.internethaber.R$attr: int mrl_rippleDimension
+com.nomad.internethaber.R$attr: int mrl_rippleDuration
+com.nomad.internethaber.R$attr: int mrl_rippleFadeDuration
+com.nomad.internethaber.R$attr: int mrl_rippleHover
+com.nomad.internethaber.R$attr: int mrl_rippleInAdapter
+com.nomad.internethaber.R$attr: int mrl_rippleOverlay
+com.nomad.internethaber.R$attr: int mrl_ripplePersistent
+com.nomad.internethaber.R$attr: int mrl_rippleRoundedCorners
 com.nomad.internethaber.R$attr: int navigationContentDescription
 com.nomad.internethaber.R$attr: int navigationIcon
 com.nomad.internethaber.R$attr: int navigationMode
@@ -9039,6 +9187,8 @@ com.nomad.internethaber.R$attr: int spinnerMode
 com.nomad.internethaber.R$attr: int spinnerStyle
 com.nomad.internethaber.R$attr: int splitTrack
 com.nomad.internethaber.R$attr: int state_above_anchor
+com.nomad.internethaber.R$attr: int stuckShadowDrawable
+com.nomad.internethaber.R$attr: int stuckShadowHeight
 com.nomad.internethaber.R$attr: int submitBackground
 com.nomad.internethaber.R$attr: int subtitle
 com.nomad.internethaber.R$attr: int subtitleTextAppearance
@@ -9141,6 +9291,7 @@ com.nomad.internethaber.R$color: int color_image_primary
 com.nomad.internethaber.R$color: int color_image_primary_dark
 com.nomad.internethaber.R$color: int color_navigation
 com.nomad.internethaber.R$color: int color_selected_navigation
+com.nomad.internethaber.R$color: int color_text_inverse
 com.nomad.internethaber.R$color: int color_text_primary
 com.nomad.internethaber.R$color: int color_text_secondry
 com.nomad.internethaber.R$color: int color_window_background
@@ -9149,6 +9300,11 @@ com.nomad.internethaber.R$color: int dim_foreground_disabled_material_dark
 com.nomad.internethaber.R$color: int dim_foreground_disabled_material_light
 com.nomad.internethaber.R$color: int dim_foreground_material_dark
 com.nomad.internethaber.R$color: int dim_foreground_material_light
+com.nomad.internethaber.R$color: int error_view_retry_button_background
+com.nomad.internethaber.R$color: int error_view_retry_button_background_stroke
+com.nomad.internethaber.R$color: int error_view_text
+com.nomad.internethaber.R$color: int error_view_text_dark
+com.nomad.internethaber.R$color: int error_view_text_light
 com.nomad.internethaber.R$color: int highlighted_text_material_dark
 com.nomad.internethaber.R$color: int highlighted_text_material_light
 com.nomad.internethaber.R$color: int hint_foreground_material_dark
@@ -9180,6 +9336,7 @@ com.nomad.internethaber.R$color: int secondary_text_disabled_material_dark
 com.nomad.internethaber.R$color: int secondary_text_disabled_material_light
 com.nomad.internethaber.R$color: int switch_thumb_normal_material_dark
 com.nomad.internethaber.R$color: int switch_thumb_normal_material_light
+com.nomad.internethaber.R$color: int transparent
 com.nomad.internethaber.R$color: R$color()
 com.nomad.internethaber.R$dimen
 com.nomad.internethaber.R$dimen: int abc_action_bar_default_height_material
@@ -9301,9 +9458,12 @@ com.nomad.internethaber.R$drawable: int drawable_menu_background
 com.nomad.internethaber.R$drawable: int drawable_shadow
 com.nomad.internethaber.R$drawable: int drawable_shadow_bottom
 com.nomad.internethaber.R$drawable: int drawer_shadow
+com.nomad.internethaber.R$drawable: int error_view_cloud
+com.nomad.internethaber.R$drawable: int error_view_retry_button_background
 com.nomad.internethaber.R$drawable: int ic_action_share
 com.nomad.internethaber.R$drawable: int ic_action_web
 com.nomad.internethaber.R$drawable: int ic_drawer
+com.nomad.internethaber.R$drawable: int ic_launcher
 com.nomad.internethaber.R$drawable: int sb__bg
 com.nomad.internethaber.R$drawable: int sb__btn_bg
 com.nomad.internethaber.R$drawable: int selector_cell_drawer
@@ -9327,16 +9487,23 @@ com.nomad.internethaber.R$id: int action_web
 com.nomad.internethaber.R$id: int activity_chooser_view_content
 com.nomad.internethaber.R$id: int activity_home_drawerlayout
 com.nomad.internethaber.R$id: int activity_home_fragment_drawer
-com.nomad.internethaber.R$id: int activity_home_toolbar
+com.nomad.internethaber.R$id: int activity_toolbar
+com.nomad.internethaber.R$id: int add
 com.nomad.internethaber.R$id: int always
 com.nomad.internethaber.R$id: int beginning
 com.nomad.internethaber.R$id: int bold
+com.nomad.internethaber.R$id: int bottom
 com.nomad.internethaber.R$id: int card_view
 com.nomad.internethaber.R$id: int cell_drawer_textview
 com.nomad.internethaber.R$id: int cell_news_spot_textview
 com.nomad.internethaber.R$id: int cell_news_thumbnail_imageview
 com.nomad.internethaber.R$id: int cell_news_title_textview
+com.nomad.internethaber.R$id: int center
+com.nomad.internethaber.R$id: int center_horizontal
+com.nomad.internethaber.R$id: int center_vertical
 com.nomad.internethaber.R$id: int checkbox
+com.nomad.internethaber.R$id: int clip_horizontal
+com.nomad.internethaber.R$id: int clip_vertical
 com.nomad.internethaber.R$id: int collapseActionView
 com.nomad.internethaber.R$id: int decor_content_parent
 com.nomad.internethaber.R$id: int default_activity_button
@@ -9345,14 +9512,25 @@ com.nomad.internethaber.R$id: int disableHome
 com.nomad.internethaber.R$id: int dropdown
 com.nomad.internethaber.R$id: int edit_query
 com.nomad.internethaber.R$id: int end
+com.nomad.internethaber.R$id: int error_image
+com.nomad.internethaber.R$id: int error_retry
+com.nomad.internethaber.R$id: int error_subtitle
+com.nomad.internethaber.R$id: int error_title
 com.nomad.internethaber.R$id: int expand_activities_button
 com.nomad.internethaber.R$id: int expanded_menu
+com.nomad.internethaber.R$id: int fill
+com.nomad.internethaber.R$id: int fill_horizontal
+com.nomad.internethaber.R$id: int fill_vertical
 com.nomad.internethaber.R$id: int fragment_navigation_drawer_list
+com.nomad.internethaber.R$id: int fragment_news_composite_listview
 com.nomad.internethaber.R$id: int fragment_news_detail_content_textview
+com.nomad.internethaber.R$id: int fragment_news_detail_pager_content_view
+com.nomad.internethaber.R$id: int fragment_news_detail_pager_photo_view
+com.nomad.internethaber.R$id: int fragment_news_detail_pager_statusbar_view
+com.nomad.internethaber.R$id: int fragment_news_detail_pager_title_view
 com.nomad.internethaber.R$id: int fragment_news_detail_photo
+com.nomad.internethaber.R$id: int fragment_news_detail_scrollview
 com.nomad.internethaber.R$id: int fragment_news_detail_title_textview
-com.nomad.internethaber.R$id: int fragment_news_listview
-com.nomad.internethaber.R$id: int fragment_news_swipe_refresh_layout
 com.nomad.internethaber.R$id: int home
 com.nomad.internethaber.R$id: int homeAsUp
 com.nomad.internethaber.R$id: int icon
@@ -9360,18 +9538,23 @@ com.nomad.internethaber.R$id: int ifRoom
 com.nomad.internethaber.R$id: int image
 com.nomad.internethaber.R$id: int italic
 com.nomad.internethaber.R$id: int layout_image_imageview
+com.nomad.internethaber.R$id: int layout_news_detail_inset_framelayout
+com.nomad.internethaber.R$id: int layout_news_detail_pagerview
+com.nomad.internethaber.R$id: int left
 com.nomad.internethaber.R$id: int light
 com.nomad.internethaber.R$id: int listMode
 com.nomad.internethaber.R$id: int list_item
 com.nomad.internethaber.R$id: int loading_view
 com.nomad.internethaber.R$id: int medium
 com.nomad.internethaber.R$id: int middle
+com.nomad.internethaber.R$id: int multiply
 com.nomad.internethaber.R$id: int never
 com.nomad.internethaber.R$id: int none
 com.nomad.internethaber.R$id: int normal
 com.nomad.internethaber.R$id: int progress_circular
 com.nomad.internethaber.R$id: int progress_horizontal
 com.nomad.internethaber.R$id: int radio
+com.nomad.internethaber.R$id: int right
 com.nomad.internethaber.R$id: int roboto
 com.nomad.internethaber.R$id: int roboto_black
 com.nomad.internethaber.R$id: int roboto_black_italic
@@ -9399,6 +9582,7 @@ com.nomad.internethaber.R$id: int roboto_thin
 com.nomad.internethaber.R$id: int roboto_thin_italic
 com.nomad.internethaber.R$id: int sb__action
 com.nomad.internethaber.R$id: int sb__text
+com.nomad.internethaber.R$id: int screen
 com.nomad.internethaber.R$id: int search_badge
 com.nomad.internethaber.R$id: int search_bar
 com.nomad.internethaber.R$id: int search_button
@@ -9409,15 +9593,22 @@ com.nomad.internethaber.R$id: int search_mag_icon
 com.nomad.internethaber.R$id: int search_plate
 com.nomad.internethaber.R$id: int search_src_text
 com.nomad.internethaber.R$id: int search_voice_btn
+com.nomad.internethaber.R$id: int segment_extended_listview_error
+com.nomad.internethaber.R$id: int segment_extended_listview_list
+com.nomad.internethaber.R$id: int segment_extended_refreshlayout
 com.nomad.internethaber.R$id: int shortcut
 com.nomad.internethaber.R$id: int showCustom
 com.nomad.internethaber.R$id: int showHome
 com.nomad.internethaber.R$id: int showTitle
 com.nomad.internethaber.R$id: int split_action_bar
+com.nomad.internethaber.R$id: int src_atop
+com.nomad.internethaber.R$id: int src_in
+com.nomad.internethaber.R$id: int src_over
 com.nomad.internethaber.R$id: int submit_area
 com.nomad.internethaber.R$id: int tabMode
 com.nomad.internethaber.R$id: int thin
 com.nomad.internethaber.R$id: int title
+com.nomad.internethaber.R$id: int top
 com.nomad.internethaber.R$id: int ultra_bold
 com.nomad.internethaber.R$id: int up
 com.nomad.internethaber.R$id: int useLogo
@@ -9460,14 +9651,17 @@ com.nomad.internethaber.R$layout: int abc_simple_dropdown_hint
 com.nomad.internethaber.R$layout: int cell_drawer
 com.nomad.internethaber.R$layout: int cell_news
 com.nomad.internethaber.R$layout: int cell_news_extended
+com.nomad.internethaber.R$layout: int error_view_layout
 com.nomad.internethaber.R$layout: int fragment_drawer
 com.nomad.internethaber.R$layout: int fragment_news
 com.nomad.internethaber.R$layout: int fragment_news_detail
+com.nomad.internethaber.R$layout: int fragment_news_detail_pager
 com.nomad.internethaber.R$layout: int layout_home
 com.nomad.internethaber.R$layout: int layout_image
 com.nomad.internethaber.R$layout: int layout_news_detail
 com.nomad.internethaber.R$layout: int loading_view
 com.nomad.internethaber.R$layout: int sb__template
+com.nomad.internethaber.R$layout: int segment_extended_listview
 com.nomad.internethaber.R$layout: int segment_toolbar
 com.nomad.internethaber.R$layout: int support_simple_spinner_dropdown_item
 com.nomad.internethaber.R$layout: R$layout()
@@ -9499,6 +9693,8 @@ com.nomad.internethaber.R$string: int abc_toolbar_collapse_description
 com.nomad.internethaber.R$string: int action_settings
 com.nomad.internethaber.R$string: int app_name
 com.nomad.internethaber.R$string: int categories
+com.nomad.internethaber.R$string: int error_view_oops
+com.nomad.internethaber.R$string: int error_view_retry
 com.nomad.internethaber.R$string: int hello_world
 com.nomad.internethaber.R$string: int loading
 com.nomad.internethaber.R$string: int navigation_drawer_close
@@ -9620,6 +9816,7 @@ com.nomad.internethaber.R$style: int CardView_Dark
 com.nomad.internethaber.R$style: int CardView_Light
 com.nomad.internethaber.R$style: int HomeTheme
 com.nomad.internethaber.R$style: int ImageTheme
+com.nomad.internethaber.R$style: int NewsDetailTheme
 com.nomad.internethaber.R$style: int Platform_AppCompat
 com.nomad.internethaber.R$style: int Platform_AppCompat_Dialog
 com.nomad.internethaber.R$style: int Platform_AppCompat_Light
@@ -9814,6 +10011,8 @@ com.nomad.internethaber.R$styleable: int CardView_contentPaddingRight
 com.nomad.internethaber.R$styleable: int CardView_contentPaddingTop
 com.nomad.internethaber.R$styleable: int[] CompatTextView
 com.nomad.internethaber.R$styleable: int CompatTextView_textAllCaps
+com.nomad.internethaber.R$styleable: int[] DrawInsetsFrameLayout
+com.nomad.internethaber.R$styleable: int DrawInsetsFrameLayout_insetBackground
 com.nomad.internethaber.R$styleable: int[] DrawerArrowToggle
 com.nomad.internethaber.R$styleable: int DrawerArrowToggle_barSize
 com.nomad.internethaber.R$styleable: int DrawerArrowToggle_color
@@ -9823,6 +10022,22 @@ com.nomad.internethaber.R$styleable: int DrawerArrowToggle_middleBarArrowSize
 com.nomad.internethaber.R$styleable: int DrawerArrowToggle_spinBars
 com.nomad.internethaber.R$styleable: int DrawerArrowToggle_thickness
 com.nomad.internethaber.R$styleable: int DrawerArrowToggle_topBottomBarArrowSize
+com.nomad.internethaber.R$styleable: int[] ErrorView
+com.nomad.internethaber.R$styleable: int ErrorView_ev_errorImage
+com.nomad.internethaber.R$styleable: int ErrorView_ev_errorSubtitle
+com.nomad.internethaber.R$styleable: int ErrorView_ev_errorTitle
+com.nomad.internethaber.R$styleable: int ErrorView_ev_retryButtonBackground
+com.nomad.internethaber.R$styleable: int ErrorView_ev_retryButtonTextColor
+com.nomad.internethaber.R$styleable: int ErrorView_ev_showRetryButton
+com.nomad.internethaber.R$styleable: int ErrorView_ev_showSubtitle
+com.nomad.internethaber.R$styleable: int ErrorView_ev_showTitle
+com.nomad.internethaber.R$styleable: int[] FrameLayoutCompat
+com.nomad.internethaber.R$styleable: int FrameLayoutCompat_foreground
+com.nomad.internethaber.R$styleable: int FrameLayoutCompat_foregroundGravity
+com.nomad.internethaber.R$styleable: int FrameLayoutCompat_foregroundInsidePadding
+com.nomad.internethaber.R$styleable: int FrameLayoutCompat_foregroundTint
+com.nomad.internethaber.R$styleable: int FrameLayoutCompat_foregroundTintMode
+com.nomad.internethaber.R$styleable: int FrameLayoutCompat_measureAllChildren
 com.nomad.internethaber.R$styleable: int[] LinearLayoutCompat
 com.nomad.internethaber.R$styleable: int LinearLayoutCompat_android_baselineAligned
 com.nomad.internethaber.R$styleable: int LinearLayoutCompat_android_baselineAlignedChildIndex
@@ -9841,6 +10056,19 @@ com.nomad.internethaber.R$styleable: int LinearLayoutCompat_Layout_android_layou
 com.nomad.internethaber.R$styleable: int[] ListPopupWindow
 com.nomad.internethaber.R$styleable: int ListPopupWindow_android_dropDownHorizontalOffset
 com.nomad.internethaber.R$styleable: int ListPopupWindow_android_dropDownVerticalOffset
+com.nomad.internethaber.R$styleable: int[] MaterialRippleLayout
+com.nomad.internethaber.R$styleable: int MaterialRippleLayout_mrl_rippleAlpha
+com.nomad.internethaber.R$styleable: int MaterialRippleLayout_mrl_rippleBackground
+com.nomad.internethaber.R$styleable: int MaterialRippleLayout_mrl_rippleColor
+com.nomad.internethaber.R$styleable: int MaterialRippleLayout_mrl_rippleDelayClick
+com.nomad.internethaber.R$styleable: int MaterialRippleLayout_mrl_rippleDimension
+com.nomad.internethaber.R$styleable: int MaterialRippleLayout_mrl_rippleDuration
+com.nomad.internethaber.R$styleable: int MaterialRippleLayout_mrl_rippleFadeDuration
+com.nomad.internethaber.R$styleable: int MaterialRippleLayout_mrl_rippleHover
+com.nomad.internethaber.R$styleable: int MaterialRippleLayout_mrl_rippleInAdapter
+com.nomad.internethaber.R$styleable: int MaterialRippleLayout_mrl_rippleOverlay
+com.nomad.internethaber.R$styleable: int MaterialRippleLayout_mrl_ripplePersistent
+com.nomad.internethaber.R$styleable: int MaterialRippleLayout_mrl_rippleRoundedCorners
 com.nomad.internethaber.R$styleable: int[] MenuGroup
 com.nomad.internethaber.R$styleable: int MenuGroup_android_checkableBehavior
 com.nomad.internethaber.R$styleable: int MenuGroup_android_enabled
@@ -9983,6 +10211,9 @@ com.nomad.internethaber.R$styleable: int Spinner_disableChildrenWhenDisabled
 com.nomad.internethaber.R$styleable: int Spinner_popupPromptView
 com.nomad.internethaber.R$styleable: int Spinner_prompt
 com.nomad.internethaber.R$styleable: int Spinner_spinnerMode
+com.nomad.internethaber.R$styleable: int[] StickyScrollView
+com.nomad.internethaber.R$styleable: int StickyScrollView_stuckShadowDrawable
+com.nomad.internethaber.R$styleable: int StickyScrollView_stuckShadowHeight
 com.nomad.internethaber.R$styleable: int[] SwitchCompat
 com.nomad.internethaber.R$styleable: int SwitchCompat_android_textOff
 com.nomad.internethaber.R$styleable: int SwitchCompat_android_textOn
@@ -10116,11 +10347,11 @@ com.nomad.internethaber.activity.BaseActivity: void onDestroy()
 com.nomad.internethaber.activity.BaseActivity: com.squareup.otto.Bus getBus()
 com.nomad.internethaber.activity.BaseActivity: int getLayoutResource()
 com.nomad.internethaber.activity.HomeActivity
-com.nomad.internethaber.activity.HomeActivity: com.nomad.internethaber.view.StyledToolbar mToolbar
+com.nomad.internethaber.activity.HomeActivity: com.nomad.internethaber.view.SubtitledToolbar mToolbar
 com.nomad.internethaber.activity.HomeActivity: android.support.v4.widget.DrawerLayout mDrawerLayout
 com.nomad.internethaber.activity.HomeActivity: HomeActivity()
 com.nomad.internethaber.activity.HomeActivity: int getLayoutResource()
-com.nomad.internethaber.activity.HomeActivity: void onCreate(android.os.Bundle)
+com.nomad.internethaber.activity.HomeActivity: void onSupportContentChanged()
 com.nomad.internethaber.activity.HomeActivity: void onStart()
 com.nomad.internethaber.activity.HomeActivity: void onNavigationDrawerItemSelected(com.nomad.internethaber.event.NavigationItemSelectEvent)
 com.nomad.internethaber.activity.HomeActivity: void onDrawerOpenedEvent(com.nomad.internethaber.event.DrawerOpenedEvent)
@@ -10134,15 +10365,31 @@ com.nomad.internethaber.activity.ImageActivity
 com.nomad.internethaber.activity.ImageActivity: it.sephiroth.android.library.imagezoom.ImageViewTouch mImageView
 com.nomad.internethaber.activity.ImageActivity: ImageActivity()
 com.nomad.internethaber.activity.ImageActivity: int getLayoutResource()
-com.nomad.internethaber.activity.ImageActivity: void onCreate(android.os.Bundle)
 com.nomad.internethaber.activity.ImageActivity: void onSupportContentChanged()
+com.nomad.internethaber.activity.ImageActivity: void onCreate(android.os.Bundle)
 com.nomad.internethaber.activity.ImageActivity$$ViewInjector
 com.nomad.internethaber.activity.ImageActivity$$ViewInjector: ImageActivity$$ViewInjector()
 com.nomad.internethaber.activity.ImageActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.nomad.internethaber.activity.ImageActivity,java.lang.Object)
 com.nomad.internethaber.activity.ImageActivity$$ViewInjector: void reset(com.nomad.internethaber.activity.ImageActivity)
 com.nomad.internethaber.activity.NewsDetailActivity
+com.nomad.internethaber.activity.NewsDetailActivity: android.support.v4.view.ViewPager mViewPager
+com.nomad.internethaber.activity.NewsDetailActivity: android.support.v7.widget.Toolbar mToolbar
+com.nomad.internethaber.activity.NewsDetailActivity: com.nomad.internethaber.view.DrawInsetsFrameLayout mInsetsFrameLayout
 com.nomad.internethaber.activity.NewsDetailActivity: NewsDetailActivity()
 com.nomad.internethaber.activity.NewsDetailActivity: int getLayoutResource()
+com.nomad.internethaber.activity.NewsDetailActivity: void onCreate(android.os.Bundle)
+com.nomad.internethaber.activity.NewsDetailActivity: boolean onOptionsItemSelected(android.view.MenuItem)
+com.nomad.internethaber.activity.NewsDetailActivity: void onMorePageLoad(int)
+com.nomad.internethaber.activity.NewsDetailActivity: void onNewsMoreResponseEvent(com.nomad.internethaber.event.NewsMoreResponseEvent)
+com.nomad.internethaber.activity.NewsDetailActivity: void onNewsMoreSuccessResponseEvent(com.nomad.internethaber.event.NewsMoreSuccessResponseEvent)
+com.nomad.internethaber.activity.NewsDetailActivity: void onNewsMoreFailureResponseEvent(com.nomad.internethaber.event.NewsMoreFailureResponseEvent)
+com.nomad.internethaber.activity.NewsDetailActivity: void onNewsNoItemResponseEvent(com.nomad.internethaber.event.NewsMoreNoItemResponseEvent)
+com.nomad.internethaber.activity.NewsDetailActivity: void onActionClicked(com.nispok.snackbar.Snackbar)
+com.nomad.internethaber.activity.NewsDetailActivity: void onInsetsChanged(android.graphics.Rect)
+com.nomad.internethaber.activity.NewsDetailActivity$$ViewInjector
+com.nomad.internethaber.activity.NewsDetailActivity$$ViewInjector: NewsDetailActivity$$ViewInjector()
+com.nomad.internethaber.activity.NewsDetailActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.nomad.internethaber.activity.NewsDetailActivity,java.lang.Object)
+com.nomad.internethaber.activity.NewsDetailActivity$$ViewInjector: void reset(com.nomad.internethaber.activity.NewsDetailActivity)
 com.nomad.internethaber.adapter.NavigationDrawerListAdapter
 com.nomad.internethaber.adapter.NavigationDrawerListAdapter: NavigationDrawerListAdapter(android.content.Context,java.util.List)
 com.nomad.internethaber.adapter.NavigationDrawerListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
@@ -10153,11 +10400,25 @@ com.nomad.internethaber.adapter.NavigationDrawerListAdapter$ViewHolder$$ViewInje
 com.nomad.internethaber.adapter.NavigationDrawerListAdapter$ViewHolder$$ViewInjector: NavigationDrawerListAdapter$ViewHolder$$ViewInjector()
 com.nomad.internethaber.adapter.NavigationDrawerListAdapter$ViewHolder$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.nomad.internethaber.adapter.NavigationDrawerListAdapter$ViewHolder,java.lang.Object)
 com.nomad.internethaber.adapter.NavigationDrawerListAdapter$ViewHolder$$ViewInjector: void reset(com.nomad.internethaber.adapter.NavigationDrawerListAdapter$ViewHolder)
+com.nomad.internethaber.adapter.NewsDetailPagerAdapter
+com.nomad.internethaber.adapter.NewsDetailPagerAdapter: NewsDetailPagerAdapter(android.support.v4.app.FragmentManager)
+com.nomad.internethaber.adapter.NewsDetailPagerAdapter: NewsDetailPagerAdapter(android.support.v4.app.FragmentManager,java.util.ArrayList)
+com.nomad.internethaber.adapter.NewsDetailPagerAdapter: android.support.v4.app.Fragment getItem(int)
+com.nomad.internethaber.adapter.NewsDetailPagerAdapter: int getCount()
+com.nomad.internethaber.adapter.NewsDetailPagerAdapter: void addMoreItems(java.util.List)
+com.nomad.internethaber.adapter.NewsDetailPagerAdapter: void setNewsList(java.util.ArrayList)
+com.nomad.internethaber.adapter.NewsDetailPagerAdapter: void setOnPagingListener(com.nomad.internethaber.adapter.NewsDetailPagerAdapter$OnPagingListener)
+com.nomad.internethaber.adapter.NewsDetailPagerAdapter: boolean isLoading()
+com.nomad.internethaber.adapter.NewsDetailPagerAdapter: void setHasMoreItems(boolean)
+com.nomad.internethaber.adapter.NewsDetailPagerAdapter: void setLoading(boolean)
+com.nomad.internethaber.adapter.NewsDetailPagerAdapter$OnPagingListener
+com.nomad.internethaber.adapter.NewsDetailPagerAdapter$OnPagingListener: void onMorePageLoad(int)
 com.nomad.internethaber.adapter.NewsListAdapter
 com.nomad.internethaber.adapter.NewsListAdapter: NewsListAdapter(android.content.Context,java.util.List)
 com.nomad.internethaber.adapter.NewsListAdapter: int getCount()
 com.nomad.internethaber.adapter.NewsListAdapter: com.nomad.internethaber.model.News getItem(int)
 com.nomad.internethaber.adapter.NewsListAdapter: long getItemId(int)
+com.nomad.internethaber.adapter.NewsListAdapter: java.util.List getItems()
 com.nomad.internethaber.adapter.NewsListAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
 com.nomad.internethaber.adapter.NewsListAdapter: java.lang.Object getItem(int)
 com.nomad.internethaber.adapter.NewsListAdapter$ViewHolder
@@ -10183,7 +10444,7 @@ com.nomad.internethaber.application.BaseApplication: android.content.Context get
 com.nomad.internethaber.application.InternetHaberApplication
 com.nomad.internethaber.application.InternetHaberApplication: InternetHaberApplication()
 com.nomad.internethaber.application.InternetHaberApplication: void onCreate()
-com.nomad.internethaber.application.InternetHaberApplication: com.nomad.internethaber.helper.ResponsiveControler getResponsiveControler()
+com.nomad.internethaber.application.InternetHaberApplication: com.nomad.internethaber.helper.ResponsiveController getResponsiveController()
 com.nomad.internethaber.bean.CategoryResponseBean
 com.nomad.internethaber.bean.CategoryResponseBean: CategoryResponseBean()
 com.nomad.internethaber.bean.CategoryResponseBean: java.util.ArrayList getCategories()
@@ -10237,6 +10498,10 @@ com.nomad.internethaber.event.NewsItemClickEventOnTablet
 com.nomad.internethaber.event.NewsItemClickEventOnTablet: NewsItemClickEventOnTablet()
 com.nomad.internethaber.event.NewsMoreFailureResponseEvent
 com.nomad.internethaber.event.NewsMoreFailureResponseEvent: NewsMoreFailureResponseEvent()
+com.nomad.internethaber.event.NewsMoreNoItemResponseEvent
+com.nomad.internethaber.event.NewsMoreNoItemResponseEvent: NewsMoreNoItemResponseEvent()
+com.nomad.internethaber.event.NewsMoreNoItemResponseEvent: void setBean(com.nomad.internethaber.bean.NewsResponseBean)
+com.nomad.internethaber.event.NewsMoreNoItemResponseEvent: com.nomad.internethaber.bean.NewsResponseBean getBean()
 com.nomad.internethaber.event.NewsMoreRequestEvent
 com.nomad.internethaber.event.NewsMoreRequestEvent: NewsMoreRequestEvent()
 com.nomad.internethaber.event.NewsMoreResponseEvent
@@ -10245,10 +10510,6 @@ com.nomad.internethaber.event.NewsMoreSuccessResponseEvent
 com.nomad.internethaber.event.NewsMoreSuccessResponseEvent: NewsMoreSuccessResponseEvent()
 com.nomad.internethaber.event.NewsMoreSuccessResponseEvent: void setBean(com.nomad.internethaber.bean.NewsResponseBean)
 com.nomad.internethaber.event.NewsMoreSuccessResponseEvent: com.nomad.internethaber.bean.NewsResponseBean getBean()
-com.nomad.internethaber.event.NewsNoItemResponseEvent
-com.nomad.internethaber.event.NewsNoItemResponseEvent: NewsNoItemResponseEvent()
-com.nomad.internethaber.event.NewsNoItemResponseEvent: void setBean(com.nomad.internethaber.bean.NewsResponseBean)
-com.nomad.internethaber.event.NewsNoItemResponseEvent: com.nomad.internethaber.bean.NewsResponseBean getBean()
 com.nomad.internethaber.event.NewsRequestEvent
 com.nomad.internethaber.event.NewsRequestEvent: NewsRequestEvent()
 com.nomad.internethaber.event.NewsResponseEvent
@@ -10269,6 +10530,7 @@ com.nomad.internethaber.fragment.BaseFragment: android.view.View onCreateView(an
 com.nomad.internethaber.fragment.BaseFragment: void onDestroyView()
 com.nomad.internethaber.fragment.BaseFragment: void onDetach()
 com.nomad.internethaber.fragment.BaseFragment: android.content.Context getContext()
+com.nomad.internethaber.fragment.BaseFragment: com.squareup.otto.Bus getBus()
 com.nomad.internethaber.fragment.BaseFragment: int getTitleResource()
 com.nomad.internethaber.fragment.BaseFragment: int getLayoutResource()
 com.nomad.internethaber.fragment.NavigationDrawerFragment
@@ -10299,6 +10561,7 @@ com.nomad.internethaber.fragment.NewsDetailFragment
 com.nomad.internethaber.fragment.NewsDetailFragment: com.nomad.internethaber.view.RectangularImageView mImageView
 com.nomad.internethaber.fragment.NewsDetailFragment: com.devspark.robototextview.widget.RobotoTextView mTitleTextView
 com.nomad.internethaber.fragment.NewsDetailFragment: com.devspark.robototextview.widget.RobotoTextView mContentTextView
+com.nomad.internethaber.fragment.NewsDetailFragment: android.widget.ScrollView mScrollView
 com.nomad.internethaber.fragment.NewsDetailFragment: NewsDetailFragment()
 com.nomad.internethaber.fragment.NewsDetailFragment: int getTitleResource()
 com.nomad.internethaber.fragment.NewsDetailFragment: int getLayoutResource()
@@ -10319,9 +10582,36 @@ com.nomad.internethaber.fragment.NewsDetailFragment$$ViewInjector
 com.nomad.internethaber.fragment.NewsDetailFragment$$ViewInjector: NewsDetailFragment$$ViewInjector()
 com.nomad.internethaber.fragment.NewsDetailFragment$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.nomad.internethaber.fragment.NewsDetailFragment,java.lang.Object)
 com.nomad.internethaber.fragment.NewsDetailFragment$$ViewInjector: void reset(com.nomad.internethaber.fragment.NewsDetailFragment)
+com.nomad.internethaber.fragment.NewsDetailPagerFragment
+com.nomad.internethaber.fragment.NewsDetailPagerFragment: com.nomad.internethaber.view.RectangularImageView mPhotoView
+com.nomad.internethaber.fragment.NewsDetailPagerFragment: com.devspark.robototextview.widget.RobotoTextView mTitleTextView
+com.nomad.internethaber.fragment.NewsDetailPagerFragment: com.devspark.robototextview.widget.RobotoTextView mContentTextView
+com.nomad.internethaber.fragment.NewsDetailPagerFragment: com.nomad.internethaber.view.StatusBarView mStatusBarView
+com.nomad.internethaber.fragment.NewsDetailPagerFragment: NewsDetailPagerFragment()
+com.nomad.internethaber.fragment.NewsDetailPagerFragment: com.nomad.internethaber.fragment.NewsDetailPagerFragment getInstance(com.nomad.internethaber.model.News)
+com.nomad.internethaber.fragment.NewsDetailPagerFragment: int getTitleResource()
+com.nomad.internethaber.fragment.NewsDetailPagerFragment: int getLayoutResource()
+com.nomad.internethaber.fragment.NewsDetailPagerFragment: void onViewCreated(android.view.View,android.os.Bundle)
+com.nomad.internethaber.fragment.NewsDetailPagerFragment: void onResume()
+com.nomad.internethaber.fragment.NewsDetailPagerFragment: void onPause()
+com.nomad.internethaber.fragment.NewsDetailPagerFragment: void onPhotoClicked(com.nomad.internethaber.view.RectangularImageView)
+com.nomad.internethaber.fragment.NewsDetailPagerFragment: void setNews(com.nomad.internethaber.model.News)
+com.nomad.internethaber.fragment.NewsDetailPagerFragment: void success(com.nomad.internethaber.bean.NewsDetailResponseBean,retrofit.client.Response)
+com.nomad.internethaber.fragment.NewsDetailPagerFragment: void failure(retrofit.RetrofitError)
+com.nomad.internethaber.fragment.NewsDetailPagerFragment: void onSuccess()
+com.nomad.internethaber.fragment.NewsDetailPagerFragment: void onError()
+com.nomad.internethaber.fragment.NewsDetailPagerFragment: void onGenerated(android.support.v7.graphics.Palette)
+com.nomad.internethaber.fragment.NewsDetailPagerFragment: void onDetach()
+com.nomad.internethaber.fragment.NewsDetailPagerFragment: void onDestroyView()
+com.nomad.internethaber.fragment.NewsDetailPagerFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
+com.nomad.internethaber.fragment.NewsDetailPagerFragment: void onAttach(android.app.Activity)
+com.nomad.internethaber.fragment.NewsDetailPagerFragment: void success(java.lang.Object,retrofit.client.Response)
+com.nomad.internethaber.fragment.NewsDetailPagerFragment$$ViewInjector
+com.nomad.internethaber.fragment.NewsDetailPagerFragment$$ViewInjector: NewsDetailPagerFragment$$ViewInjector()
+com.nomad.internethaber.fragment.NewsDetailPagerFragment$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.nomad.internethaber.fragment.NewsDetailPagerFragment,java.lang.Object)
+com.nomad.internethaber.fragment.NewsDetailPagerFragment$$ViewInjector: void reset(com.nomad.internethaber.fragment.NewsDetailPagerFragment)
 com.nomad.internethaber.fragment.NewsFragment
-com.nomad.internethaber.fragment.NewsFragment: com.nomad.internethaber.view.ResponsivePagingListView mListView
-com.nomad.internethaber.fragment.NewsFragment: com.nomad.internethaber.view.StyledSwipeRefreshLayout mRefreshLayout
+com.nomad.internethaber.fragment.NewsFragment: com.nomad.internethaber.view.CompositePagingListView mListView
 com.nomad.internethaber.fragment.NewsFragment: NewsFragment()
 com.nomad.internethaber.fragment.NewsFragment: int getTitleResource()
 com.nomad.internethaber.fragment.NewsFragment: int getLayoutResource()
@@ -10336,9 +10626,11 @@ com.nomad.internethaber.fragment.NewsFragment: void onNewsFailureSuccessResponse
 com.nomad.internethaber.fragment.NewsFragment: void onLoadMoreItems()
 com.nomad.internethaber.fragment.NewsFragment: void onNewsMoreResponseEvent(com.nomad.internethaber.event.NewsMoreResponseEvent)
 com.nomad.internethaber.fragment.NewsFragment: void onNewsMoreSuccessResponseEvent(com.nomad.internethaber.event.NewsMoreSuccessResponseEvent)
-com.nomad.internethaber.fragment.NewsFragment: void onNewsMoreFailureSuccessResponseEvent(com.nomad.internethaber.event.NewsMoreFailureResponseEvent)
-com.nomad.internethaber.fragment.NewsFragment: void onNewsNoItemResponseEvent(com.nomad.internethaber.event.NewsNoItemResponseEvent)
+com.nomad.internethaber.fragment.NewsFragment: void onNewsMoreFailureResponseEvent(com.nomad.internethaber.event.NewsMoreFailureResponseEvent)
+com.nomad.internethaber.fragment.NewsFragment: void onNewsNoItemResponseEvent(com.nomad.internethaber.event.NewsMoreNoItemResponseEvent)
 com.nomad.internethaber.fragment.NewsFragment: void onRefresh()
+com.nomad.internethaber.fragment.NewsFragment: void onRetry()
+com.nomad.internethaber.fragment.NewsFragment: void onActionClicked(com.nispok.snackbar.Snackbar)
 com.nomad.internethaber.fragment.NewsFragment: void onDetach()
 com.nomad.internethaber.fragment.NewsFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
 com.nomad.internethaber.fragment.NewsFragment: void onAttach(android.app.Activity)
@@ -10348,8 +10640,10 @@ com.nomad.internethaber.fragment.NewsFragment$$ViewInjector: void inject(butterk
 com.nomad.internethaber.fragment.NewsFragment$$ViewInjector: void reset(com.nomad.internethaber.fragment.NewsFragment)
 com.nomad.internethaber.helper.NavigationHelper
 com.nomad.internethaber.helper.NavigationHelper: NavigationHelper()
-com.nomad.internethaber.helper.NavigationHelper: int getPosition()
-com.nomad.internethaber.helper.NavigationHelper: void setPosition(int)
+com.nomad.internethaber.helper.NavigationHelper: int getDrawerPosition()
+com.nomad.internethaber.helper.NavigationHelper: void setDrawerPosition(int)
+com.nomad.internethaber.helper.NavigationHelper: int getSelectedNewsPosition()
+com.nomad.internethaber.helper.NavigationHelper: void setSelectedNewsPosition(int)
 com.nomad.internethaber.helper.NavigationHelper: java.lang.CharSequence getTitle()
 com.nomad.internethaber.helper.NavigationHelper: void setTitle(java.lang.CharSequence)
 com.nomad.internethaber.helper.NavigationHelper: java.lang.CharSequence getSubtitle()
@@ -10358,15 +10652,17 @@ com.nomad.internethaber.helper.NotificationFacade
 com.nomad.internethaber.helper.NotificationFacade: NotificationFacade(android.content.Context)
 com.nomad.internethaber.helper.NotificationFacade: android.support.v4.app.NotificationCompat$Builder getBuilder()
 com.nomad.internethaber.helper.NotificationFacade: void show()
-com.nomad.internethaber.helper.ResponsiveControler
-com.nomad.internethaber.helper.ResponsiveControler: ResponsiveControler(android.content.res.Resources)
-com.nomad.internethaber.helper.ResponsiveControler: boolean isTablet()
+com.nomad.internethaber.helper.ResponsiveController
+com.nomad.internethaber.helper.ResponsiveController: ResponsiveController(android.content.res.Resources)
+com.nomad.internethaber.helper.ResponsiveController: boolean isTablet()
 com.nomad.internethaber.helper.SelectedImageHelper
 com.nomad.internethaber.helper.SelectedImageHelper: SelectedImageHelper()
 com.nomad.internethaber.helper.SelectedImageHelper: android.graphics.drawable.Drawable getPhoto()
 com.nomad.internethaber.helper.SelectedImageHelper: void setPhoto(android.graphics.drawable.Drawable)
 com.nomad.internethaber.interfaces.CategoryRestInterface
 com.nomad.internethaber.interfaces.CategoryRestInterface: com.nomad.internethaber.bean.CategoryResponseBean get()
+com.nomad.internethaber.interfaces.NewsDetailPagerRestInterface
+com.nomad.internethaber.interfaces.NewsDetailPagerRestInterface: void get(java.lang.String,java.lang.String,retrofit.Callback)
 com.nomad.internethaber.interfaces.NewsDetailRestInterface
 com.nomad.internethaber.interfaces.NewsDetailRestInterface: com.nomad.internethaber.bean.NewsDetailResponseBean get(java.lang.String,java.lang.String)
 com.nomad.internethaber.interfaces.NewsRestInterface
@@ -10379,6 +10675,11 @@ com.nomad.internethaber.model.Category: java.lang.String getId()
 com.nomad.internethaber.model.Category: void setId(java.lang.String)
 com.nomad.internethaber.model.Category: java.lang.String getName()
 com.nomad.internethaber.model.Category: void setName(java.lang.String)
+com.nomad.internethaber.model.Interval
+com.nomad.internethaber.model.Interval: Interval()
+com.nomad.internethaber.model.Interval: com.nomad.internethaber.model.Interval calculate(int)
+com.nomad.internethaber.model.Interval: java.lang.String getFrom()
+com.nomad.internethaber.model.Interval: java.lang.String getTo()
 com.nomad.internethaber.model.NavigationItem
 com.nomad.internethaber.model.NavigationItem: NavigationItem(int,int)
 com.nomad.internethaber.model.NavigationItem: int getTextResource()
@@ -10437,6 +10738,8 @@ com.nomad.internethaber.model.Range
 com.nomad.internethaber.model.Range: Range()
 com.nomad.internethaber.model.Range: com.nomad.internethaber.model.Range nextPage()
 com.nomad.internethaber.model.Range: com.nomad.internethaber.model.Range resetPage()
+com.nomad.internethaber.model.Range: int getPage()
+com.nomad.internethaber.model.Range: int turnPage()
 com.nomad.internethaber.model.Range: java.lang.String getFrom()
 com.nomad.internethaber.model.Range: java.lang.String getTo()
 com.nomad.internethaber.provider.BusProvider
@@ -10495,6 +10798,26 @@ com.nomad.internethaber.task.NewsMoreAsyncTask$State: com.nomad.internethaber.ta
 com.nomad.internethaber.util.ThreadUtils
 com.nomad.internethaber.util.ThreadUtils: ThreadUtils()
 com.nomad.internethaber.util.ThreadUtils: void kill(android.os.AsyncTask)
+com.nomad.internethaber.view.CompositePagingListView
+com.nomad.internethaber.view.CompositePagingListView: CompositePagingListView(android.content.Context,android.util.AttributeSet,int)
+com.nomad.internethaber.view.CompositePagingListView: CompositePagingListView(android.content.Context,android.util.AttributeSet)
+com.nomad.internethaber.view.CompositePagingListView: CompositePagingListView(android.content.Context)
+com.nomad.internethaber.view.CompositePagingListView: void showEmptyView()
+com.nomad.internethaber.view.CompositePagingListView: void hideEmptyView()
+com.nomad.internethaber.view.CompositePagingListView: tr.xip.errorview.ErrorView getErrorView()
+com.nomad.internethaber.view.CompositePagingListView: com.nomad.internethaber.view.ResponsivePagingListView getListView()
+com.nomad.internethaber.view.CompositePagingListView: android.support.v4.widget.SwipeRefreshLayout getSwipeRefreshLayout()
+com.nomad.internethaber.view.DrawInsetsFrameLayout
+com.nomad.internethaber.view.DrawInsetsFrameLayout: DrawInsetsFrameLayout(android.content.Context)
+com.nomad.internethaber.view.DrawInsetsFrameLayout: DrawInsetsFrameLayout(android.content.Context,android.util.AttributeSet)
+com.nomad.internethaber.view.DrawInsetsFrameLayout: DrawInsetsFrameLayout(android.content.Context,android.util.AttributeSet,int)
+com.nomad.internethaber.view.DrawInsetsFrameLayout: boolean fitSystemWindows(android.graphics.Rect)
+com.nomad.internethaber.view.DrawInsetsFrameLayout: void onDraw(android.graphics.Canvas)
+com.nomad.internethaber.view.DrawInsetsFrameLayout: void onAttachedToWindow()
+com.nomad.internethaber.view.DrawInsetsFrameLayout: void onDetachedFromWindow()
+com.nomad.internethaber.view.DrawInsetsFrameLayout: void setOnInsetsCallback(com.nomad.internethaber.view.DrawInsetsFrameLayout$OnInsetsCallback)
+com.nomad.internethaber.view.DrawInsetsFrameLayout$OnInsetsCallback
+com.nomad.internethaber.view.DrawInsetsFrameLayout$OnInsetsCallback: void onInsetsChanged(android.graphics.Rect)
 com.nomad.internethaber.view.RectangularImageView
 com.nomad.internethaber.view.RectangularImageView: RectangularImageView(android.content.Context)
 com.nomad.internethaber.view.RectangularImageView: RectangularImageView(android.content.Context,android.util.AttributeSet)
@@ -10512,13 +10835,23 @@ com.nomad.internethaber.view.SquaredImageView
 com.nomad.internethaber.view.SquaredImageView: SquaredImageView(android.content.Context)
 com.nomad.internethaber.view.SquaredImageView: SquaredImageView(android.content.Context,android.util.AttributeSet)
 com.nomad.internethaber.view.SquaredImageView: void onMeasure(int,int)
+com.nomad.internethaber.view.StatusBarView
+com.nomad.internethaber.view.StatusBarView: StatusBarView(android.content.Context)
+com.nomad.internethaber.view.StatusBarView: StatusBarView(android.content.Context,android.util.AttributeSet)
+com.nomad.internethaber.view.StatusBarView: StatusBarView(android.content.Context,android.util.AttributeSet,int)
+com.nomad.internethaber.view.StatusBarView: void onMeasure(int,int)
+com.nomad.internethaber.view.StatusBarView: int getStatusBarHeight()
 com.nomad.internethaber.view.StyledSwipeRefreshLayout
 com.nomad.internethaber.view.StyledSwipeRefreshLayout: StyledSwipeRefreshLayout(android.content.Context)
 com.nomad.internethaber.view.StyledSwipeRefreshLayout: StyledSwipeRefreshLayout(android.content.Context,android.util.AttributeSet)
-com.nomad.internethaber.view.StyledToolbar
-com.nomad.internethaber.view.StyledToolbar: StyledToolbar(android.content.Context)
-com.nomad.internethaber.view.StyledToolbar: StyledToolbar(android.content.Context,android.util.AttributeSet)
-com.nomad.internethaber.view.StyledToolbar: StyledToolbar(android.content.Context,android.util.AttributeSet,int)
+com.nomad.internethaber.view.SubtitledToolbar
+com.nomad.internethaber.view.SubtitledToolbar: SubtitledToolbar(android.content.Context)
+com.nomad.internethaber.view.SubtitledToolbar: SubtitledToolbar(android.content.Context,android.util.AttributeSet)
+com.nomad.internethaber.view.SubtitledToolbar: SubtitledToolbar(android.content.Context,android.util.AttributeSet,int)
+com.nomad.internethaber.view.TransparentToolbar
+com.nomad.internethaber.view.TransparentToolbar: TransparentToolbar(android.content.Context)
+com.nomad.internethaber.view.TransparentToolbar: TransparentToolbar(android.content.Context,android.util.AttributeSet)
+com.nomad.internethaber.view.TransparentToolbar: TransparentToolbar(android.content.Context,android.util.AttributeSet,int)
 com.paging.listview.BuildConfig
 com.paging.listview.BuildConfig: boolean DEBUG
 com.paging.listview.BuildConfig: java.lang.String APPLICATION_ID
@@ -10795,6 +11128,1130 @@ com.squareup.picasso.UrlConnectionDownloader: UrlConnectionDownloader(android.co
 com.squareup.picasso.UrlConnectionDownloader: java.net.HttpURLConnection openConnection(android.net.Uri)
 com.squareup.picasso.UrlConnectionDownloader: com.squareup.picasso.Downloader$Response load(android.net.Uri,boolean)
 com.squareup.picasso.UrlConnectionDownloader: void shutdown()
+com.xgc1986.parallaxPagerTransformer.ParallaxPagerTransformer
+com.xgc1986.parallaxPagerTransformer.ParallaxPagerTransformer: ParallaxPagerTransformer(int)
+com.xgc1986.parallaxPagerTransformer.ParallaxPagerTransformer: void transformPage(android.view.View,float)
+com.xgc1986.parallaxPagerTransformer.ParallaxPagerTransformer: void setBorder(int)
+com.xgc1986.parallaxPagerTransformer.ParallaxPagerTransformer: void setSpeed(float)
+com.xgc1986.parallaxpagerlibrary.BuildConfig
+com.xgc1986.parallaxpagerlibrary.BuildConfig: boolean DEBUG
+com.xgc1986.parallaxpagerlibrary.BuildConfig: java.lang.String APPLICATION_ID
+com.xgc1986.parallaxpagerlibrary.BuildConfig: java.lang.String BUILD_TYPE
+com.xgc1986.parallaxpagerlibrary.BuildConfig: java.lang.String FLAVOR
+com.xgc1986.parallaxpagerlibrary.BuildConfig: int VERSION_CODE
+com.xgc1986.parallaxpagerlibrary.BuildConfig: java.lang.String VERSION_NAME
+com.xgc1986.parallaxpagerlibrary.BuildConfig: BuildConfig()
+com.xgc1986.parallaxpagerlibrary.R
+com.xgc1986.parallaxpagerlibrary.R: R()
+com.xgc1986.parallaxpagerlibrary.R$drawable
+com.xgc1986.parallaxpagerlibrary.R$drawable: int ic_launcher
+com.xgc1986.parallaxpagerlibrary.R$drawable: R$drawable()
+com.xgc1986.parallaxpagerlibrary.R$string
+com.xgc1986.parallaxpagerlibrary.R$string: int app_name
+com.xgc1986.parallaxpagerlibrary.R$string: R$string()
+io.codetail.animation.RevealAnimator
+io.codetail.animation.RevealAnimator: void setClipOutlines(boolean)
+io.codetail.animation.RevealAnimator: void setCenter(float,float)
+io.codetail.animation.RevealAnimator: void setTarget(android.view.View)
+io.codetail.animation.RevealAnimator: void setRevealRadius(float)
+io.codetail.animation.RevealAnimator: float getRevealRadius()
+io.codetail.animation.RevealAnimator: void invalidate(android.graphics.Rect)
+io.codetail.animation.RevealAnimator$RevealFinished
+io.codetail.animation.RevealAnimator$RevealFinished: void onAnimationEnd(com.nineoldandroids.animation.Animator)
+io.codetail.animation.RevealAnimator$RevealFinishedGingerbread
+io.codetail.animation.RevealAnimator$RevealFinishedGingerbread: void onAnimationEnd(com.nineoldandroids.animation.Animator)
+io.codetail.animation.RevealAnimator$RevealFinishedIceCreamSandwich
+io.codetail.animation.RevealAnimator$RevealFinishedIceCreamSandwich: void onAnimationStart(com.nineoldandroids.animation.Animator)
+io.codetail.animation.RevealAnimator$RevealFinishedIceCreamSandwich: void onAnimationEnd(com.nineoldandroids.animation.Animator)
+io.codetail.animation.RevealAnimator$RevealFinishedJellyBeanMr1
+io.codetail.animation.RevealAnimator$RevealFinishedJellyBeanMr1: void onAnimationStart(com.nineoldandroids.animation.Animator)
+io.codetail.animation.RevealAnimator$RevealFinishedJellyBeanMr1: void onAnimationEnd(com.nineoldandroids.animation.Animator)
+io.codetail.animation.SupportAnimator
+io.codetail.animation.SupportAnimator: SupportAnimator()
+io.codetail.animation.SupportAnimator: boolean isNativeAnimator()
+io.codetail.animation.SupportAnimator: java.lang.Object get()
+io.codetail.animation.SupportAnimator: void start()
+io.codetail.animation.SupportAnimator: void setDuration(int)
+io.codetail.animation.SupportAnimator: void setInterpolator(android.view.animation.Interpolator)
+io.codetail.animation.SupportAnimator: void addListener(io.codetail.animation.SupportAnimator$AnimatorListener)
+io.codetail.animation.SupportAnimator: boolean isRunning()
+io.codetail.animation.SupportAnimator$AnimatorListener
+io.codetail.animation.SupportAnimator$AnimatorListener: void onAnimationStart()
+io.codetail.animation.SupportAnimator$AnimatorListener: void onAnimationEnd()
+io.codetail.animation.SupportAnimator$AnimatorListener: void onAnimationCancel()
+io.codetail.animation.SupportAnimator$AnimatorListener: void onAnimationRepeat()
+io.codetail.animation.ViewAnimationUtils
+io.codetail.animation.ViewAnimationUtils: int SCALE_UP_DURATION
+io.codetail.animation.ViewAnimationUtils: ViewAnimationUtils()
+io.codetail.animation.ViewAnimationUtils: com.nineoldandroids.animation.Animator createCircularReveal(android.view.View,int,int,float,float)
+io.codetail.animation.ViewAnimationUtils: void liftingFromBottom(android.view.View,float,float,int,int)
+io.codetail.animation.ViewAnimationUtils: void liftingFromBottom(android.view.View,float,int,int)
+io.codetail.animation.ViewAnimationUtils: void liftingFromBottom(android.view.View,float,int)
+io.codetail.animation.ViewAnimationUtils$SimpleAnimationListener
+io.codetail.animation.ViewAnimationUtils$SimpleAnimationListener: ViewAnimationUtils$SimpleAnimationListener()
+io.codetail.animation.ViewAnimationUtils$SimpleAnimationListener: void onAnimationStart(com.nineoldandroids.animation.Animator)
+io.codetail.animation.ViewAnimationUtils$SimpleAnimationListener: void onAnimationEnd(com.nineoldandroids.animation.Animator)
+io.codetail.animation.ViewAnimationUtils$SimpleAnimationListener: void onAnimationCancel(com.nineoldandroids.animation.Animator)
+io.codetail.animation.ViewAnimationUtils$SimpleAnimationListener: void onAnimationRepeat(com.nineoldandroids.animation.Animator)
+io.codetail.view.BuildConfig
+io.codetail.view.BuildConfig: boolean DEBUG
+io.codetail.view.BuildConfig: java.lang.String APPLICATION_ID
+io.codetail.view.BuildConfig: java.lang.String BUILD_TYPE
+io.codetail.view.BuildConfig: java.lang.String FLAVOR
+io.codetail.view.BuildConfig: int VERSION_CODE
+io.codetail.view.BuildConfig: java.lang.String VERSION_NAME
+io.codetail.view.BuildConfig: java.lang.String PACKAGE_NAME
+io.codetail.view.BuildConfig: BuildConfig()
+io.codetail.view.R
+io.codetail.view.R: R()
+io.codetail.view.R$anim
+io.codetail.view.R$anim: int abc_fade_in
+io.codetail.view.R$anim: int abc_fade_out
+io.codetail.view.R$anim: int abc_slide_in_bottom
+io.codetail.view.R$anim: int abc_slide_in_top
+io.codetail.view.R$anim: int abc_slide_out_bottom
+io.codetail.view.R$anim: int abc_slide_out_top
+io.codetail.view.R$anim: R$anim()
+io.codetail.view.R$attr
+io.codetail.view.R$attr: int actionBarDivider
+io.codetail.view.R$attr: int actionBarItemBackground
+io.codetail.view.R$attr: int actionBarPopupTheme
+io.codetail.view.R$attr: int actionBarSize
+io.codetail.view.R$attr: int actionBarSplitStyle
+io.codetail.view.R$attr: int actionBarStyle
+io.codetail.view.R$attr: int actionBarTabBarStyle
+io.codetail.view.R$attr: int actionBarTabStyle
+io.codetail.view.R$attr: int actionBarTabTextStyle
+io.codetail.view.R$attr: int actionBarTheme
+io.codetail.view.R$attr: int actionBarWidgetTheme
+io.codetail.view.R$attr: int actionButtonStyle
+io.codetail.view.R$attr: int actionDropDownStyle
+io.codetail.view.R$attr: int actionLayout
+io.codetail.view.R$attr: int actionMenuTextAppearance
+io.codetail.view.R$attr: int actionMenuTextColor
+io.codetail.view.R$attr: int actionModeBackground
+io.codetail.view.R$attr: int actionModeCloseButtonStyle
+io.codetail.view.R$attr: int actionModeCloseDrawable
+io.codetail.view.R$attr: int actionModeCopyDrawable
+io.codetail.view.R$attr: int actionModeCutDrawable
+io.codetail.view.R$attr: int actionModeFindDrawable
+io.codetail.view.R$attr: int actionModePasteDrawable
+io.codetail.view.R$attr: int actionModePopupWindowStyle
+io.codetail.view.R$attr: int actionModeSelectAllDrawable
+io.codetail.view.R$attr: int actionModeShareDrawable
+io.codetail.view.R$attr: int actionModeSplitBackground
+io.codetail.view.R$attr: int actionModeStyle
+io.codetail.view.R$attr: int actionModeWebSearchDrawable
+io.codetail.view.R$attr: int actionOverflowButtonStyle
+io.codetail.view.R$attr: int actionOverflowMenuStyle
+io.codetail.view.R$attr: int actionProviderClass
+io.codetail.view.R$attr: int actionViewClass
+io.codetail.view.R$attr: int activityChooserViewStyle
+io.codetail.view.R$attr: int background
+io.codetail.view.R$attr: int backgroundSplit
+io.codetail.view.R$attr: int backgroundStacked
+io.codetail.view.R$attr: int barSize
+io.codetail.view.R$attr: int buttonBarButtonStyle
+io.codetail.view.R$attr: int buttonBarStyle
+io.codetail.view.R$attr: int closeIcon
+io.codetail.view.R$attr: int closeItemLayout
+io.codetail.view.R$attr: int collapseIcon
+io.codetail.view.R$attr: int color
+io.codetail.view.R$attr: int colorAccent
+io.codetail.view.R$attr: int colorButtonNormal
+io.codetail.view.R$attr: int colorControlActivated
+io.codetail.view.R$attr: int colorControlHighlight
+io.codetail.view.R$attr: int colorControlNormal
+io.codetail.view.R$attr: int colorPrimary
+io.codetail.view.R$attr: int colorPrimaryDark
+io.codetail.view.R$attr: int colorSwitchThumbNormal
+io.codetail.view.R$attr: int commitIcon
+io.codetail.view.R$attr: int contentInsetEnd
+io.codetail.view.R$attr: int contentInsetLeft
+io.codetail.view.R$attr: int contentInsetRight
+io.codetail.view.R$attr: int contentInsetStart
+io.codetail.view.R$attr: int customNavigationLayout
+io.codetail.view.R$attr: int disableChildrenWhenDisabled
+io.codetail.view.R$attr: int displayOptions
+io.codetail.view.R$attr: int divider
+io.codetail.view.R$attr: int dividerHorizontal
+io.codetail.view.R$attr: int dividerPadding
+io.codetail.view.R$attr: int dividerVertical
+io.codetail.view.R$attr: int drawableSize
+io.codetail.view.R$attr: int drawerArrowStyle
+io.codetail.view.R$attr: int dropDownListViewStyle
+io.codetail.view.R$attr: int dropdownListPreferredItemHeight
+io.codetail.view.R$attr: int editTextBackground
+io.codetail.view.R$attr: int editTextColor
+io.codetail.view.R$attr: int elevation
+io.codetail.view.R$attr: int expandActivityOverflowButtonDrawable
+io.codetail.view.R$attr: int foreground
+io.codetail.view.R$attr: int foregroundGravity
+io.codetail.view.R$attr: int foregroundInsidePadding
+io.codetail.view.R$attr: int foregroundTint
+io.codetail.view.R$attr: int foregroundTintMode
+io.codetail.view.R$attr: int gapBetweenBars
+io.codetail.view.R$attr: int goIcon
+io.codetail.view.R$attr: int height
+io.codetail.view.R$attr: int hideOnContentScroll
+io.codetail.view.R$attr: int homeAsUpIndicator
+io.codetail.view.R$attr: int homeLayout
+io.codetail.view.R$attr: int icon
+io.codetail.view.R$attr: int iconifiedByDefault
+io.codetail.view.R$attr: int indeterminateProgressStyle
+io.codetail.view.R$attr: int initialActivityCount
+io.codetail.view.R$attr: int isLightTheme
+io.codetail.view.R$attr: int itemPadding
+io.codetail.view.R$attr: int layout
+io.codetail.view.R$attr: int listChoiceBackgroundIndicator
+io.codetail.view.R$attr: int listPopupWindowStyle
+io.codetail.view.R$attr: int listPreferredItemHeight
+io.codetail.view.R$attr: int listPreferredItemHeightLarge
+io.codetail.view.R$attr: int listPreferredItemHeightSmall
+io.codetail.view.R$attr: int listPreferredItemPaddingLeft
+io.codetail.view.R$attr: int listPreferredItemPaddingRight
+io.codetail.view.R$attr: int logo
+io.codetail.view.R$attr: int maxButtonHeight
+io.codetail.view.R$attr: int measureAllChildren
+io.codetail.view.R$attr: int measureWithLargestChild
+io.codetail.view.R$attr: int middleBarArrowSize
+io.codetail.view.R$attr: int navigationContentDescription
+io.codetail.view.R$attr: int navigationIcon
+io.codetail.view.R$attr: int navigationMode
+io.codetail.view.R$attr: int overlapAnchor
+io.codetail.view.R$attr: int paddingEnd
+io.codetail.view.R$attr: int paddingStart
+io.codetail.view.R$attr: int panelBackground
+io.codetail.view.R$attr: int panelMenuListTheme
+io.codetail.view.R$attr: int panelMenuListWidth
+io.codetail.view.R$attr: int popupMenuStyle
+io.codetail.view.R$attr: int popupPromptView
+io.codetail.view.R$attr: int popupTheme
+io.codetail.view.R$attr: int popupWindowStyle
+io.codetail.view.R$attr: int preserveIconSpacing
+io.codetail.view.R$attr: int progressBarPadding
+io.codetail.view.R$attr: int progressBarStyle
+io.codetail.view.R$attr: int prompt
+io.codetail.view.R$attr: int queryBackground
+io.codetail.view.R$attr: int queryHint
+io.codetail.view.R$attr: int searchIcon
+io.codetail.view.R$attr: int searchViewStyle
+io.codetail.view.R$attr: int selectableItemBackground
+io.codetail.view.R$attr: int selectableItemBackgroundBorderless
+io.codetail.view.R$attr: int showAsAction
+io.codetail.view.R$attr: int showDividers
+io.codetail.view.R$attr: int showText
+io.codetail.view.R$attr: int spinBars
+io.codetail.view.R$attr: int spinnerDropDownItemStyle
+io.codetail.view.R$attr: int spinnerMode
+io.codetail.view.R$attr: int spinnerStyle
+io.codetail.view.R$attr: int splitTrack
+io.codetail.view.R$attr: int state_above_anchor
+io.codetail.view.R$attr: int submitBackground
+io.codetail.view.R$attr: int subtitle
+io.codetail.view.R$attr: int subtitleTextAppearance
+io.codetail.view.R$attr: int subtitleTextStyle
+io.codetail.view.R$attr: int suggestionRowLayout
+io.codetail.view.R$attr: int switchMinWidth
+io.codetail.view.R$attr: int switchPadding
+io.codetail.view.R$attr: int switchStyle
+io.codetail.view.R$attr: int switchTextAppearance
+io.codetail.view.R$attr: int textAllCaps
+io.codetail.view.R$attr: int textAppearanceLargePopupMenu
+io.codetail.view.R$attr: int textAppearanceListItem
+io.codetail.view.R$attr: int textAppearanceListItemSmall
+io.codetail.view.R$attr: int textAppearanceSearchResultSubtitle
+io.codetail.view.R$attr: int textAppearanceSearchResultTitle
+io.codetail.view.R$attr: int textAppearanceSmallPopupMenu
+io.codetail.view.R$attr: int textColorSearchUrl
+io.codetail.view.R$attr: int theme
+io.codetail.view.R$attr: int thickness
+io.codetail.view.R$attr: int thumbTextPadding
+io.codetail.view.R$attr: int title
+io.codetail.view.R$attr: int titleMarginBottom
+io.codetail.view.R$attr: int titleMarginEnd
+io.codetail.view.R$attr: int titleMarginStart
+io.codetail.view.R$attr: int titleMarginTop
+io.codetail.view.R$attr: int titleMargins
+io.codetail.view.R$attr: int titleTextAppearance
+io.codetail.view.R$attr: int titleTextStyle
+io.codetail.view.R$attr: int toolbarNavigationButtonStyle
+io.codetail.view.R$attr: int toolbarStyle
+io.codetail.view.R$attr: int topBottomBarArrowSize
+io.codetail.view.R$attr: int track
+io.codetail.view.R$attr: int voiceIcon
+io.codetail.view.R$attr: int windowActionBar
+io.codetail.view.R$attr: int windowActionBarOverlay
+io.codetail.view.R$attr: int windowActionModeOverlay
+io.codetail.view.R$attr: int windowFixedHeightMajor
+io.codetail.view.R$attr: int windowFixedHeightMinor
+io.codetail.view.R$attr: int windowFixedWidthMajor
+io.codetail.view.R$attr: int windowFixedWidthMinor
+io.codetail.view.R$attr: R$attr()
+io.codetail.view.R$bool
+io.codetail.view.R$bool: int abc_action_bar_embed_tabs
+io.codetail.view.R$bool: int abc_action_bar_embed_tabs_pre_jb
+io.codetail.view.R$bool: int abc_action_bar_expanded_action_views_exclusive
+io.codetail.view.R$bool: int abc_config_actionMenuItemAllCaps
+io.codetail.view.R$bool: int abc_config_allowActionMenuItemTextWithIcon
+io.codetail.view.R$bool: int abc_config_showMenuShortcutsWhenKeyboardPresent
+io.codetail.view.R$bool: R$bool()
+io.codetail.view.R$color
+io.codetail.view.R$color: int abc_background_cache_hint_selector_material_dark
+io.codetail.view.R$color: int abc_background_cache_hint_selector_material_light
+io.codetail.view.R$color: int abc_input_method_navigation_guard
+io.codetail.view.R$color: int abc_primary_text_disable_only_material_dark
+io.codetail.view.R$color: int abc_primary_text_disable_only_material_light
+io.codetail.view.R$color: int abc_primary_text_material_dark
+io.codetail.view.R$color: int abc_primary_text_material_light
+io.codetail.view.R$color: int abc_search_url_text
+io.codetail.view.R$color: int abc_search_url_text_normal
+io.codetail.view.R$color: int abc_search_url_text_pressed
+io.codetail.view.R$color: int abc_search_url_text_selected
+io.codetail.view.R$color: int abc_secondary_text_material_dark
+io.codetail.view.R$color: int abc_secondary_text_material_light
+io.codetail.view.R$color: int accent_material_dark
+io.codetail.view.R$color: int accent_material_light
+io.codetail.view.R$color: int background_floating_material_dark
+io.codetail.view.R$color: int background_floating_material_light
+io.codetail.view.R$color: int background_material_dark
+io.codetail.view.R$color: int background_material_light
+io.codetail.view.R$color: int bright_foreground_disabled_material_dark
+io.codetail.view.R$color: int bright_foreground_disabled_material_light
+io.codetail.view.R$color: int bright_foreground_inverse_material_dark
+io.codetail.view.R$color: int bright_foreground_inverse_material_light
+io.codetail.view.R$color: int bright_foreground_material_dark
+io.codetail.view.R$color: int bright_foreground_material_light
+io.codetail.view.R$color: int button_material_dark
+io.codetail.view.R$color: int button_material_light
+io.codetail.view.R$color: int dim_foreground_disabled_material_dark
+io.codetail.view.R$color: int dim_foreground_disabled_material_light
+io.codetail.view.R$color: int dim_foreground_material_dark
+io.codetail.view.R$color: int dim_foreground_material_light
+io.codetail.view.R$color: int highlighted_text_material_dark
+io.codetail.view.R$color: int highlighted_text_material_light
+io.codetail.view.R$color: int hint_foreground_material_dark
+io.codetail.view.R$color: int hint_foreground_material_light
+io.codetail.view.R$color: int link_text_material_dark
+io.codetail.view.R$color: int link_text_material_light
+io.codetail.view.R$color: int material_blue_grey_800
+io.codetail.view.R$color: int material_blue_grey_900
+io.codetail.view.R$color: int material_blue_grey_950
+io.codetail.view.R$color: int material_deep_teal_200
+io.codetail.view.R$color: int material_deep_teal_500
+io.codetail.view.R$color: int primary_dark_material_dark
+io.codetail.view.R$color: int primary_dark_material_light
+io.codetail.view.R$color: int primary_material_dark
+io.codetail.view.R$color: int primary_material_light
+io.codetail.view.R$color: int primary_text_default_material_dark
+io.codetail.view.R$color: int primary_text_default_material_light
+io.codetail.view.R$color: int primary_text_disabled_material_dark
+io.codetail.view.R$color: int primary_text_disabled_material_light
+io.codetail.view.R$color: int ripple_material_dark
+io.codetail.view.R$color: int ripple_material_light
+io.codetail.view.R$color: int secondary_text_default_material_dark
+io.codetail.view.R$color: int secondary_text_default_material_light
+io.codetail.view.R$color: int secondary_text_disabled_material_dark
+io.codetail.view.R$color: int secondary_text_disabled_material_light
+io.codetail.view.R$color: int switch_thumb_normal_material_dark
+io.codetail.view.R$color: int switch_thumb_normal_material_light
+io.codetail.view.R$color: R$color()
+io.codetail.view.R$dimen
+io.codetail.view.R$dimen: int abc_action_bar_default_height_material
+io.codetail.view.R$dimen: int abc_action_bar_default_padding_material
+io.codetail.view.R$dimen: int abc_action_bar_icon_vertical_padding_material
+io.codetail.view.R$dimen: int abc_action_bar_progress_bar_size
+io.codetail.view.R$dimen: int abc_action_bar_stacked_max_height
+io.codetail.view.R$dimen: int abc_action_bar_stacked_tab_max_width
+io.codetail.view.R$dimen: int abc_action_bar_subtitle_bottom_margin_material
+io.codetail.view.R$dimen: int abc_action_bar_subtitle_top_margin_material
+io.codetail.view.R$dimen: int abc_action_button_min_height_material
+io.codetail.view.R$dimen: int abc_action_button_min_width_material
+io.codetail.view.R$dimen: int abc_action_button_min_width_overflow_material
+io.codetail.view.R$dimen: int abc_config_prefDialogWidth
+io.codetail.view.R$dimen: int abc_control_inset_material
+io.codetail.view.R$dimen: int abc_control_padding_material
+io.codetail.view.R$dimen: int abc_dropdownitem_icon_width
+io.codetail.view.R$dimen: int abc_dropdownitem_text_padding_left
+io.codetail.view.R$dimen: int abc_dropdownitem_text_padding_right
+io.codetail.view.R$dimen: int abc_panel_menu_list_width
+io.codetail.view.R$dimen: int abc_search_view_preferred_width
+io.codetail.view.R$dimen: int abc_search_view_text_min_width
+io.codetail.view.R$dimen: int abc_text_size_body_1_material
+io.codetail.view.R$dimen: int abc_text_size_body_2_material
+io.codetail.view.R$dimen: int abc_text_size_button_material
+io.codetail.view.R$dimen: int abc_text_size_caption_material
+io.codetail.view.R$dimen: int abc_text_size_display_1_material
+io.codetail.view.R$dimen: int abc_text_size_display_2_material
+io.codetail.view.R$dimen: int abc_text_size_display_3_material
+io.codetail.view.R$dimen: int abc_text_size_display_4_material
+io.codetail.view.R$dimen: int abc_text_size_headline_material
+io.codetail.view.R$dimen: int abc_text_size_large_material
+io.codetail.view.R$dimen: int abc_text_size_medium_material
+io.codetail.view.R$dimen: int abc_text_size_menu_material
+io.codetail.view.R$dimen: int abc_text_size_small_material
+io.codetail.view.R$dimen: int abc_text_size_subhead_material
+io.codetail.view.R$dimen: int abc_text_size_subtitle_material_toolbar
+io.codetail.view.R$dimen: int abc_text_size_title_material
+io.codetail.view.R$dimen: int abc_text_size_title_material_toolbar
+io.codetail.view.R$dimen: int dialog_fixed_height_major
+io.codetail.view.R$dimen: int dialog_fixed_height_minor
+io.codetail.view.R$dimen: int dialog_fixed_width_major
+io.codetail.view.R$dimen: int dialog_fixed_width_minor
+io.codetail.view.R$dimen: int disabled_alpha_material_dark
+io.codetail.view.R$dimen: int disabled_alpha_material_light
+io.codetail.view.R$dimen: R$dimen()
+io.codetail.view.R$drawable
+io.codetail.view.R$drawable: int abc_ab_share_pack_holo_dark
+io.codetail.view.R$drawable: int abc_ab_share_pack_holo_light
+io.codetail.view.R$drawable: int abc_btn_check_material
+io.codetail.view.R$drawable: int abc_btn_check_to_on_mtrl_000
+io.codetail.view.R$drawable: int abc_btn_check_to_on_mtrl_015
+io.codetail.view.R$drawable: int abc_btn_radio_material
+io.codetail.view.R$drawable: int abc_btn_radio_to_on_mtrl_000
+io.codetail.view.R$drawable: int abc_btn_radio_to_on_mtrl_015
+io.codetail.view.R$drawable: int abc_btn_switch_to_on_mtrl_00001
+io.codetail.view.R$drawable: int abc_btn_switch_to_on_mtrl_00012
+io.codetail.view.R$drawable: int abc_cab_background_internal_bg
+io.codetail.view.R$drawable: int abc_cab_background_top_material
+io.codetail.view.R$drawable: int abc_cab_background_top_mtrl_alpha
+io.codetail.view.R$drawable: int abc_edit_text_material
+io.codetail.view.R$drawable: int abc_ic_ab_back_mtrl_am_alpha
+io.codetail.view.R$drawable: int abc_ic_clear_mtrl_alpha
+io.codetail.view.R$drawable: int abc_ic_commit_search_api_mtrl_alpha
+io.codetail.view.R$drawable: int abc_ic_go_search_api_mtrl_alpha
+io.codetail.view.R$drawable: int abc_ic_menu_copy_mtrl_am_alpha
+io.codetail.view.R$drawable: int abc_ic_menu_cut_mtrl_alpha
+io.codetail.view.R$drawable: int abc_ic_menu_moreoverflow_mtrl_alpha
+io.codetail.view.R$drawable: int abc_ic_menu_paste_mtrl_am_alpha
+io.codetail.view.R$drawable: int abc_ic_menu_selectall_mtrl_alpha
+io.codetail.view.R$drawable: int abc_ic_menu_share_mtrl_alpha
+io.codetail.view.R$drawable: int abc_ic_search_api_mtrl_alpha
+io.codetail.view.R$drawable: int abc_ic_voice_search_api_mtrl_alpha
+io.codetail.view.R$drawable: int abc_item_background_holo_dark
+io.codetail.view.R$drawable: int abc_item_background_holo_light
+io.codetail.view.R$drawable: int abc_list_divider_mtrl_alpha
+io.codetail.view.R$drawable: int abc_list_focused_holo
+io.codetail.view.R$drawable: int abc_list_longpressed_holo
+io.codetail.view.R$drawable: int abc_list_pressed_holo_dark
+io.codetail.view.R$drawable: int abc_list_pressed_holo_light
+io.codetail.view.R$drawable: int abc_list_selector_background_transition_holo_dark
+io.codetail.view.R$drawable: int abc_list_selector_background_transition_holo_light
+io.codetail.view.R$drawable: int abc_list_selector_disabled_holo_dark
+io.codetail.view.R$drawable: int abc_list_selector_disabled_holo_light
+io.codetail.view.R$drawable: int abc_list_selector_holo_dark
+io.codetail.view.R$drawable: int abc_list_selector_holo_light
+io.codetail.view.R$drawable: int abc_menu_hardkey_panel_mtrl_mult
+io.codetail.view.R$drawable: int abc_popup_background_mtrl_mult
+io.codetail.view.R$drawable: int abc_spinner_mtrl_am_alpha
+io.codetail.view.R$drawable: int abc_switch_thumb_material
+io.codetail.view.R$drawable: int abc_switch_track_mtrl_alpha
+io.codetail.view.R$drawable: int abc_tab_indicator_material
+io.codetail.view.R$drawable: int abc_tab_indicator_mtrl_alpha
+io.codetail.view.R$drawable: int abc_textfield_activated_mtrl_alpha
+io.codetail.view.R$drawable: int abc_textfield_default_mtrl_alpha
+io.codetail.view.R$drawable: int abc_textfield_search_activated_mtrl_alpha
+io.codetail.view.R$drawable: int abc_textfield_search_default_mtrl_alpha
+io.codetail.view.R$drawable: int abc_textfield_search_material
+io.codetail.view.R$drawable: R$drawable()
+io.codetail.view.R$id
+io.codetail.view.R$id: int action_bar
+io.codetail.view.R$id: int action_bar_activity_content
+io.codetail.view.R$id: int action_bar_container
+io.codetail.view.R$id: int action_bar_root
+io.codetail.view.R$id: int action_bar_spinner
+io.codetail.view.R$id: int action_bar_subtitle
+io.codetail.view.R$id: int action_bar_title
+io.codetail.view.R$id: int action_context_bar
+io.codetail.view.R$id: int action_menu_divider
+io.codetail.view.R$id: int action_menu_presenter
+io.codetail.view.R$id: int action_mode_bar
+io.codetail.view.R$id: int action_mode_bar_stub
+io.codetail.view.R$id: int action_mode_close_button
+io.codetail.view.R$id: int activity_chooser_view_content
+io.codetail.view.R$id: int add
+io.codetail.view.R$id: int always
+io.codetail.view.R$id: int beginning
+io.codetail.view.R$id: int bottom
+io.codetail.view.R$id: int center
+io.codetail.view.R$id: int center_horizontal
+io.codetail.view.R$id: int center_vertical
+io.codetail.view.R$id: int checkbox
+io.codetail.view.R$id: int clip_horizontal
+io.codetail.view.R$id: int clip_vertical
+io.codetail.view.R$id: int collapseActionView
+io.codetail.view.R$id: int decor_content_parent
+io.codetail.view.R$id: int default_activity_button
+io.codetail.view.R$id: int dialog
+io.codetail.view.R$id: int disableHome
+io.codetail.view.R$id: int dropdown
+io.codetail.view.R$id: int edit_query
+io.codetail.view.R$id: int end
+io.codetail.view.R$id: int expand_activities_button
+io.codetail.view.R$id: int expanded_menu
+io.codetail.view.R$id: int fill
+io.codetail.view.R$id: int fill_horizontal
+io.codetail.view.R$id: int fill_vertical
+io.codetail.view.R$id: int home
+io.codetail.view.R$id: int homeAsUp
+io.codetail.view.R$id: int icon
+io.codetail.view.R$id: int ifRoom
+io.codetail.view.R$id: int image
+io.codetail.view.R$id: int left
+io.codetail.view.R$id: int listMode
+io.codetail.view.R$id: int list_item
+io.codetail.view.R$id: int middle
+io.codetail.view.R$id: int multiply
+io.codetail.view.R$id: int never
+io.codetail.view.R$id: int none
+io.codetail.view.R$id: int normal
+io.codetail.view.R$id: int progress_circular
+io.codetail.view.R$id: int progress_horizontal
+io.codetail.view.R$id: int radio
+io.codetail.view.R$id: int right
+io.codetail.view.R$id: int screen
+io.codetail.view.R$id: int search_badge
+io.codetail.view.R$id: int search_bar
+io.codetail.view.R$id: int search_button
+io.codetail.view.R$id: int search_close_btn
+io.codetail.view.R$id: int search_edit_frame
+io.codetail.view.R$id: int search_go_btn
+io.codetail.view.R$id: int search_mag_icon
+io.codetail.view.R$id: int search_plate
+io.codetail.view.R$id: int search_src_text
+io.codetail.view.R$id: int search_voice_btn
+io.codetail.view.R$id: int shortcut
+io.codetail.view.R$id: int showCustom
+io.codetail.view.R$id: int showHome
+io.codetail.view.R$id: int showTitle
+io.codetail.view.R$id: int split_action_bar
+io.codetail.view.R$id: int src_atop
+io.codetail.view.R$id: int src_in
+io.codetail.view.R$id: int src_over
+io.codetail.view.R$id: int submit_area
+io.codetail.view.R$id: int tabMode
+io.codetail.view.R$id: int title
+io.codetail.view.R$id: int top
+io.codetail.view.R$id: int up
+io.codetail.view.R$id: int useLogo
+io.codetail.view.R$id: int withText
+io.codetail.view.R$id: int wrap_content
+io.codetail.view.R$id: R$id()
+io.codetail.view.R$integer
+io.codetail.view.R$integer: int abc_max_action_buttons
+io.codetail.view.R$integer: R$integer()
+io.codetail.view.R$layout
+io.codetail.view.R$layout: int abc_action_bar_title_item
+io.codetail.view.R$layout: int abc_action_bar_up_container
+io.codetail.view.R$layout: int abc_action_bar_view_list_nav_layout
+io.codetail.view.R$layout: int abc_action_menu_item_layout
+io.codetail.view.R$layout: int abc_action_menu_layout
+io.codetail.view.R$layout: int abc_action_mode_bar
+io.codetail.view.R$layout: int abc_action_mode_close_item_material
+io.codetail.view.R$layout: int abc_activity_chooser_view
+io.codetail.view.R$layout: int abc_activity_chooser_view_include
+io.codetail.view.R$layout: int abc_activity_chooser_view_list_item
+io.codetail.view.R$layout: int abc_expanded_menu_layout
+io.codetail.view.R$layout: int abc_list_menu_item_checkbox
+io.codetail.view.R$layout: int abc_list_menu_item_icon
+io.codetail.view.R$layout: int abc_list_menu_item_layout
+io.codetail.view.R$layout: int abc_list_menu_item_radio
+io.codetail.view.R$layout: int abc_popup_menu_item_layout
+io.codetail.view.R$layout: int abc_screen_content_include
+io.codetail.view.R$layout: int abc_screen_simple
+io.codetail.view.R$layout: int abc_screen_simple_overlay_action_mode
+io.codetail.view.R$layout: int abc_screen_toolbar
+io.codetail.view.R$layout: int abc_search_dropdown_item_icons_2line
+io.codetail.view.R$layout: int abc_search_view
+io.codetail.view.R$layout: int abc_simple_dropdown_hint
+io.codetail.view.R$layout: int support_simple_spinner_dropdown_item
+io.codetail.view.R$layout: R$layout()
+io.codetail.view.R$string
+io.codetail.view.R$string: int abc_action_bar_home_description
+io.codetail.view.R$string: int abc_action_bar_home_description_format
+io.codetail.view.R$string: int abc_action_bar_home_subtitle_description_format
+io.codetail.view.R$string: int abc_action_bar_up_description
+io.codetail.view.R$string: int abc_action_menu_overflow_description
+io.codetail.view.R$string: int abc_action_mode_done
+io.codetail.view.R$string: int abc_activity_chooser_view_see_all
+io.codetail.view.R$string: int abc_activitychooserview_choose_application
+io.codetail.view.R$string: int abc_searchview_description_clear
+io.codetail.view.R$string: int abc_searchview_description_query
+io.codetail.view.R$string: int abc_searchview_description_search
+io.codetail.view.R$string: int abc_searchview_description_submit
+io.codetail.view.R$string: int abc_searchview_description_voice
+io.codetail.view.R$string: int abc_shareactionprovider_share_with
+io.codetail.view.R$string: int abc_shareactionprovider_share_with_application
+io.codetail.view.R$string: R$string()
+io.codetail.view.R$style
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Body1
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Body2
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Button
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Caption
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Display1
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Display2
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Display3
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Display4
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Headline
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Inverse
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Large
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Large_Inverse
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Medium
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Medium_Inverse
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Menu
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_SearchResult
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_SearchResult_Subtitle
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_SearchResult_Title
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Small
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Small_Inverse
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Subhead
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Subhead_Inverse
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Title
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Title_Inverse
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Widget_ActionBar_Menu
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Widget_ActionBar_Title
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Widget_ActionMode_Title
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Widget_DropDownItem
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Widget_PopupMenu_Large
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Widget_PopupMenu_Small
+io.codetail.view.R$style: int Base_TextAppearance_AppCompat_Widget_Switch
+io.codetail.view.R$style: int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item
+io.codetail.view.R$style: int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle
+io.codetail.view.R$style: int Base_TextAppearance_Widget_AppCompat_Toolbar_Title
+io.codetail.view.R$style: int Base_ThemeOverlay_AppCompat
+io.codetail.view.R$style: int Base_ThemeOverlay_AppCompat_ActionBar
+io.codetail.view.R$style: int Base_ThemeOverlay_AppCompat_Dark
+io.codetail.view.R$style: int Base_ThemeOverlay_AppCompat_Dark_ActionBar
+io.codetail.view.R$style: int Base_ThemeOverlay_AppCompat_Light
+io.codetail.view.R$style: int Base_Theme_AppCompat
+io.codetail.view.R$style: int Base_Theme_AppCompat_CompactMenu
+io.codetail.view.R$style: int Base_Theme_AppCompat_Dialog
+io.codetail.view.R$style: int Base_Theme_AppCompat_DialogWhenLarge
+io.codetail.view.R$style: int Base_Theme_AppCompat_Dialog_FixedSize
+io.codetail.view.R$style: int Base_Theme_AppCompat_Light
+io.codetail.view.R$style: int Base_Theme_AppCompat_Light_DarkActionBar
+io.codetail.view.R$style: int Base_Theme_AppCompat_Light_Dialog
+io.codetail.view.R$style: int Base_Theme_AppCompat_Light_DialogWhenLarge
+io.codetail.view.R$style: int Base_Theme_AppCompat_Light_Dialog_FixedSize
+io.codetail.view.R$style: int Base_V11_Theme_AppCompat
+io.codetail.view.R$style: int Base_V11_Theme_AppCompat_Dialog
+io.codetail.view.R$style: int Base_V11_Theme_AppCompat_Light
+io.codetail.view.R$style: int Base_V11_Theme_AppCompat_Light_Dialog
+io.codetail.view.R$style: int Base_V14_Theme_AppCompat
+io.codetail.view.R$style: int Base_V14_Theme_AppCompat_Dialog
+io.codetail.view.R$style: int Base_V14_Theme_AppCompat_Light
+io.codetail.view.R$style: int Base_V14_Theme_AppCompat_Light_Dialog
+io.codetail.view.R$style: int Base_V21_Theme_AppCompat
+io.codetail.view.R$style: int Base_V21_Theme_AppCompat_Dialog
+io.codetail.view.R$style: int Base_V21_Theme_AppCompat_Light
+io.codetail.view.R$style: int Base_V21_Theme_AppCompat_Light_Dialog
+io.codetail.view.R$style: int Base_V7_Theme_AppCompat
+io.codetail.view.R$style: int Base_V7_Theme_AppCompat_Dialog
+io.codetail.view.R$style: int Base_V7_Theme_AppCompat_Light
+io.codetail.view.R$style: int Base_Widget_AppCompat_ActionBar
+io.codetail.view.R$style: int Base_Widget_AppCompat_ActionBar_Solid
+io.codetail.view.R$style: int Base_Widget_AppCompat_ActionBar_TabBar
+io.codetail.view.R$style: int Base_Widget_AppCompat_ActionBar_TabText
+io.codetail.view.R$style: int Base_Widget_AppCompat_ActionBar_TabView
+io.codetail.view.R$style: int Base_Widget_AppCompat_ActionButton
+io.codetail.view.R$style: int Base_Widget_AppCompat_ActionButton_CloseMode
+io.codetail.view.R$style: int Base_Widget_AppCompat_ActionButton_Overflow
+io.codetail.view.R$style: int Base_Widget_AppCompat_ActionMode
+io.codetail.view.R$style: int Base_Widget_AppCompat_ActivityChooserView
+io.codetail.view.R$style: int Base_Widget_AppCompat_AutoCompleteTextView
+io.codetail.view.R$style: int Base_Widget_AppCompat_CompoundButton_Switch
+io.codetail.view.R$style: int Base_Widget_AppCompat_DrawerArrowToggle
+io.codetail.view.R$style: int Base_Widget_AppCompat_DropDownItem_Spinner
+io.codetail.view.R$style: int Base_Widget_AppCompat_EditText
+io.codetail.view.R$style: int Base_Widget_AppCompat_Light_ActionBar
+io.codetail.view.R$style: int Base_Widget_AppCompat_Light_ActionBar_Solid
+io.codetail.view.R$style: int Base_Widget_AppCompat_Light_ActionBar_TabBar
+io.codetail.view.R$style: int Base_Widget_AppCompat_Light_ActionBar_TabText
+io.codetail.view.R$style: int Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse
+io.codetail.view.R$style: int Base_Widget_AppCompat_Light_ActionBar_TabView
+io.codetail.view.R$style: int Base_Widget_AppCompat_Light_ActivityChooserView
+io.codetail.view.R$style: int Base_Widget_AppCompat_Light_AutoCompleteTextView
+io.codetail.view.R$style: int Base_Widget_AppCompat_Light_PopupMenu
+io.codetail.view.R$style: int Base_Widget_AppCompat_Light_PopupMenu_Overflow
+io.codetail.view.R$style: int Base_Widget_AppCompat_ListPopupWindow
+io.codetail.view.R$style: int Base_Widget_AppCompat_ListView_DropDown
+io.codetail.view.R$style: int Base_Widget_AppCompat_ListView_Menu
+io.codetail.view.R$style: int Base_Widget_AppCompat_PopupMenu
+io.codetail.view.R$style: int Base_Widget_AppCompat_PopupMenu_Overflow
+io.codetail.view.R$style: int Base_Widget_AppCompat_PopupWindow
+io.codetail.view.R$style: int Base_Widget_AppCompat_ProgressBar
+io.codetail.view.R$style: int Base_Widget_AppCompat_ProgressBar_Horizontal
+io.codetail.view.R$style: int Base_Widget_AppCompat_SearchView
+io.codetail.view.R$style: int Base_Widget_AppCompat_Spinner
+io.codetail.view.R$style: int Base_Widget_AppCompat_Spinner_DropDown_ActionBar
+io.codetail.view.R$style: int Base_Widget_AppCompat_Toolbar
+io.codetail.view.R$style: int Base_Widget_AppCompat_Toolbar_Button_Navigation
+io.codetail.view.R$style: int Platform_AppCompat
+io.codetail.view.R$style: int Platform_AppCompat_Dialog
+io.codetail.view.R$style: int Platform_AppCompat_Light
+io.codetail.view.R$style: int Platform_AppCompat_Light_Dialog
+io.codetail.view.R$style: int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem
+io.codetail.view.R$style: int RtlOverlay_Widget_AppCompat_ActionButton_CloseMode
+io.codetail.view.R$style: int RtlOverlay_Widget_AppCompat_ActionButton_Overflow
+io.codetail.view.R$style: int RtlOverlay_Widget_AppCompat_PopupMenuItem
+io.codetail.view.R$style: int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup
+io.codetail.view.R$style: int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text
+io.codetail.view.R$style: int RtlOverlay_Widget_AppCompat_SearchView_MagIcon
+io.codetail.view.R$style: int RtlOverlay_Widget_AppCompat_Search_DropDown
+io.codetail.view.R$style: int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1
+io.codetail.view.R$style: int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2
+io.codetail.view.R$style: int RtlOverlay_Widget_AppCompat_Search_DropDown_Query
+io.codetail.view.R$style: int RtlOverlay_Widget_AppCompat_Search_DropDown_Text
+io.codetail.view.R$style: int TextAppearance_AppCompat
+io.codetail.view.R$style: int TextAppearance_AppCompat_Body1
+io.codetail.view.R$style: int TextAppearance_AppCompat_Body2
+io.codetail.view.R$style: int TextAppearance_AppCompat_Button
+io.codetail.view.R$style: int TextAppearance_AppCompat_Caption
+io.codetail.view.R$style: int TextAppearance_AppCompat_Display1
+io.codetail.view.R$style: int TextAppearance_AppCompat_Display2
+io.codetail.view.R$style: int TextAppearance_AppCompat_Display3
+io.codetail.view.R$style: int TextAppearance_AppCompat_Display4
+io.codetail.view.R$style: int TextAppearance_AppCompat_Headline
+io.codetail.view.R$style: int TextAppearance_AppCompat_Inverse
+io.codetail.view.R$style: int TextAppearance_AppCompat_Large
+io.codetail.view.R$style: int TextAppearance_AppCompat_Large_Inverse
+io.codetail.view.R$style: int TextAppearance_AppCompat_Light_SearchResult_Subtitle
+io.codetail.view.R$style: int TextAppearance_AppCompat_Light_SearchResult_Title
+io.codetail.view.R$style: int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large
+io.codetail.view.R$style: int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small
+io.codetail.view.R$style: int TextAppearance_AppCompat_Medium
+io.codetail.view.R$style: int TextAppearance_AppCompat_Medium_Inverse
+io.codetail.view.R$style: int TextAppearance_AppCompat_Menu
+io.codetail.view.R$style: int TextAppearance_AppCompat_SearchResult_Subtitle
+io.codetail.view.R$style: int TextAppearance_AppCompat_SearchResult_Title
+io.codetail.view.R$style: int TextAppearance_AppCompat_Small
+io.codetail.view.R$style: int TextAppearance_AppCompat_Small_Inverse
+io.codetail.view.R$style: int TextAppearance_AppCompat_Subhead
+io.codetail.view.R$style: int TextAppearance_AppCompat_Subhead_Inverse
+io.codetail.view.R$style: int TextAppearance_AppCompat_Title
+io.codetail.view.R$style: int TextAppearance_AppCompat_Title_Inverse
+io.codetail.view.R$style: int TextAppearance_AppCompat_Widget_ActionBar_Menu
+io.codetail.view.R$style: int TextAppearance_AppCompat_Widget_ActionBar_Subtitle
+io.codetail.view.R$style: int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse
+io.codetail.view.R$style: int TextAppearance_AppCompat_Widget_ActionBar_Title
+io.codetail.view.R$style: int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse
+io.codetail.view.R$style: int TextAppearance_AppCompat_Widget_ActionMode_Subtitle
+io.codetail.view.R$style: int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse
+io.codetail.view.R$style: int TextAppearance_AppCompat_Widget_ActionMode_Title
+io.codetail.view.R$style: int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse
+io.codetail.view.R$style: int TextAppearance_AppCompat_Widget_DropDownItem
+io.codetail.view.R$style: int TextAppearance_AppCompat_Widget_PopupMenu_Large
+io.codetail.view.R$style: int TextAppearance_AppCompat_Widget_PopupMenu_Small
+io.codetail.view.R$style: int TextAppearance_AppCompat_Widget_Switch
+io.codetail.view.R$style: int TextAppearance_Widget_AppCompat_ExpandedMenu_Item
+io.codetail.view.R$style: int TextAppearance_Widget_AppCompat_Toolbar_Subtitle
+io.codetail.view.R$style: int TextAppearance_Widget_AppCompat_Toolbar_Title
+io.codetail.view.R$style: int ThemeOverlay_AppCompat
+io.codetail.view.R$style: int ThemeOverlay_AppCompat_ActionBar
+io.codetail.view.R$style: int ThemeOverlay_AppCompat_Dark
+io.codetail.view.R$style: int ThemeOverlay_AppCompat_Dark_ActionBar
+io.codetail.view.R$style: int ThemeOverlay_AppCompat_Light
+io.codetail.view.R$style: int Theme_AppCompat
+io.codetail.view.R$style: int Theme_AppCompat_CompactMenu
+io.codetail.view.R$style: int Theme_AppCompat_Dialog
+io.codetail.view.R$style: int Theme_AppCompat_DialogWhenLarge
+io.codetail.view.R$style: int Theme_AppCompat_Light
+io.codetail.view.R$style: int Theme_AppCompat_Light_DarkActionBar
+io.codetail.view.R$style: int Theme_AppCompat_Light_Dialog
+io.codetail.view.R$style: int Theme_AppCompat_Light_DialogWhenLarge
+io.codetail.view.R$style: int Theme_AppCompat_Light_NoActionBar
+io.codetail.view.R$style: int Theme_AppCompat_NoActionBar
+io.codetail.view.R$style: int Widget_AppCompat_ActionBar
+io.codetail.view.R$style: int Widget_AppCompat_ActionBar_Solid
+io.codetail.view.R$style: int Widget_AppCompat_ActionBar_TabBar
+io.codetail.view.R$style: int Widget_AppCompat_ActionBar_TabText
+io.codetail.view.R$style: int Widget_AppCompat_ActionBar_TabView
+io.codetail.view.R$style: int Widget_AppCompat_ActionButton
+io.codetail.view.R$style: int Widget_AppCompat_ActionButton_CloseMode
+io.codetail.view.R$style: int Widget_AppCompat_ActionButton_Overflow
+io.codetail.view.R$style: int Widget_AppCompat_ActionMode
+io.codetail.view.R$style: int Widget_AppCompat_ActivityChooserView
+io.codetail.view.R$style: int Widget_AppCompat_AutoCompleteTextView
+io.codetail.view.R$style: int Widget_AppCompat_CompoundButton_Switch
+io.codetail.view.R$style: int Widget_AppCompat_DrawerArrowToggle
+io.codetail.view.R$style: int Widget_AppCompat_DropDownItem_Spinner
+io.codetail.view.R$style: int Widget_AppCompat_EditText
+io.codetail.view.R$style: int Widget_AppCompat_Light_ActionBar
+io.codetail.view.R$style: int Widget_AppCompat_Light_ActionBar_Solid
+io.codetail.view.R$style: int Widget_AppCompat_Light_ActionBar_Solid_Inverse
+io.codetail.view.R$style: int Widget_AppCompat_Light_ActionBar_TabBar
+io.codetail.view.R$style: int Widget_AppCompat_Light_ActionBar_TabBar_Inverse
+io.codetail.view.R$style: int Widget_AppCompat_Light_ActionBar_TabText
+io.codetail.view.R$style: int Widget_AppCompat_Light_ActionBar_TabText_Inverse
+io.codetail.view.R$style: int Widget_AppCompat_Light_ActionBar_TabView
+io.codetail.view.R$style: int Widget_AppCompat_Light_ActionBar_TabView_Inverse
+io.codetail.view.R$style: int Widget_AppCompat_Light_ActionButton
+io.codetail.view.R$style: int Widget_AppCompat_Light_ActionButton_CloseMode
+io.codetail.view.R$style: int Widget_AppCompat_Light_ActionButton_Overflow
+io.codetail.view.R$style: int Widget_AppCompat_Light_ActionMode_Inverse
+io.codetail.view.R$style: int Widget_AppCompat_Light_ActivityChooserView
+io.codetail.view.R$style: int Widget_AppCompat_Light_AutoCompleteTextView
+io.codetail.view.R$style: int Widget_AppCompat_Light_DropDownItem_Spinner
+io.codetail.view.R$style: int Widget_AppCompat_Light_ListPopupWindow
+io.codetail.view.R$style: int Widget_AppCompat_Light_ListView_DropDown
+io.codetail.view.R$style: int Widget_AppCompat_Light_PopupMenu
+io.codetail.view.R$style: int Widget_AppCompat_Light_PopupMenu_Overflow
+io.codetail.view.R$style: int Widget_AppCompat_Light_SearchView
+io.codetail.view.R$style: int Widget_AppCompat_Light_Spinner_DropDown_ActionBar
+io.codetail.view.R$style: int Widget_AppCompat_ListPopupWindow
+io.codetail.view.R$style: int Widget_AppCompat_ListView_DropDown
+io.codetail.view.R$style: int Widget_AppCompat_ListView_Menu
+io.codetail.view.R$style: int Widget_AppCompat_PopupMenu
+io.codetail.view.R$style: int Widget_AppCompat_PopupMenu_Overflow
+io.codetail.view.R$style: int Widget_AppCompat_PopupWindow
+io.codetail.view.R$style: int Widget_AppCompat_ProgressBar
+io.codetail.view.R$style: int Widget_AppCompat_ProgressBar_Horizontal
+io.codetail.view.R$style: int Widget_AppCompat_SearchView
+io.codetail.view.R$style: int Widget_AppCompat_Spinner
+io.codetail.view.R$style: int Widget_AppCompat_Spinner_DropDown
+io.codetail.view.R$style: int Widget_AppCompat_Spinner_DropDown_ActionBar
+io.codetail.view.R$style: int Widget_AppCompat_Toolbar
+io.codetail.view.R$style: int Widget_AppCompat_Toolbar_Button_Navigation
+io.codetail.view.R$style: R$style()
+io.codetail.view.R$styleable
+io.codetail.view.R$styleable: int[] ActionBar
+io.codetail.view.R$styleable: int[] ActionBarLayout
+io.codetail.view.R$styleable: int ActionBarLayout_android_layout_gravity
+io.codetail.view.R$styleable: int ActionBar_background
+io.codetail.view.R$styleable: int ActionBar_backgroundSplit
+io.codetail.view.R$styleable: int ActionBar_backgroundStacked
+io.codetail.view.R$styleable: int ActionBar_contentInsetEnd
+io.codetail.view.R$styleable: int ActionBar_contentInsetLeft
+io.codetail.view.R$styleable: int ActionBar_contentInsetRight
+io.codetail.view.R$styleable: int ActionBar_contentInsetStart
+io.codetail.view.R$styleable: int ActionBar_customNavigationLayout
+io.codetail.view.R$styleable: int ActionBar_displayOptions
+io.codetail.view.R$styleable: int ActionBar_divider
+io.codetail.view.R$styleable: int ActionBar_elevation
+io.codetail.view.R$styleable: int ActionBar_height
+io.codetail.view.R$styleable: int ActionBar_hideOnContentScroll
+io.codetail.view.R$styleable: int ActionBar_homeAsUpIndicator
+io.codetail.view.R$styleable: int ActionBar_homeLayout
+io.codetail.view.R$styleable: int ActionBar_icon
+io.codetail.view.R$styleable: int ActionBar_indeterminateProgressStyle
+io.codetail.view.R$styleable: int ActionBar_itemPadding
+io.codetail.view.R$styleable: int ActionBar_logo
+io.codetail.view.R$styleable: int ActionBar_navigationMode
+io.codetail.view.R$styleable: int ActionBar_popupTheme
+io.codetail.view.R$styleable: int ActionBar_progressBarPadding
+io.codetail.view.R$styleable: int ActionBar_progressBarStyle
+io.codetail.view.R$styleable: int ActionBar_subtitle
+io.codetail.view.R$styleable: int ActionBar_subtitleTextStyle
+io.codetail.view.R$styleable: int ActionBar_title
+io.codetail.view.R$styleable: int ActionBar_titleTextStyle
+io.codetail.view.R$styleable: int[] ActionMenuItemView
+io.codetail.view.R$styleable: int ActionMenuItemView_android_minWidth
+io.codetail.view.R$styleable: int[] ActionMenuView
+io.codetail.view.R$styleable: int[] ActionMode
+io.codetail.view.R$styleable: int ActionMode_background
+io.codetail.view.R$styleable: int ActionMode_backgroundSplit
+io.codetail.view.R$styleable: int ActionMode_closeItemLayout
+io.codetail.view.R$styleable: int ActionMode_height
+io.codetail.view.R$styleable: int ActionMode_subtitleTextStyle
+io.codetail.view.R$styleable: int ActionMode_titleTextStyle
+io.codetail.view.R$styleable: int[] ActivityChooserView
+io.codetail.view.R$styleable: int ActivityChooserView_expandActivityOverflowButtonDrawable
+io.codetail.view.R$styleable: int ActivityChooserView_initialActivityCount
+io.codetail.view.R$styleable: int[] CompatTextView
+io.codetail.view.R$styleable: int CompatTextView_textAllCaps
+io.codetail.view.R$styleable: int[] DrawerArrowToggle
+io.codetail.view.R$styleable: int DrawerArrowToggle_barSize
+io.codetail.view.R$styleable: int DrawerArrowToggle_color
+io.codetail.view.R$styleable: int DrawerArrowToggle_drawableSize
+io.codetail.view.R$styleable: int DrawerArrowToggle_gapBetweenBars
+io.codetail.view.R$styleable: int DrawerArrowToggle_middleBarArrowSize
+io.codetail.view.R$styleable: int DrawerArrowToggle_spinBars
+io.codetail.view.R$styleable: int DrawerArrowToggle_thickness
+io.codetail.view.R$styleable: int DrawerArrowToggle_topBottomBarArrowSize
+io.codetail.view.R$styleable: int[] FrameLayoutCompat
+io.codetail.view.R$styleable: int FrameLayoutCompat_foreground
+io.codetail.view.R$styleable: int FrameLayoutCompat_foregroundGravity
+io.codetail.view.R$styleable: int FrameLayoutCompat_foregroundInsidePadding
+io.codetail.view.R$styleable: int FrameLayoutCompat_foregroundTint
+io.codetail.view.R$styleable: int FrameLayoutCompat_foregroundTintMode
+io.codetail.view.R$styleable: int FrameLayoutCompat_measureAllChildren
+io.codetail.view.R$styleable: int[] LinearLayoutCompat
+io.codetail.view.R$styleable: int[] LinearLayoutCompat_Layout
+io.codetail.view.R$styleable: int LinearLayoutCompat_Layout_android_layout_gravity
+io.codetail.view.R$styleable: int LinearLayoutCompat_Layout_android_layout_height
+io.codetail.view.R$styleable: int LinearLayoutCompat_Layout_android_layout_weight
+io.codetail.view.R$styleable: int LinearLayoutCompat_Layout_android_layout_width
+io.codetail.view.R$styleable: int LinearLayoutCompat_android_baselineAligned
+io.codetail.view.R$styleable: int LinearLayoutCompat_android_baselineAlignedChildIndex
+io.codetail.view.R$styleable: int LinearLayoutCompat_android_gravity
+io.codetail.view.R$styleable: int LinearLayoutCompat_android_orientation
+io.codetail.view.R$styleable: int LinearLayoutCompat_android_weightSum
+io.codetail.view.R$styleable: int LinearLayoutCompat_divider
+io.codetail.view.R$styleable: int LinearLayoutCompat_dividerPadding
+io.codetail.view.R$styleable: int LinearLayoutCompat_measureWithLargestChild
+io.codetail.view.R$styleable: int LinearLayoutCompat_showDividers
+io.codetail.view.R$styleable: int[] ListPopupWindow
+io.codetail.view.R$styleable: int ListPopupWindow_android_dropDownHorizontalOffset
+io.codetail.view.R$styleable: int ListPopupWindow_android_dropDownVerticalOffset
+io.codetail.view.R$styleable: int[] MenuGroup
+io.codetail.view.R$styleable: int MenuGroup_android_checkableBehavior
+io.codetail.view.R$styleable: int MenuGroup_android_enabled
+io.codetail.view.R$styleable: int MenuGroup_android_id
+io.codetail.view.R$styleable: int MenuGroup_android_menuCategory
+io.codetail.view.R$styleable: int MenuGroup_android_orderInCategory
+io.codetail.view.R$styleable: int MenuGroup_android_visible
+io.codetail.view.R$styleable: int[] MenuItem
+io.codetail.view.R$styleable: int MenuItem_actionLayout
+io.codetail.view.R$styleable: int MenuItem_actionProviderClass
+io.codetail.view.R$styleable: int MenuItem_actionViewClass
+io.codetail.view.R$styleable: int MenuItem_android_alphabeticShortcut
+io.codetail.view.R$styleable: int MenuItem_android_checkable
+io.codetail.view.R$styleable: int MenuItem_android_checked
+io.codetail.view.R$styleable: int MenuItem_android_enabled
+io.codetail.view.R$styleable: int MenuItem_android_icon
+io.codetail.view.R$styleable: int MenuItem_android_id
+io.codetail.view.R$styleable: int MenuItem_android_menuCategory
+io.codetail.view.R$styleable: int MenuItem_android_numericShortcut
+io.codetail.view.R$styleable: int MenuItem_android_onClick
+io.codetail.view.R$styleable: int MenuItem_android_orderInCategory
+io.codetail.view.R$styleable: int MenuItem_android_title
+io.codetail.view.R$styleable: int MenuItem_android_titleCondensed
+io.codetail.view.R$styleable: int MenuItem_android_visible
+io.codetail.view.R$styleable: int MenuItem_showAsAction
+io.codetail.view.R$styleable: int[] MenuView
+io.codetail.view.R$styleable: int MenuView_android_headerBackground
+io.codetail.view.R$styleable: int MenuView_android_horizontalDivider
+io.codetail.view.R$styleable: int MenuView_android_itemBackground
+io.codetail.view.R$styleable: int MenuView_android_itemIconDisabledAlpha
+io.codetail.view.R$styleable: int MenuView_android_itemTextAppearance
+io.codetail.view.R$styleable: int MenuView_android_verticalDivider
+io.codetail.view.R$styleable: int MenuView_android_windowAnimationStyle
+io.codetail.view.R$styleable: int MenuView_preserveIconSpacing
+io.codetail.view.R$styleable: int[] PopupWindow
+io.codetail.view.R$styleable: int[] PopupWindowBackgroundState
+io.codetail.view.R$styleable: int PopupWindowBackgroundState_state_above_anchor
+io.codetail.view.R$styleable: int PopupWindow_android_popupBackground
+io.codetail.view.R$styleable: int PopupWindow_overlapAnchor
+io.codetail.view.R$styleable: int[] SearchView
+io.codetail.view.R$styleable: int SearchView_android_focusable
+io.codetail.view.R$styleable: int SearchView_android_imeOptions
+io.codetail.view.R$styleable: int SearchView_android_inputType
+io.codetail.view.R$styleable: int SearchView_android_maxWidth
+io.codetail.view.R$styleable: int SearchView_closeIcon
+io.codetail.view.R$styleable: int SearchView_commitIcon
+io.codetail.view.R$styleable: int SearchView_goIcon
+io.codetail.view.R$styleable: int SearchView_iconifiedByDefault
+io.codetail.view.R$styleable: int SearchView_layout
+io.codetail.view.R$styleable: int SearchView_queryBackground
+io.codetail.view.R$styleable: int SearchView_queryHint
+io.codetail.view.R$styleable: int SearchView_searchIcon
+io.codetail.view.R$styleable: int SearchView_submitBackground
+io.codetail.view.R$styleable: int SearchView_suggestionRowLayout
+io.codetail.view.R$styleable: int SearchView_voiceIcon
+io.codetail.view.R$styleable: int[] Spinner
+io.codetail.view.R$styleable: int Spinner_android_background
+io.codetail.view.R$styleable: int Spinner_android_dropDownHorizontalOffset
+io.codetail.view.R$styleable: int Spinner_android_dropDownSelector
+io.codetail.view.R$styleable: int Spinner_android_dropDownVerticalOffset
+io.codetail.view.R$styleable: int Spinner_android_dropDownWidth
+io.codetail.view.R$styleable: int Spinner_android_gravity
+io.codetail.view.R$styleable: int Spinner_android_popupBackground
+io.codetail.view.R$styleable: int Spinner_disableChildrenWhenDisabled
+io.codetail.view.R$styleable: int Spinner_popupPromptView
+io.codetail.view.R$styleable: int Spinner_prompt
+io.codetail.view.R$styleable: int Spinner_spinnerMode
+io.codetail.view.R$styleable: int[] SwitchCompat
+io.codetail.view.R$styleable: int SwitchCompat_android_textOff
+io.codetail.view.R$styleable: int SwitchCompat_android_textOn
+io.codetail.view.R$styleable: int SwitchCompat_android_thumb
+io.codetail.view.R$styleable: int SwitchCompat_showText
+io.codetail.view.R$styleable: int SwitchCompat_splitTrack
+io.codetail.view.R$styleable: int SwitchCompat_switchMinWidth
+io.codetail.view.R$styleable: int SwitchCompat_switchPadding
+io.codetail.view.R$styleable: int SwitchCompat_switchTextAppearance
+io.codetail.view.R$styleable: int SwitchCompat_thumbTextPadding
+io.codetail.view.R$styleable: int SwitchCompat_track
+io.codetail.view.R$styleable: int[] Theme
+io.codetail.view.R$styleable: int Theme_actionBarDivider
+io.codetail.view.R$styleable: int Theme_actionBarItemBackground
+io.codetail.view.R$styleable: int Theme_actionBarPopupTheme
+io.codetail.view.R$styleable: int Theme_actionBarSize
+io.codetail.view.R$styleable: int Theme_actionBarSplitStyle
+io.codetail.view.R$styleable: int Theme_actionBarStyle
+io.codetail.view.R$styleable: int Theme_actionBarTabBarStyle
+io.codetail.view.R$styleable: int Theme_actionBarTabStyle
+io.codetail.view.R$styleable: int Theme_actionBarTabTextStyle
+io.codetail.view.R$styleable: int Theme_actionBarTheme
+io.codetail.view.R$styleable: int Theme_actionBarWidgetTheme
+io.codetail.view.R$styleable: int Theme_actionButtonStyle
+io.codetail.view.R$styleable: int Theme_actionDropDownStyle
+io.codetail.view.R$styleable: int Theme_actionMenuTextAppearance
+io.codetail.view.R$styleable: int Theme_actionMenuTextColor
+io.codetail.view.R$styleable: int Theme_actionModeBackground
+io.codetail.view.R$styleable: int Theme_actionModeCloseButtonStyle
+io.codetail.view.R$styleable: int Theme_actionModeCloseDrawable
+io.codetail.view.R$styleable: int Theme_actionModeCopyDrawable
+io.codetail.view.R$styleable: int Theme_actionModeCutDrawable
+io.codetail.view.R$styleable: int Theme_actionModeFindDrawable
+io.codetail.view.R$styleable: int Theme_actionModePasteDrawable
+io.codetail.view.R$styleable: int Theme_actionModePopupWindowStyle
+io.codetail.view.R$styleable: int Theme_actionModeSelectAllDrawable
+io.codetail.view.R$styleable: int Theme_actionModeShareDrawable
+io.codetail.view.R$styleable: int Theme_actionModeSplitBackground
+io.codetail.view.R$styleable: int Theme_actionModeStyle
+io.codetail.view.R$styleable: int Theme_actionModeWebSearchDrawable
+io.codetail.view.R$styleable: int Theme_actionOverflowButtonStyle
+io.codetail.view.R$styleable: int Theme_actionOverflowMenuStyle
+io.codetail.view.R$styleable: int Theme_activityChooserViewStyle
+io.codetail.view.R$styleable: int Theme_android_windowIsFloating
+io.codetail.view.R$styleable: int Theme_buttonBarButtonStyle
+io.codetail.view.R$styleable: int Theme_buttonBarStyle
+io.codetail.view.R$styleable: int Theme_colorAccent
+io.codetail.view.R$styleable: int Theme_colorButtonNormal
+io.codetail.view.R$styleable: int Theme_colorControlActivated
+io.codetail.view.R$styleable: int Theme_colorControlHighlight
+io.codetail.view.R$styleable: int Theme_colorControlNormal
+io.codetail.view.R$styleable: int Theme_colorPrimary
+io.codetail.view.R$styleable: int Theme_colorPrimaryDark
+io.codetail.view.R$styleable: int Theme_colorSwitchThumbNormal
+io.codetail.view.R$styleable: int Theme_dividerHorizontal
+io.codetail.view.R$styleable: int Theme_dividerVertical
+io.codetail.view.R$styleable: int Theme_dropDownListViewStyle
+io.codetail.view.R$styleable: int Theme_dropdownListPreferredItemHeight
+io.codetail.view.R$styleable: int Theme_editTextBackground
+io.codetail.view.R$styleable: int Theme_editTextColor
+io.codetail.view.R$styleable: int Theme_homeAsUpIndicator
+io.codetail.view.R$styleable: int Theme_listChoiceBackgroundIndicator
+io.codetail.view.R$styleable: int Theme_listPopupWindowStyle
+io.codetail.view.R$styleable: int Theme_listPreferredItemHeight
+io.codetail.view.R$styleable: int Theme_listPreferredItemHeightLarge
+io.codetail.view.R$styleable: int Theme_listPreferredItemHeightSmall
+io.codetail.view.R$styleable: int Theme_listPreferredItemPaddingLeft
+io.codetail.view.R$styleable: int Theme_listPreferredItemPaddingRight
+io.codetail.view.R$styleable: int Theme_panelBackground
+io.codetail.view.R$styleable: int Theme_panelMenuListTheme
+io.codetail.view.R$styleable: int Theme_panelMenuListWidth
+io.codetail.view.R$styleable: int Theme_popupMenuStyle
+io.codetail.view.R$styleable: int Theme_popupWindowStyle
+io.codetail.view.R$styleable: int Theme_searchViewStyle
+io.codetail.view.R$styleable: int Theme_selectableItemBackground
+io.codetail.view.R$styleable: int Theme_selectableItemBackgroundBorderless
+io.codetail.view.R$styleable: int Theme_spinnerDropDownItemStyle
+io.codetail.view.R$styleable: int Theme_spinnerStyle
+io.codetail.view.R$styleable: int Theme_switchStyle
+io.codetail.view.R$styleable: int Theme_textAppearanceLargePopupMenu
+io.codetail.view.R$styleable: int Theme_textAppearanceListItem
+io.codetail.view.R$styleable: int Theme_textAppearanceListItemSmall
+io.codetail.view.R$styleable: int Theme_textAppearanceSearchResultSubtitle
+io.codetail.view.R$styleable: int Theme_textAppearanceSearchResultTitle
+io.codetail.view.R$styleable: int Theme_textAppearanceSmallPopupMenu
+io.codetail.view.R$styleable: int Theme_textColorSearchUrl
+io.codetail.view.R$styleable: int Theme_toolbarNavigationButtonStyle
+io.codetail.view.R$styleable: int Theme_toolbarStyle
+io.codetail.view.R$styleable: int Theme_windowActionBar
+io.codetail.view.R$styleable: int Theme_windowActionBarOverlay
+io.codetail.view.R$styleable: int Theme_windowActionModeOverlay
+io.codetail.view.R$styleable: int Theme_windowFixedHeightMajor
+io.codetail.view.R$styleable: int Theme_windowFixedHeightMinor
+io.codetail.view.R$styleable: int Theme_windowFixedWidthMajor
+io.codetail.view.R$styleable: int Theme_windowFixedWidthMinor
+io.codetail.view.R$styleable: int[] Toolbar
+io.codetail.view.R$styleable: int Toolbar_android_gravity
+io.codetail.view.R$styleable: int Toolbar_android_minHeight
+io.codetail.view.R$styleable: int Toolbar_collapseIcon
+io.codetail.view.R$styleable: int Toolbar_contentInsetEnd
+io.codetail.view.R$styleable: int Toolbar_contentInsetLeft
+io.codetail.view.R$styleable: int Toolbar_contentInsetRight
+io.codetail.view.R$styleable: int Toolbar_contentInsetStart
+io.codetail.view.R$styleable: int Toolbar_maxButtonHeight
+io.codetail.view.R$styleable: int Toolbar_navigationContentDescription
+io.codetail.view.R$styleable: int Toolbar_navigationIcon
+io.codetail.view.R$styleable: int Toolbar_popupTheme
+io.codetail.view.R$styleable: int Toolbar_subtitle
+io.codetail.view.R$styleable: int Toolbar_subtitleTextAppearance
+io.codetail.view.R$styleable: int Toolbar_theme
+io.codetail.view.R$styleable: int Toolbar_title
+io.codetail.view.R$styleable: int Toolbar_titleMarginBottom
+io.codetail.view.R$styleable: int Toolbar_titleMarginEnd
+io.codetail.view.R$styleable: int Toolbar_titleMarginStart
+io.codetail.view.R$styleable: int Toolbar_titleMarginTop
+io.codetail.view.R$styleable: int Toolbar_titleMargins
+io.codetail.view.R$styleable: int Toolbar_titleTextAppearance
+io.codetail.view.R$styleable: int[] View
+io.codetail.view.R$styleable: int[] ViewStubCompat
+io.codetail.view.R$styleable: int ViewStubCompat_android_id
+io.codetail.view.R$styleable: int ViewStubCompat_android_inflatedId
+io.codetail.view.R$styleable: int ViewStubCompat_android_layout
+io.codetail.view.R$styleable: int View_android_focusable
+io.codetail.view.R$styleable: int View_paddingEnd
+io.codetail.view.R$styleable: int View_paddingStart
+io.codetail.view.R$styleable: R$styleable()
+io.codetail.widget.FrameLayoutCompat
+io.codetail.widget.FrameLayoutCompat: boolean mForegroundInPadding
+io.codetail.widget.FrameLayoutCompat: FrameLayoutCompat(android.content.Context)
+io.codetail.widget.FrameLayoutCompat: FrameLayoutCompat(android.content.Context,android.util.AttributeSet)
+io.codetail.widget.FrameLayoutCompat: FrameLayoutCompat(android.content.Context,android.util.AttributeSet,int)
+io.codetail.widget.FrameLayoutCompat: FrameLayoutCompat(android.content.Context,android.util.AttributeSet,int,int)
+io.codetail.widget.FrameLayoutCompat: android.graphics.PorterDuff$Mode parseTintMode(int,android.graphics.PorterDuff$Mode)
+io.codetail.widget.FrameLayoutCompat: int getForegroundGravity()
+io.codetail.widget.FrameLayoutCompat: void setForegroundGravity(int)
+io.codetail.widget.FrameLayoutCompat: void setVisibility(int)
+io.codetail.widget.FrameLayoutCompat: boolean verifyDrawable(android.graphics.drawable.Drawable)
+io.codetail.widget.FrameLayoutCompat: void jumpDrawablesToCurrentState()
+io.codetail.widget.FrameLayoutCompat: void drawableStateChanged()
+io.codetail.widget.FrameLayoutCompat: void drawableHotspotChanged(float,float)
+io.codetail.widget.FrameLayoutCompat: android.view.ViewGroup$LayoutParams generateDefaultLayoutParams()
+io.codetail.widget.FrameLayoutCompat: void setForeground(android.graphics.drawable.Drawable)
+io.codetail.widget.FrameLayoutCompat: android.graphics.drawable.Drawable getForeground()
+io.codetail.widget.FrameLayoutCompat: void setForegroundTintList(android.content.res.ColorStateList)
+io.codetail.widget.FrameLayoutCompat: android.content.res.ColorStateList getForegroundTintList()
+io.codetail.widget.FrameLayoutCompat: void setForegroundTintMode(android.graphics.PorterDuff$Mode)
+io.codetail.widget.FrameLayoutCompat: android.graphics.PorterDuff$Mode getForegroundTintMode()
+io.codetail.widget.FrameLayoutCompat: int getPaddingLeftWithForeground()
+io.codetail.widget.FrameLayoutCompat: int getPaddingRightWithForeground()
+io.codetail.widget.FrameLayoutCompat: int getPaddingTopWithForeground()
+io.codetail.widget.FrameLayoutCompat: int getPaddingBottomWithForeground()
+io.codetail.widget.FrameLayoutCompat: void onMeasure(int,int)
+io.codetail.widget.FrameLayoutCompat: int combineMeasuredStates(int,int)
+io.codetail.widget.FrameLayoutCompat: int resolveSizeAndState(int,int,int)
+io.codetail.widget.FrameLayoutCompat: void onLayout(boolean,int,int,int,int)
+io.codetail.widget.FrameLayoutCompat: void onSizeChanged(int,int,int,int)
+io.codetail.widget.FrameLayoutCompat: void draw(android.graphics.Canvas)
+io.codetail.widget.FrameLayoutCompat: void setMeasureAllChildren(boolean)
+io.codetail.widget.FrameLayoutCompat: boolean getConsiderGoneChildrenWhenMeasuring()
+io.codetail.widget.FrameLayoutCompat: boolean getMeasureAllChildren()
+io.codetail.widget.FrameLayoutCompat: android.view.ViewGroup$LayoutParams generateLayoutParams(android.util.AttributeSet)
+io.codetail.widget.FrameLayoutCompat: boolean shouldDelayChildPressedState()
+io.codetail.widget.FrameLayoutCompat: boolean checkLayoutParams(android.view.ViewGroup$LayoutParams)
+io.codetail.widget.FrameLayoutCompat: android.view.ViewGroup$LayoutParams generateLayoutParams(android.view.ViewGroup$LayoutParams)
+io.codetail.widget.FrameLayoutCompat: void onInitializeAccessibilityEvent(android.view.accessibility.AccessibilityEvent)
+io.codetail.widget.FrameLayoutCompat: void onInitializeAccessibilityNodeInfo(android.view.accessibility.AccessibilityNodeInfo)
+io.codetail.widget.RevealFrameLayout
+io.codetail.widget.RevealFrameLayout: RevealFrameLayout(android.content.Context)
+io.codetail.widget.RevealFrameLayout: RevealFrameLayout(android.content.Context,android.util.AttributeSet)
+io.codetail.widget.RevealFrameLayout: RevealFrameLayout(android.content.Context,android.util.AttributeSet,int)
+io.codetail.widget.RevealFrameLayout: void setTarget(android.view.View)
+io.codetail.widget.RevealFrameLayout: void setCenter(float,float)
+io.codetail.widget.RevealFrameLayout: void setClipOutlines(boolean)
+io.codetail.widget.RevealFrameLayout: void setRevealRadius(float)
+io.codetail.widget.RevealFrameLayout: float getRevealRadius()
+io.codetail.widget.RevealFrameLayout: boolean drawChild(android.graphics.Canvas,android.view.View,long)
+io.codetail.widget.RevealLinearLayout
+io.codetail.widget.RevealLinearLayout: RevealLinearLayout(android.content.Context)
+io.codetail.widget.RevealLinearLayout: RevealLinearLayout(android.content.Context,android.util.AttributeSet)
+io.codetail.widget.RevealLinearLayout: RevealLinearLayout(android.content.Context,android.util.AttributeSet,int)
+io.codetail.widget.RevealLinearLayout: void setTarget(android.view.View)
+io.codetail.widget.RevealLinearLayout: void setClipOutlines(boolean)
+io.codetail.widget.RevealLinearLayout: void setRevealRadius(float)
+io.codetail.widget.RevealLinearLayout: float getRevealRadius()
+io.codetail.widget.RevealLinearLayout: boolean drawChild(android.graphics.Canvas,android.view.View,long)
 it.sephiroth.android.library.imagezoom.BuildConfig
 it.sephiroth.android.library.imagezoom.BuildConfig: boolean DEBUG
 it.sephiroth.android.library.imagezoom.BuildConfig: java.lang.String PACKAGE_NAME
@@ -11859,3 +13316,103 @@ timber.log.Timber$Tree: void w(java.lang.String,java.lang.Object[])
 timber.log.Timber$Tree: void w(java.lang.Throwable,java.lang.String,java.lang.Object[])
 timber.log.Timber$Tree: void e(java.lang.String,java.lang.Object[])
 timber.log.Timber$Tree: void e(java.lang.Throwable,java.lang.String,java.lang.Object[])
+tr.xip.errorview.BuildConfig
+tr.xip.errorview.BuildConfig: boolean DEBUG
+tr.xip.errorview.BuildConfig: java.lang.String APPLICATION_ID
+tr.xip.errorview.BuildConfig: java.lang.String BUILD_TYPE
+tr.xip.errorview.BuildConfig: java.lang.String FLAVOR
+tr.xip.errorview.BuildConfig: int VERSION_CODE
+tr.xip.errorview.BuildConfig: java.lang.String VERSION_NAME
+tr.xip.errorview.BuildConfig: BuildConfig()
+tr.xip.errorview.ErrorView
+tr.xip.errorview.ErrorView: ErrorView(android.content.Context,android.util.AttributeSet)
+tr.xip.errorview.ErrorView: void setOnRetryListener(tr.xip.errorview.RetryListener)
+tr.xip.errorview.ErrorView: void setError(int)
+tr.xip.errorview.ErrorView: void setErrorImageResource(int)
+tr.xip.errorview.ErrorView: void setErrorImageDrawable(android.graphics.drawable.Drawable)
+tr.xip.errorview.ErrorView: void setErrorImageBitmap(android.graphics.Bitmap)
+tr.xip.errorview.ErrorView: void setErrorTitle(java.lang.String)
+tr.xip.errorview.ErrorView: void setErrorTitle(int)
+tr.xip.errorview.ErrorView: void setErrorSubtitle(java.lang.String)
+tr.xip.errorview.ErrorView: void setErrorSubtitle(int)
+tr.xip.errorview.ErrorView: void setRetryButtonText(java.lang.String)
+tr.xip.errorview.ErrorView: void setRetryButtonText(int)
+tr.xip.errorview.ErrorView: void showTitle(boolean)
+tr.xip.errorview.ErrorView: void showSubtitle(boolean)
+tr.xip.errorview.ErrorView: void showRetryButton(boolean)
+tr.xip.errorview.ErrorViewStatusCodes
+tr.xip.errorview.ErrorViewStatusCodes: int CODE_400
+tr.xip.errorview.ErrorViewStatusCodes: int CODE_401
+tr.xip.errorview.ErrorViewStatusCodes: int CODE_402
+tr.xip.errorview.ErrorViewStatusCodes: int CODE_403
+tr.xip.errorview.ErrorViewStatusCodes: int CODE_404
+tr.xip.errorview.ErrorViewStatusCodes: int CODE_405
+tr.xip.errorview.ErrorViewStatusCodes: int CODE_406
+tr.xip.errorview.ErrorViewStatusCodes: int CODE_407
+tr.xip.errorview.ErrorViewStatusCodes: int CODE_408
+tr.xip.errorview.ErrorViewStatusCodes: int CODE_409
+tr.xip.errorview.ErrorViewStatusCodes: int CODE_410
+tr.xip.errorview.ErrorViewStatusCodes: int CODE_411
+tr.xip.errorview.ErrorViewStatusCodes: int CODE_412
+tr.xip.errorview.ErrorViewStatusCodes: int CODE_413
+tr.xip.errorview.ErrorViewStatusCodes: int CODE_414
+tr.xip.errorview.ErrorViewStatusCodes: int CODE_415
+tr.xip.errorview.ErrorViewStatusCodes: int CODE_416
+tr.xip.errorview.ErrorViewStatusCodes: int CODE_417
+tr.xip.errorview.ErrorViewStatusCodes: int CODE_500
+tr.xip.errorview.ErrorViewStatusCodes: int CODE_501
+tr.xip.errorview.ErrorViewStatusCodes: int CODE_502
+tr.xip.errorview.ErrorViewStatusCodes: int CODE_503
+tr.xip.errorview.ErrorViewStatusCodes: int CODE_504
+tr.xip.errorview.ErrorViewStatusCodes: int CODE_505
+tr.xip.errorview.ErrorViewStatusCodes: ErrorViewStatusCodes()
+tr.xip.errorview.ErrorViewStatusCodes: java.util.Map getCodesMap()
+tr.xip.errorview.R
+tr.xip.errorview.R: R()
+tr.xip.errorview.R$attr
+tr.xip.errorview.R$attr: int ev_errorImage
+tr.xip.errorview.R$attr: int ev_errorSubtitle
+tr.xip.errorview.R$attr: int ev_errorTitle
+tr.xip.errorview.R$attr: int ev_retryButtonBackground
+tr.xip.errorview.R$attr: int ev_retryButtonTextColor
+tr.xip.errorview.R$attr: int ev_showRetryButton
+tr.xip.errorview.R$attr: int ev_showSubtitle
+tr.xip.errorview.R$attr: int ev_showTitle
+tr.xip.errorview.R$attr: R$attr()
+tr.xip.errorview.R$color
+tr.xip.errorview.R$color: int error_view_retry_button_background
+tr.xip.errorview.R$color: int error_view_retry_button_background_stroke
+tr.xip.errorview.R$color: int error_view_text
+tr.xip.errorview.R$color: int error_view_text_dark
+tr.xip.errorview.R$color: int error_view_text_light
+tr.xip.errorview.R$color: R$color()
+tr.xip.errorview.R$drawable
+tr.xip.errorview.R$drawable: int error_view_cloud
+tr.xip.errorview.R$drawable: int error_view_retry_button_background
+tr.xip.errorview.R$drawable: R$drawable()
+tr.xip.errorview.R$id
+tr.xip.errorview.R$id: int error_image
+tr.xip.errorview.R$id: int error_retry
+tr.xip.errorview.R$id: int error_subtitle
+tr.xip.errorview.R$id: int error_title
+tr.xip.errorview.R$id: R$id()
+tr.xip.errorview.R$layout
+tr.xip.errorview.R$layout: int error_view_layout
+tr.xip.errorview.R$layout: R$layout()
+tr.xip.errorview.R$string
+tr.xip.errorview.R$string: int error_view_oops
+tr.xip.errorview.R$string: int error_view_retry
+tr.xip.errorview.R$string: R$string()
+tr.xip.errorview.R$styleable
+tr.xip.errorview.R$styleable: int[] ErrorView
+tr.xip.errorview.R$styleable: int ErrorView_ev_errorImage
+tr.xip.errorview.R$styleable: int ErrorView_ev_errorSubtitle
+tr.xip.errorview.R$styleable: int ErrorView_ev_errorTitle
+tr.xip.errorview.R$styleable: int ErrorView_ev_retryButtonBackground
+tr.xip.errorview.R$styleable: int ErrorView_ev_retryButtonTextColor
+tr.xip.errorview.R$styleable: int ErrorView_ev_showRetryButton
+tr.xip.errorview.R$styleable: int ErrorView_ev_showSubtitle
+tr.xip.errorview.R$styleable: int ErrorView_ev_showTitle
+tr.xip.errorview.R$styleable: R$styleable()
+tr.xip.errorview.RetryListener
+tr.xip.errorview.RetryListener: void onRetry()
