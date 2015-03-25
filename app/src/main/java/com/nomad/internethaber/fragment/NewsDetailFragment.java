@@ -107,7 +107,6 @@ public final class NewsDetailFragment extends BaseFragment implements Callback {
             default:
                 return super.onOptionsItemSelected(item);
         }
-
     }
 
     @Subscribe

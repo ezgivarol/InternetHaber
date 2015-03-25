@@ -2,6 +2,9 @@ package com.nomad.internethaber.activity;
 
 import android.support.annotation.NonNull;
 import android.support.v4.widget.DrawerLayout;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.nomad.internethaber.R;
 import com.nomad.internethaber.event.DrawerClosedEvent;
@@ -46,6 +49,26 @@ public final class HomeActivity extends BaseActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         mNavigationDrawerFragment.setup(R.id.activity_home_fragment_drawer, mDrawerLayout, mToolbar);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_home, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        switch (id) {
+            case R.id.action_settings:
+                Toast.makeText(this, "Feature is not implemented yet.", Toast.LENGTH_SHORT).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
     }
 
     @Subscribe
