@@ -30,7 +30,7 @@ import com.nomad.internethaber.event.NewsSuccessResponseEvent;
 import com.nomad.internethaber.model.News;
 import com.nomad.internethaber.model.NewsDetail;
 import com.nomad.internethaber.task.NewsDetailAsyncTask;
-import com.nomad.internethaber.view.RectangularImageView;
+import com.nomad.internethaber.view.RectangularedImageView;
 import com.squareup.otto.Subscribe;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
@@ -43,7 +43,7 @@ import io.codetail.animation.ViewAnimationUtils;
 public final class NewsDetailFragment extends BaseFragment implements Callback {
 
     @InjectView(R.id.fragment_news_detail_photo)
-    protected RectangularImageView mImageView;
+    protected RectangularedImageView mImageView;
 
     @InjectView(R.id.fragment_news_detail_title_textview)
     protected RobotoTextView mTitleTextView;
@@ -169,7 +169,7 @@ public final class NewsDetailFragment extends BaseFragment implements Callback {
     }
 
     @OnClick(R.id.fragment_news_detail_photo)
-    public void onPhotoClicked(RectangularImageView view) {
+    public void onPhotoClicked(RectangularedImageView view) {
         String photoUrl = mNewsDetail.getPhoto();
         Intent intent = new Intent(getContext(), ImageActivity.class);
         intent.putExtra("url", photoUrl);

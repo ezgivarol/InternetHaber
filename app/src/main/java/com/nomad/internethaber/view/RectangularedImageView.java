@@ -4,13 +4,13 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-public final class RectangularImageView extends ImageView {
+public final class RectangularedImageView extends ImageView {
 
-    public RectangularImageView(Context context) {
+    public RectangularedImageView(Context context) {
         super(context);
     }
 
-    public RectangularImageView(Context context, AttributeSet attrs) {
+    public RectangularedImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 

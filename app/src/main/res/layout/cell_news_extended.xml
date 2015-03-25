@@ -21,7 +21,7 @@
         card_view:cardCornerRadius="2dp"
         card_view:cardElevation="1dp">
 
-        <com.nomad.internethaber.view.SquaredImageView
+        <com.nomad.internethaber.view.RectangularedImageView
             android:id="@+id/cell_news_thumbnail_imageview"
             android:layout_width="match_parent"
             android:layout_height="0dp"/>

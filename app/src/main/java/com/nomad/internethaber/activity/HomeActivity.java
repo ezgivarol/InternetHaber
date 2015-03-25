@@ -68,7 +68,6 @@ public final class HomeActivity extends BaseActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
-
     }
 
     @Subscribe

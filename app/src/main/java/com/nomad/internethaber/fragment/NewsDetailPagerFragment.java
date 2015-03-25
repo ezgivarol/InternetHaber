@@ -21,7 +21,7 @@ import com.nomad.internethaber.interfaces.NewsDetailPagerRestInterface;
 import com.nomad.internethaber.model.News;
 import com.nomad.internethaber.model.NewsDetail;
 import com.nomad.internethaber.provider.RestAdapterProvider;
-import com.nomad.internethaber.view.RectangularImageView;
+import com.nomad.internethaber.view.RectangularedImageView;
 import com.nomad.internethaber.view.StatusBarView;
 import com.squareup.picasso.Picasso;
 
@@ -35,7 +35,7 @@ import retrofit.client.Response;
 public final class NewsDetailPagerFragment extends BaseFragment implements Callback<NewsDetailResponseBean>, com.squareup.picasso.Callback, Palette.PaletteAsyncListener {
 
     @InjectView(R.id.fragment_news_detail_pager_photo_view)
-    protected RectangularImageView mPhotoView;
+    protected RectangularedImageView mPhotoView;
 
     @InjectView(R.id.fragment_news_detail_pager_title_view)
     protected RobotoTextView mTitleTextView;
@@ -95,7 +95,7 @@ public final class NewsDetailPagerFragment extends BaseFragment implements Callb
     }
 
     @OnClick(R.id.fragment_news_detail_pager_photo_view)
-    public void onPhotoClicked(RectangularImageView view) {
+    public void onPhotoClicked(RectangularedImageView view) {
         String photoUrl = mNewsDetail.getPhoto();
         Intent intent = new Intent(getContext(), ImageActivity.class);
         intent.putExtra("url", photoUrl);
