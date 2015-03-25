@@ -10,8 +10,7 @@ import com.nomad.internethaber.event.NewsFailureResponseEvent;
 import com.nomad.internethaber.interfaces.NewsDetailRestInterface;
 import com.nomad.internethaber.provider.BusProvider;
 import com.nomad.internethaber.provider.RestAdapterProvider;
-
-import timber.log.Timber;
+import com.orhanobut.logger.Logger;
 
 public final class NewsDetailAsyncTask extends AsyncTask<Void, Void, Boolean> {
 
@@ -35,7 +34,7 @@ public final class NewsDetailAsyncTask extends AsyncTask<Void, Void, Boolean> {
             mBean = newsDetailRestInterface.get(mNewsId, mNewsType);
             return true;
         } catch (Exception e) {
-            Timber.e("News detail could not get.");
+            Logger.e(e);
         }
 
         return false;

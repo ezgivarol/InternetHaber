@@ -9668,6 +9668,7 @@ com.nomad.internethaber.R$layout: R$layout()
 com.nomad.internethaber.R$menu
 com.nomad.internethaber.R$menu: int menu_global
 com.nomad.internethaber.R$menu: int menu_home
+com.nomad.internethaber.R$menu: int menu_image
 com.nomad.internethaber.R$menu: int menu_news_detail
 com.nomad.internethaber.R$menu: R$menu()
 com.nomad.internethaber.R$mipmap
@@ -10363,10 +10364,12 @@ com.nomad.internethaber.activity.HomeActivity$$ViewInjector: void inject(butterk
 com.nomad.internethaber.activity.HomeActivity$$ViewInjector: void reset(com.nomad.internethaber.activity.HomeActivity)
 com.nomad.internethaber.activity.ImageActivity
 com.nomad.internethaber.activity.ImageActivity: it.sephiroth.android.library.imagezoom.ImageViewTouch mImageView
+com.nomad.internethaber.activity.ImageActivity: android.support.v7.widget.Toolbar mToolbar
 com.nomad.internethaber.activity.ImageActivity: ImageActivity()
 com.nomad.internethaber.activity.ImageActivity: int getLayoutResource()
-com.nomad.internethaber.activity.ImageActivity: void onSupportContentChanged()
 com.nomad.internethaber.activity.ImageActivity: void onCreate(android.os.Bundle)
+com.nomad.internethaber.activity.ImageActivity: boolean onCreateOptionsMenu(android.view.Menu)
+com.nomad.internethaber.activity.ImageActivity: boolean onOptionsItemSelected(android.view.MenuItem)
 com.nomad.internethaber.activity.ImageActivity$$ViewInjector
 com.nomad.internethaber.activity.ImageActivity$$ViewInjector: ImageActivity$$ViewInjector()
 com.nomad.internethaber.activity.ImageActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.nomad.internethaber.activity.ImageActivity,java.lang.Object)
@@ -10575,6 +10578,8 @@ com.nomad.internethaber.fragment.NewsDetailFragment: void onNewsFailureResponseE
 com.nomad.internethaber.fragment.NewsDetailFragment: void onNewsDetailSuccessResponseEvent(com.nomad.internethaber.event.NewsDetailSuccessResponseEvent)
 com.nomad.internethaber.fragment.NewsDetailFragment: void onNewsDetailFailureResponseEvent(com.nomad.internethaber.event.NewsDetailFailureResponseEvent)
 com.nomad.internethaber.fragment.NewsDetailFragment: void onPhotoClicked(com.nomad.internethaber.view.RectangularImageView)
+com.nomad.internethaber.fragment.NewsDetailFragment: void onSuccess()
+com.nomad.internethaber.fragment.NewsDetailFragment: void onError()
 com.nomad.internethaber.fragment.NewsDetailFragment: void onDetach()
 com.nomad.internethaber.fragment.NewsDetailFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
 com.nomad.internethaber.fragment.NewsDetailFragment: void onAttach(android.app.Activity)
@@ -10655,10 +10660,6 @@ com.nomad.internethaber.helper.NotificationFacade: void show()
 com.nomad.internethaber.helper.ResponsiveController
 com.nomad.internethaber.helper.ResponsiveController: ResponsiveController(android.content.res.Resources)
 com.nomad.internethaber.helper.ResponsiveController: boolean isTablet()
-com.nomad.internethaber.helper.SelectedImageHelper
-com.nomad.internethaber.helper.SelectedImageHelper: SelectedImageHelper()
-com.nomad.internethaber.helper.SelectedImageHelper: android.graphics.drawable.Drawable getPhoto()
-com.nomad.internethaber.helper.SelectedImageHelper: void setPhoto(android.graphics.drawable.Drawable)
 com.nomad.internethaber.interfaces.CategoryRestInterface
 com.nomad.internethaber.interfaces.CategoryRestInterface: com.nomad.internethaber.bean.CategoryResponseBean get()
 com.nomad.internethaber.interfaces.NewsDetailPagerRestInterface

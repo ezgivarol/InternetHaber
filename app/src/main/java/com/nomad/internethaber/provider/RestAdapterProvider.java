@@ -3,6 +3,7 @@ package com.nomad.internethaber.provider;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.nomad.internethaber.constant.ApplicationConstants;
+import com.nomad.internethaber.helper.LoggerConverter;
 
 import retrofit.RestAdapter;
 import retrofit.converter.GsonConverter;
@@ -15,12 +16,12 @@ public final class RestAdapterProvider {
             Gson gson = new GsonBuilder()
                     .create();
 
-            GsonConverter gsonConverter = new GsonConverter(gson);
+            LoggerConverter loggerConverter = new LoggerConverter(gson);
 
             sAdapter = new RestAdapter
                     .Builder()
                     .setEndpoint(ApplicationConstants.API_URL)
-                    .setConverter(gsonConverter)
+                    .setConverter(loggerConverter)
                     .build();
         }
 

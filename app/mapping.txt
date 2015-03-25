@@ -18841,6 +18841,7 @@ com.nomad.internethaber.R$layout -> com.nomad.internethaber.R$layout:
 com.nomad.internethaber.R$menu -> com.nomad.internethaber.R$menu:
     int menu_global -> menu_global
     int menu_home -> menu_home
+    int menu_image -> menu_image
     int menu_news_detail -> menu_news_detail
 com.nomad.internethaber.R$mipmap -> com.nomad.internethaber.R$mipmap:
     int ic_launcher -> ic_launcher
@@ -19530,12 +19531,15 @@ com.nomad.internethaber.activity.HomeActivity$$ViewInjector -> com.nomad.interne
     17:19:void reset(com.nomad.internethaber.activity.HomeActivity) -> reset
 com.nomad.internethaber.activity.ImageActivity -> com.nomad.internethaber.activity.ImageActivity:
     it.sephiroth.android.library.imagezoom.ImageViewTouch mImageView -> mImageView
-    21:21:int getLayoutResource() -> getLayoutResource
-    26:29:void onSupportContentChanged() -> onSupportContentChanged
-    33:39:void onCreate(android.os.Bundle) -> onCreate
+    android.support.v7.widget.Toolbar mToolbar -> mToolbar
+    java.lang.String mPhotoUrl -> n
+    29:29:int getLayoutResource() -> getLayoutResource
+    34:42:void onCreate(android.os.Bundle) -> onCreate
+    46:47:boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    52:67:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
 com.nomad.internethaber.activity.ImageActivity$$ViewInjector -> com.nomad.internethaber.activity.ImageActivity$$ViewInjector:
-    10:12:void inject(butterknife.ButterKnife$Finder,com.nomad.internethaber.activity.ImageActivity,java.lang.Object) -> inject
-    15:16:void reset(com.nomad.internethaber.activity.ImageActivity) -> reset
+    10:14:void inject(butterknife.ButterKnife$Finder,com.nomad.internethaber.activity.ImageActivity,java.lang.Object) -> inject
+    17:19:void reset(com.nomad.internethaber.activity.ImageActivity) -> reset
 com.nomad.internethaber.activity.NewsDetailActivity -> com.nomad.internethaber.activity.NewsDetailActivity:
     android.support.v4.view.ViewPager mViewPager -> mViewPager
     android.support.v7.widget.Toolbar mToolbar -> mToolbar
@@ -19545,16 +19549,16 @@ com.nomad.internethaber.activity.NewsDetailActivity -> com.nomad.internethaber.a
     com.nomad.internethaber.task.NewsMoreAsyncTask mAsyncTask -> p
     java.util.ArrayList mList -> q
     com.nomad.internethaber.model.Category mCategory -> r
-    56:56:int getLayoutResource() -> getLayoutResource
-    61:84:void onCreate(android.os.Bundle) -> onCreate
-    88:95:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
-    101:113:void onMorePageLoad(int) -> onMorePageLoad
-    118:119:void onNewsMoreResponseEvent(com.nomad.internethaber.event.NewsMoreResponseEvent) -> onNewsMoreResponseEvent
-    124:128:void onNewsMoreSuccessResponseEvent(com.nomad.internethaber.event.NewsMoreSuccessResponseEvent) -> onNewsMoreSuccessResponseEvent
-    133:142:void onNewsMoreFailureResponseEvent(com.nomad.internethaber.event.NewsMoreFailureResponseEvent) -> onNewsMoreFailureResponseEvent
-    147:148:void onNewsNoItemResponseEvent(com.nomad.internethaber.event.NewsMoreNoItemResponseEvent) -> onNewsNoItemResponseEvent
-    153:153:void onActionClicked(com.nispok.snackbar.Snackbar) -> onActionClicked
-    157:158:void onInsetsChanged(android.graphics.Rect) -> onInsetsChanged
+    55:55:int getLayoutResource() -> getLayoutResource
+    60:83:void onCreate(android.os.Bundle) -> onCreate
+    87:94:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    100:112:void onMorePageLoad(int) -> onMorePageLoad
+    117:118:void onNewsMoreResponseEvent(com.nomad.internethaber.event.NewsMoreResponseEvent) -> onNewsMoreResponseEvent
+    123:127:void onNewsMoreSuccessResponseEvent(com.nomad.internethaber.event.NewsMoreSuccessResponseEvent) -> onNewsMoreSuccessResponseEvent
+    132:141:void onNewsMoreFailureResponseEvent(com.nomad.internethaber.event.NewsMoreFailureResponseEvent) -> onNewsMoreFailureResponseEvent
+    146:147:void onNewsNoItemResponseEvent(com.nomad.internethaber.event.NewsMoreNoItemResponseEvent) -> onNewsNoItemResponseEvent
+    151:162:void onActionClicked(com.nispok.snackbar.Snackbar) -> onActionClicked
+    166:167:void onInsetsChanged(android.graphics.Rect) -> onInsetsChanged
 com.nomad.internethaber.activity.NewsDetailActivity$$ViewInjector -> com.nomad.internethaber.activity.NewsDetailActivity$$ViewInjector:
     10:16:void inject(butterknife.ButterKnife$Finder,com.nomad.internethaber.activity.NewsDetailActivity,java.lang.Object) -> inject
     19:22:void reset(com.nomad.internethaber.activity.NewsDetailActivity) -> reset
@@ -19730,21 +19734,23 @@ com.nomad.internethaber.fragment.NewsDetailFragment -> com.nomad.internethaber.f
     android.widget.ScrollView mScrollView -> mScrollView
     com.nomad.internethaber.task.NewsDetailAsyncTask mAsyncTask -> a
     com.nomad.internethaber.model.NewsDetail mNewsDetail -> b
-    64:64:int getTitleResource() -> getTitleResource
-    70:70:int getLayoutResource() -> getLayoutResource
-    75:78:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
-    82:85:void onDestroyView() -> onDestroyView
-    89:91:void onCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> onCreateOptionsMenu
-    95:109:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
-    116:125:void onNewsSelectEvent(com.nomad.internethaber.event.NewsSelectEvent) -> onNewsSelectEvent
-    129:139:void onNewsSuccessResponseEvent(com.nomad.internethaber.event.NewsSuccessResponseEvent) -> onNewsSuccessResponseEvent
-    144:144:void onNewsFailureResponseEvent(com.nomad.internethaber.event.NewsFailureResponseEvent) -> onNewsFailureResponseEvent
-    148:166:void onNewsDetailSuccessResponseEvent(com.nomad.internethaber.event.NewsDetailSuccessResponseEvent) -> onNewsDetailSuccessResponseEvent
-    171:171:void onNewsDetailFailureResponseEvent(com.nomad.internethaber.event.NewsDetailFailureResponseEvent) -> onNewsDetailFailureResponseEvent
-    175:184:void onPhotoClicked(com.nomad.internethaber.view.RectangularImageView) -> onPhotoClicked
-    44:44:void onDetach() -> onDetach
-    44:44:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
-    44:44:void onAttach(android.app.Activity) -> onAttach
+    63:63:int getTitleResource() -> getTitleResource
+    69:69:int getLayoutResource() -> getLayoutResource
+    74:77:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
+    81:84:void onDestroyView() -> onDestroyView
+    88:90:void onCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> onCreateOptionsMenu
+    94:108:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    115:124:void onNewsSelectEvent(com.nomad.internethaber.event.NewsSelectEvent) -> onNewsSelectEvent
+    128:138:void onNewsSuccessResponseEvent(com.nomad.internethaber.event.NewsSuccessResponseEvent) -> onNewsSuccessResponseEvent
+    143:143:void onNewsFailureResponseEvent(com.nomad.internethaber.event.NewsFailureResponseEvent) -> onNewsFailureResponseEvent
+    147:165:void onNewsDetailSuccessResponseEvent(com.nomad.internethaber.event.NewsDetailSuccessResponseEvent) -> onNewsDetailSuccessResponseEvent
+    170:170:void onNewsDetailFailureResponseEvent(com.nomad.internethaber.event.NewsDetailFailureResponseEvent) -> onNewsDetailFailureResponseEvent
+    174:180:void onPhotoClicked(com.nomad.internethaber.view.RectangularImageView) -> onPhotoClicked
+    185:185:void onSuccess() -> onSuccess
+    190:190:void onError() -> onError
+    43:43:void onDetach() -> onDetach
+    43:43:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+    43:43:void onAttach(android.app.Activity) -> onAttach
 com.nomad.internethaber.fragment.NewsDetailFragment$$ViewInjector -> com.nomad.internethaber.fragment.NewsDetailFragment$$ViewInjector:
     10:26:void inject(butterknife.ButterKnife$Finder,com.nomad.internethaber.fragment.NewsDetailFragment,java.lang.Object) -> inject
     29:33:void reset(com.nomad.internethaber.fragment.NewsDetailFragment) -> reset
@@ -19759,24 +19765,25 @@ com.nomad.internethaber.fragment.NewsDetailPagerFragment -> com.nomad.internetha
     com.nomad.internethaber.model.News mNews -> a
     com.nomad.internethaber.model.NewsDetail mNewsDetail -> b
     boolean shouldRun -> c
+    com.squareup.picasso.Picasso mPicasso -> d
     56:58:com.nomad.internethaber.fragment.NewsDetailPagerFragment getInstance(com.nomad.internethaber.model.News) -> getInstance
     64:64:int getTitleResource() -> getTitleResource
     70:70:int getLayoutResource() -> getLayoutResource
-    75:82:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
-    86:88:void onResume() -> onResume
-    92:94:void onPause() -> onPause
-    98:107:void onPhotoClicked(com.nomad.internethaber.view.RectangularImageView) -> onPhotoClicked
-    110:111:void setNews(com.nomad.internethaber.model.News) -> setNews
-    115:133:void success(com.nomad.internethaber.bean.NewsDetailResponseBean,retrofit.client.Response) -> success
-    138:138:void failure(retrofit.RetrofitError) -> failure
-    142:148:void onSuccess() -> onSuccess
-    153:153:void onError() -> onError
-    157:168:void onGenerated(android.support.v7.graphics.Palette) -> onGenerated
-    37:37:void onDetach() -> onDetach
-    37:37:void onDestroyView() -> onDestroyView
-    37:37:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
-    37:37:void onAttach(android.app.Activity) -> onAttach
-    37:37:void success(java.lang.Object,retrofit.client.Response) -> success
+    75:84:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
+    88:90:void onResume() -> onResume
+    94:96:void onPause() -> onPause
+    100:106:void onPhotoClicked(com.nomad.internethaber.view.RectangularImageView) -> onPhotoClicked
+    109:110:void setNews(com.nomad.internethaber.model.News) -> setNews
+    114:132:void success(com.nomad.internethaber.bean.NewsDetailResponseBean,retrofit.client.Response) -> success
+    137:137:void failure(retrofit.RetrofitError) -> failure
+    141:147:void onSuccess() -> onSuccess
+    152:152:void onError() -> onError
+    156:167:void onGenerated(android.support.v7.graphics.Palette) -> onGenerated
+    36:36:void onDetach() -> onDetach
+    36:36:void onDestroyView() -> onDestroyView
+    36:36:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+    36:36:void onAttach(android.app.Activity) -> onAttach
+    36:36:void success(java.lang.Object,retrofit.client.Response) -> success
 com.nomad.internethaber.fragment.NewsDetailPagerFragment$$ViewInjector -> com.nomad.internethaber.fragment.NewsDetailPagerFragment$$ViewInjector:
     10:26:void inject(butterknife.ButterKnife$Finder,com.nomad.internethaber.fragment.NewsDetailPagerFragment,java.lang.Object) -> inject
     29:33:void reset(com.nomad.internethaber.fragment.NewsDetailPagerFragment) -> reset
@@ -19836,10 +19843,6 @@ com.nomad.internethaber.helper.NotificationFacade -> com.nomad.internethaber.hel
 com.nomad.internethaber.helper.ResponsiveController -> com.nomad.internethaber.helper.ResponsiveController:
     boolean isTablet -> a
     15:15:boolean isTablet() -> isTablet
-com.nomad.internethaber.helper.SelectedImageHelper -> com.nomad.internethaber.helper.SelectedImageHelper:
-    android.graphics.drawable.Drawable sPhoto -> a
-    9:9:android.graphics.drawable.Drawable getPhoto() -> getPhoto
-    13:14:void setPhoto(android.graphics.drawable.Drawable) -> setPhoto
 com.nomad.internethaber.interfaces.CategoryRestInterface -> com.nomad.internethaber.interfaces.CategoryRestInterface:
     com.nomad.internethaber.bean.CategoryResponseBean get() -> get
 com.nomad.internethaber.interfaces.NewsDetailPagerRestInterface -> com.nomad.internethaber.interfaces.NewsDetailPagerRestInterface:

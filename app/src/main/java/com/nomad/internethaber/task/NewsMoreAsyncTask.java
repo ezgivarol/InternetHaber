@@ -10,8 +10,8 @@ import com.nomad.internethaber.event.NewsMoreSuccessResponseEvent;
 import com.nomad.internethaber.interfaces.NewsRestInterface;
 import com.nomad.internethaber.provider.BusProvider;
 import com.nomad.internethaber.provider.RestAdapterProvider;
+import com.orhanobut.logger.Logger;
 
-import timber.log.Timber;
 
 public final class NewsMoreAsyncTask extends AsyncTask<Void, Void, NewsMoreAsyncTask.State> {
 
@@ -45,7 +45,7 @@ public final class NewsMoreAsyncTask extends AsyncTask<Void, Void, NewsMoreAsync
 
             return State.SUCCESS;
         } catch (Exception e) {
-            Timber.e("Categories could not get.");
+            Logger.e(e);
         }
 
         return State.FAILURE;

@@ -9,8 +9,8 @@ import com.nomad.internethaber.event.CategoriesSuccessResponseEvent;
 import com.nomad.internethaber.interfaces.CategoryRestInterface;
 import com.nomad.internethaber.provider.BusProvider;
 import com.nomad.internethaber.provider.RestAdapterProvider;
+import com.orhanobut.logger.Logger;
 
-import timber.log.Timber;
 
 public final class CategoriesAsyncTask extends AsyncTask<Void, Void, Boolean> {
 
@@ -24,7 +24,6 @@ public final class CategoriesAsyncTask extends AsyncTask<Void, Void, Boolean> {
         BusProvider.getInstance().post(event);
     }
 
-    
     @Override
     protected Boolean doInBackground(Void... params) {
         try {
@@ -32,7 +31,7 @@ public final class CategoriesAsyncTask extends AsyncTask<Void, Void, Boolean> {
             mBean = categoryRestInterface.get();
             return true;
         } catch (Exception e) {
-            Timber.e("Categories could not get.");
+            Logger.e(e);
         }
 
         return false;

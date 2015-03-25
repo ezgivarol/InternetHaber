@@ -38,8 +38,8 @@ android {
         applicationId "com.nomad.internethaber"
         minSdkVersion 16
         targetSdkVersion 21
-        versionCode 3
-        versionName "0.6"
+        versionCode 4
+        versionName "0.7"
     }
     buildTypes {
         release {
@@ -90,5 +90,5 @@ dependencies {
     compile 'se.emilsjolander:StickyScrollViewItems:+'
 
     // Log Mechanism
-    compile 'com.jakewharton.timber:timber:2.7.1'
+    compile 'com.orhanobut:logger:1.3'
 }

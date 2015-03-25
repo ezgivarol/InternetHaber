@@ -5,7 +5,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.util.Log;
 
 import com.nomad.internethaber.fragment.NewsDetailPagerFragment;
 import com.nomad.internethaber.model.News;
@@ -14,7 +13,6 @@ import com.nomad.internethaber.model.Range;
 import java.util.ArrayList;
 import java.util.List;
 
-import timber.log.Timber;
 
 public final class NewsDetailPagerAdapter extends FragmentPagerAdapter {
     private ArrayList<News> mList;
