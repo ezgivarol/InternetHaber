@@ -49,6 +49,8 @@ public final class NewsDetailActivity extends BaseActivity implements NewsDetail
     private ArrayList<News> mList;
     private Category mCategory;
 
+    private int temp;
+
     @NonNull
     @Override
     protected int getLayoutResource() {
