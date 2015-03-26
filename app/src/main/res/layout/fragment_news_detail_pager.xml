@@ -22,7 +22,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.nomad.internethaber.view.RectangularImageView
+            <com.nomad.internethaber.view.RectangularedImageView
                 android:id="@+id/fragment_news_detail_pager_photo_view"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"/>
