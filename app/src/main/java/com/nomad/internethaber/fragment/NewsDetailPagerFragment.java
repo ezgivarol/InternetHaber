@@ -23,6 +23,7 @@ import com.nomad.internethaber.model.NewsDetail;
 import com.nomad.internethaber.provider.RestAdapterProvider;
 import com.nomad.internethaber.view.RectangularedImageView;
 import com.nomad.internethaber.view.StatusBarView;
+import com.orhanobut.logger.Logger;
 import com.squareup.picasso.Picasso;
 
 import butterknife.InjectView;
@@ -132,7 +133,8 @@ public final class NewsDetailPagerFragment extends BaseFragment implements Callb
 
     @Override
     public void failure(RetrofitError error) {
-
+        String errorMessage = error.getMessage();
+        Logger.e(errorMessage);
     }
 
     @Override
@@ -147,7 +149,8 @@ public final class NewsDetailPagerFragment extends BaseFragment implements Callb
 
     @Override
     public void onError() {
-
+        String errorMessage = "Could not get vibrant color.";
+        Logger.e(errorMessage);
     }
 
     @Override
