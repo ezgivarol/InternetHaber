@@ -23,6 +23,7 @@ import com.nomad.internethaber.event.NavigationItemSelectEvent;
 import com.nomad.internethaber.helper.NavigationHelper;
 import com.nomad.internethaber.model.Category;
 import com.nomad.internethaber.task.CategoriesAsyncTask;
+import com.nomad.internethaber.view.GalleryView;
 import com.squareup.otto.Subscribe;
 
 import java.util.ArrayList;
@@ -77,6 +78,9 @@ public final class NavigationDrawerFragment extends BaseFragment implements Runn
     public void onCategoriesSuccessResponseEvent(CategoriesSuccessResponseEvent event) {
         CategoryResponseBean categoryResponseBean = event.getBean();
         ArrayList<Category> categories = categoryResponseBean.getCategories();
+
+        GalleryView galleryView = new GalleryView(getContext());
+        mDrawerList.addFooterView(galleryView);
 
         NavigationDrawerListAdapter adapter = new NavigationDrawerListAdapter(getContext(), categories);
         mDrawerList.setAdapter(adapter);

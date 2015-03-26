@@ -10,6 +10,8 @@ import com.nomad.internethaber.R;
 import com.nomad.internethaber.event.DrawerClosedEvent;
 import com.nomad.internethaber.event.DrawerOpenedEvent;
 import com.nomad.internethaber.event.NavigationItemSelectEvent;
+import com.nomad.internethaber.event.PictureGalleryClickEvent;
+import com.nomad.internethaber.event.VideoGalleryClickEvent;
 import com.nomad.internethaber.fragment.NavigationDrawerFragment;
 import com.nomad.internethaber.helper.NavigationHelper;
 import com.nomad.internethaber.view.SubtitledToolbar;
@@ -103,5 +105,17 @@ public final class HomeActivity extends BaseActivity {
             mNavigationDrawerFragment.closeDrawer();
         else
             super.onBackPressed();
+    }
+
+    @Subscribe
+    public void onPictureGalleryClickedEvent(PictureGalleryClickEvent event) {
+        Toast.makeText(getApplicationContext(),"Picture gallery clicked", Toast.LENGTH_SHORT).show();
+        // TODO Open gallery activity
+    }
+
+    @Subscribe
+    public void onVideoGalleryClickedEvent(VideoGalleryClickEvent event) {
+        Toast.makeText(getApplicationContext(),"Video gallery clicked", Toast.LENGTH_SHORT).show();
+        // TODO Open video activity
     }
 }

@@ -8,6 +8,6 @@
     android:scrollbars="vertical"
     android:focusable="true"
     android:choiceMode="singleChoice"
-    android:dividerHeight="6dp"
+    android:dividerHeight="@dimen/navigation_drawer_divider_height"
     android:listSelector="@drawable/selector_cell_drawer"
     android:background="@color/color_drawer_background"/>
