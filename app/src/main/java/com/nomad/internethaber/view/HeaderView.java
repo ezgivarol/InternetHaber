@@ -2,11 +2,12 @@ package com.nomad.internethaber.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.widget.LinearLayout;
 
 import com.nomad.internethaber.R;
 
-public class HeaderView extends LinearLayout  {
+public class HeaderView extends LinearLayout {
 
     public HeaderView(Context context) {
         super(context);
@@ -30,7 +31,12 @@ public class HeaderView extends LinearLayout  {
     }
 
     private void init() {
-        setOrientation(VERTICAL);
         inflate(getContext(), R.layout.segment_header, this);
     }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        return true;
+    }
+
 }
