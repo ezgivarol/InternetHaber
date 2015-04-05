@@ -88,9 +88,9 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         mListView.getListView().setPagingableListener(this);
         mListView.getErrorView().setOnRetryListener(this);
 
-      //  mBanner.loadAd(71463,pageId,539766,true);
+       // mBanner.loadAd(71463,pageId,30304,true,"");
 
-       mBanner.loadAd(71463,"539772",30304,true,"", new SASAdView.AdResponseHandler() {
+      mBanner.loadAd(71463,"539772",30304,true,"", new SASAdView.AdResponseHandler() {
 
             public void adLoadingCompleted(SASAdElement sasAdElement) {
 
@@ -105,9 +105,6 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
 //                Toast.makeText(getContext(),e.toString(),Toast.LENGTH_LONG).show();
             }
         });
-
-      //  mBanner.loadAd(71463,pageId,30304,true);
-
 
     }
 
