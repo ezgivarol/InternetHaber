@@ -96,7 +96,6 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
 
                 Log.d("REKLAMMMMMM-Yanıtt",  "varr");
 
-
             }
             public void adLoadingFailed(Exception e) {
 
