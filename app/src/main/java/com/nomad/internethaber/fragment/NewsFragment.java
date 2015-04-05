@@ -50,7 +50,7 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
     protected CompositePagingListView mListView;
 
     @InjectView(R.id.fragment_news_banner)
-    protected SASBannerView mBanner;
+    protected SASBannerView mBannerView;
 
     private NewsListAdapter mAdapter;
 
@@ -81,7 +81,8 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         mListView.getListView().setPagingableListener(this);
         mListView.getErrorView().setOnRetryListener(this);
 
-        mBanner.loadAd(71463, "539766", 30304, true, "", new LoggerAdResponseHandler());
+        mBannerView.setRefreshInterval(30);
+        mBannerView.loadAd(71463, "539766", 30304, true, "", new LoggerAdResponseHandler());
     }
 
     @Override
@@ -251,6 +252,12 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
     }
 
     @Override
+    public void onDestroy() {
+        mBannerView.onDestroy();
+        super.onDestroy();
+    }
+
+    @Override
     public void onRetry() {
         mListView.hideEmptyView();
 
@@ -272,4 +279,6 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         mNewsMoreAsyncTask.setTo(to);
         mNewsMoreAsyncTask.execute();
     }
+
+
 }

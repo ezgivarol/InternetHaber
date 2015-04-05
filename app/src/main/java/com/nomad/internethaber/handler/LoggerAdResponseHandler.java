@@ -8,8 +8,8 @@ public final class LoggerAdResponseHandler implements SASAdView.AdResponseHandle
 
     @Override
     public void adLoadingCompleted(SASAdElement sasAdElement) {
-        String sasElement = sasAdElement.toString();
-        Logger.v(sasElement);
+        String message = "SmartAd is loaded.";
+        Logger.v(message);
     }
 
     @Override
