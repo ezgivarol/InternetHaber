@@ -36,15 +36,14 @@
             android:padding="16dp"
             android:orientation="vertical">
 
-            <com.devspark.robototextview.widget.RobotoTextView
+            <com.nomad.internethaber.view.TrueTypeTextView
                 android:id="@+id/cell_news_title_textview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                app:typeface="roboto_bold"
                 style="@style/style_title_inverse"/>
 
-            <com.devspark.robototextview.widget.RobotoTextView
+        <com.devspark.robototextview.widget.RobotoTextView
                 android:id="@+id/cell_news_spot_textview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

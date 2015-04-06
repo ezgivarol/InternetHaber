@@ -1,0 +1,2 @@
+configurations.create("default")
+artifacts.add("default", file('SmartAdServer-Android-VideoSDK-1.1.1.jar'))

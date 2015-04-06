@@ -1,6 +1,8 @@
 package com.nomad.internethaber.adapter;
 
 import android.content.Context;
+import android.content.res.AssetManager;
+import android.graphics.Typeface;
 import android.text.Html;
 import android.text.Spanned;
 import android.view.LayoutInflater;
@@ -24,7 +26,7 @@ import butterknife.InjectView;
 public final class NewsListAdapter extends PagingBaseAdapter<News> {
     private Picasso mPicasso;
     private Context mContext;
-
+   // private Context ctx;
     public NewsListAdapter(Context context, List<News> items) {
         super(items);
 
@@ -83,7 +85,7 @@ public final class NewsListAdapter extends PagingBaseAdapter<News> {
         @InjectView(R.id.cell_news_title_textview)
         TextView mTitleTextView;
 
-        @InjectView(R.id.cell_news_spot_textview)
+         @InjectView(R.id.cell_news_spot_textview)
         TextView mSpotTextView;
 
         @InjectView(R.id.cell_news_thumbnail_imageview)

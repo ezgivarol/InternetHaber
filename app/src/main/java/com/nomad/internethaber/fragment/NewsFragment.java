@@ -1,6 +1,8 @@
 package com.nomad.internethaber.fragment;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.opengl.Visibility;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -100,12 +102,10 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
               mBannerCloseButton.setOnClickListener(new View.OnClickListener() {
                   @Override
                   public void onClick(View v) {
-
                       mBanner.close();
                       mBannerCloseButton.setVisibility(View.INVISIBLE);
                   }
               });
-
 
           }
 
@@ -196,6 +196,7 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         ArrayList<News> news = bean.getNews();
 
         mAdapter = new NewsListAdapter(getContext(), news);
+
         mListView.getListView().setAdapter(mAdapter);
         mListView.getListView().setHasMoreItems(true);
     }

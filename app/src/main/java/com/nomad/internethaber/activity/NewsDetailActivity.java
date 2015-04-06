@@ -93,8 +93,8 @@ public final class NewsDetailActivity extends BaseActivity implements NewsDetail
         mViewPager.setPageTransformer(true, parallaxPagerTransformer);
 
         mInsetsFrameLayout.setOnInsetsCallback(this);
-
-        mFooter.loadAd(71463,"539772",30304,true,"",new SASAdView.AdResponseHandler() {
+       // 539772
+        mFooter.loadAd(71463,"539766",30304,true,"",new SASAdView.AdResponseHandler() {
             @Override
             public void adLoadingCompleted(SASAdElement sasAdElement) {
 
