@@ -63,5 +63,6 @@
                 app:typeface="roboto_light"
                 android:textSize="16sp"/>
         </LinearLayout>
+
     </com.emilsjolander.components.StickyScrollViewItems.StickyScrollView>
 </LinearLayout>

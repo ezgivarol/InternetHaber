@@ -1,3 +1,7 @@
+<FrameLayout
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 <com.nomad.internethaber.view.DrawInsetsFrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout_news_detail_inset_framelayout"
@@ -11,9 +15,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
+
     <include
         layout="@layout/segment_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="top"/>
+
+    <com.smartadserver.android.library.SASBannerView
+        android:id="@+id/fragment_news_detail_footer"
+        android:layout_width="fill_parent"
+
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+      />
+
 </com.nomad.internethaber.view.DrawInsetsFrameLayout>
+</FrameLayout>
+
+

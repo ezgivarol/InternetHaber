@@ -20,6 +20,7 @@ abstract class BaseActivity extends ActionBarActivity {
 
         ButterKnife.inject(this);
         getBus().register(this);
+
     }
 
     @Override

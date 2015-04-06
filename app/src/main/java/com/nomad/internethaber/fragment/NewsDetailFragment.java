@@ -31,6 +31,9 @@ import com.nomad.internethaber.model.News;
 import com.nomad.internethaber.model.NewsDetail;
 import com.nomad.internethaber.task.NewsDetailAsyncTask;
 import com.nomad.internethaber.view.RectangularedImageView;
+import com.smartadserver.android.library.SASBannerView;
+import com.smartadserver.android.library.model.SASAdElement;
+import com.smartadserver.android.library.ui.SASAdView;
 import com.squareup.otto.Subscribe;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
@@ -54,6 +57,9 @@ public final class NewsDetailFragment extends BaseFragment implements Callback {
     @InjectView(R.id.fragment_news_detail_scrollview)
     protected ScrollView mScrollView;
 
+   // @InjectView(R.id.fragment_news_footer_detail)
+   // protected SASBannerView mFooter;
+
     private NewsDetailAsyncTask mAsyncTask;
     private NewsDetail mNewsDetail;
 
@@ -74,6 +80,18 @@ public final class NewsDetailFragment extends BaseFragment implements Callback {
         super.onViewCreated(view, savedInstanceState);
 
         setHasOptionsMenu(true);
+
+       /** mFooter.loadAd(71463,"539772",30304,true,"",new SASAdView.AdResponseHandler() {
+            @Override
+            public void adLoadingCompleted(SASAdElement sasAdElement) {
+
+            }
+
+            @Override
+            public void adLoadingFailed(Exception e) {
+
+            }
+        }); */
     }
 
     @Override

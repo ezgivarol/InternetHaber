@@ -1,3 +1,10 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
 <io.codetail.widget.RevealFrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -10,11 +17,13 @@
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="22dp">
+            android:padding="22dp"
+            android:background="@drawable/image_internet_haber">
 
             <com.devspark.robototextview.widget.RobotoTextView
                 android:id="@+id/fragment_news_detail_title_textview"
@@ -34,6 +43,10 @@
                 android:layout_height="wrap_content"
                 app:typeface="roboto_regular"
                 style="@style/style_spot"/>
+
+
         </LinearLayout>
     </ScrollView>
+
 </io.codetail.widget.RevealFrameLayout>
+</FrameLayout>
