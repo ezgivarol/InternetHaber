@@ -1,6 +1,7 @@
 package com.nomad.internethaber.view;
 
 import android.content.Context;
+import android.content.res.AssetManager;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.widget.TextView;
@@ -25,7 +26,20 @@ public class TrueTypeTextView extends TextView {
     }
 
     public void init() {
-       Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/OpenSans-CondBold.ttf");
-        setTypeface(tf);
+        AssetManager assets = getContext().getAssets();
+        Typeface typeface = TypefaceProvider.getInstance(assets);
+        setTypeface(typeface);
+    }
+
+    private static class TypefaceProvider{
+
+        private static Typeface sTypeface;
+        public static Typeface getInstance(AssetManager manager) {
+            if (sTypeface == null) {
+                sTypeface = Typeface.createFromAsset(manager, "fonts/OpenSans-CondBold.ttf");
+            }
+
+            return sTypeface;
+        }
     }
 }
