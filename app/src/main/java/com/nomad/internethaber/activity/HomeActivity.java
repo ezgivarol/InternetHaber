@@ -110,7 +110,8 @@ public final class HomeActivity extends BaseActivity {
     @Subscribe
     public void onPictureGalleryClickedEvent(PictureGalleryClickEvent event) {
         Toast.makeText(getApplicationContext(),"Picture gallery clicked", Toast.LENGTH_SHORT).show();
-        // TODO Open gallery activity
+
+
     }
 
     @Subscribe
