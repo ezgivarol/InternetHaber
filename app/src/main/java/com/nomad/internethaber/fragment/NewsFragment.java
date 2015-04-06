@@ -55,7 +55,6 @@ import tr.xip.errorview.RetryListener;
 
 public final class NewsFragment extends BaseFragment implements PagingListView.Pagingable, SwipeRefreshLayout.OnRefreshListener, RetryListener, ActionClickListener {
 
-    public String pageId = getClass().getCanonicalName();
 
     @InjectView(R.id.fragment_news_composite_listview)
     protected CompositePagingListView mListView;

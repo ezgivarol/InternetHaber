@@ -1,0 +1,5 @@
+<com.nomad.internethaber.view.RectangularedImageView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cell_picture_gallery_thumbnail_imageview"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"/>

@@ -10,6 +10,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.nomad.internethaber.R;
 import com.nomad.internethaber.adapter.NavigationDrawerListAdapter;
@@ -61,6 +62,7 @@ public final class NavigationDrawerFragment extends BaseFragment implements Runn
 
         mCategoriesAsyncTask = new CategoriesAsyncTask();
         mCategoriesAsyncTask.execute();
+
     }
 
     @Override
@@ -180,5 +182,9 @@ public final class NavigationDrawerFragment extends BaseFragment implements Runn
             getBus().post(event);
         }
     }
+public void toaster(String values){
 
+    Toast.makeText(getContext(),values,Toast.LENGTH_LONG).show();
+
+}
 }

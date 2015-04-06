@@ -118,5 +118,9 @@ public final class HomeActivity extends BaseActivity {
     public void onVideoGalleryClickedEvent(VideoGalleryClickEvent event) {
         Toast.makeText(getApplicationContext(),"Video gallery clicked", Toast.LENGTH_SHORT).show();
         // TODO Open video activity
+
     }
+
+
+
 }
