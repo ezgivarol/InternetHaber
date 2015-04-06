@@ -15,6 +15,7 @@ import java.util.List;
 
 
 public final class NewsDetailPagerAdapter extends FragmentPagerAdapter {
+
     private ArrayList<News> mList;
     private OnPagingListener mListener;
     private boolean isLoading;

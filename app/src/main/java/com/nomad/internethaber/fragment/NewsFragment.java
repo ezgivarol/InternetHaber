@@ -48,7 +48,6 @@ import com.squareup.otto.Subscribe;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 import butterknife.InjectView;
 import tr.xip.errorview.RetryListener;
@@ -141,6 +140,7 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         intent.putExtra("list", list);
         intent.putExtra("category", mCategory);
         startActivity(intent);
+
     }
 
     @Platform(device = Platform.Device.TABLET)

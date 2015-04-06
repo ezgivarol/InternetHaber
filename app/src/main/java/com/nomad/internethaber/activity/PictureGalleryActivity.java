@@ -1,6 +1,5 @@
 package com.nomad.internethaber.activity;
 
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
@@ -11,18 +10,14 @@ import com.nomad.internethaber.R;
 import com.nomad.internethaber.event.DrawerClosedEvent;
 import com.nomad.internethaber.event.DrawerOpenedEvent;
 import com.nomad.internethaber.event.NavigationItemSelectEvent;
-import com.nomad.internethaber.event.PictureGalleryClickEvent;
 import com.nomad.internethaber.event.VideoGalleryClickEvent;
 import com.nomad.internethaber.fragment.NavigationDrawerFragment;
-import com.nomad.internethaber.fragment.PictureGalleryFragment;
 import com.nomad.internethaber.helper.NavigationHelper;
 import com.nomad.internethaber.view.SubtitledToolbar;
 import com.squareup.otto.Subscribe;
-
 import butterknife.InjectView;
 
-public final class HomeActivity extends BaseActivity {
-
+public class PictureGalleryActivity extends BaseActivity  {
     @InjectView(R.id.activity_toolbar)
     protected SubtitledToolbar mToolbar;
 
@@ -34,7 +29,7 @@ public final class HomeActivity extends BaseActivity {
     @NonNull
     @Override
     protected int getLayoutResource() {
-        return R.layout.layout_home;
+        return R.layout.layout_picture_gallery;
     }
 
     @Override
@@ -109,11 +104,7 @@ public final class HomeActivity extends BaseActivity {
             super.onBackPressed();
     }
 
-    @Subscribe
-    public void onPictureGalleryClickedEvent(PictureGalleryClickEvent event) {
-        Toast.makeText(getApplicationContext(),"Picture gallery clicked", Toast.LENGTH_SHORT).show();
 
-    }
     @Subscribe
     public void onVideoGalleryClickedEvent(VideoGalleryClickEvent event) {
         Toast.makeText(getApplicationContext(),"Video gallery clicked", Toast.LENGTH_SHORT).show();

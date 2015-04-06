@@ -72,7 +72,7 @@ public class PictureGalleryAdapter extends PagingBaseAdapter<News> {
 
     protected static class ViewHolder {
 
-        @InjectView(R.id.cell_picture_gallery_thumbnail_imageview)
+        @InjectView(R.id.cell_picture_gallery)
         ImageView mPictureGalleryImageView;
 
         protected ViewHolder(View view) {

@@ -18,7 +18,7 @@ import java.util.List;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public final class NewsListAdapter extends PagingBaseAdapter<News> {
+public final class NewsListAdapter extends PagingBaseAdapter<News>{
     private Picasso mPicasso;
     private Context mContext;
    // private Context ctx;
