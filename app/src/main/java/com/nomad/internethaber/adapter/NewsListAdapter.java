@@ -1,8 +1,6 @@
 package com.nomad.internethaber.adapter;
 
 import android.content.Context;
-import android.content.res.AssetManager;
-import android.graphics.Typeface;
 import android.text.Html;
 import android.text.Spanned;
 import android.view.LayoutInflater;
@@ -15,9 +13,6 @@ import com.nomad.internethaber.R;
 import com.nomad.internethaber.model.News;
 import com.paging.listview.PagingBaseAdapter;
 import com.squareup.picasso.Picasso;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import butterknife.ButterKnife;
@@ -74,7 +69,7 @@ public final class NewsListAdapter extends PagingBaseAdapter<News> {
 
         String spot = news.getSpot();
         Spanned spannedSpot = Html.fromHtml(spot);
-        viewHolder.mSpotTextView.setText(spannedSpot);
+        viewHolder.mSpotTextView.setText(spannedSpot.subSequence(0,35)+ "...");
 
         return convertView;
     }
