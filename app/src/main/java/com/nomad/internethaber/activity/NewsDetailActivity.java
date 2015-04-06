@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.nispok.snackbar.Snackbar;
@@ -29,6 +30,7 @@ import com.smartadserver.android.library.SASBannerView;
 import com.smartadserver.android.library.SASInterstitialView;
 import com.smartadserver.android.library.model.SASAdElement;
 import com.smartadserver.android.library.ui.SASAdView;
+import com.smartadserver.android.library.ui.SASCloseButton;
 import com.squareup.otto.Subscribe;
 import com.xgc1986.parallaxPagerTransformer.ParallaxPagerTransformer;
 
@@ -52,6 +54,9 @@ public final class NewsDetailActivity extends BaseActivity implements NewsDetail
 
     @InjectView(R.id.fragment_news_detail_footer)
     protected SASBannerView mFooter;
+
+    @InjectView(R.id.fragment_news_detail_footer_closeButton)
+    protected SASCloseButton mFooterCloseButton;
 
     private NewsMoreAsyncTask mAsyncTask;
     private ArrayList<News> mList;
@@ -92,6 +97,15 @@ public final class NewsDetailActivity extends BaseActivity implements NewsDetail
         mFooter.loadAd(71463,"539772",30304,true,"",new SASAdView.AdResponseHandler() {
             @Override
             public void adLoadingCompleted(SASAdElement sasAdElement) {
+
+                mFooterCloseButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        mFooter.close();
+                       mFooterCloseButton.setVisibility(View.INVISIBLE);
+                    }
+                });
 
             }
 

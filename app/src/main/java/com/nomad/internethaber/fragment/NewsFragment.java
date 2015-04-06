@@ -1,6 +1,7 @@
 package com.nomad.internethaber.fragment;
 
 import android.content.Intent;
+import android.opengl.Visibility;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -40,6 +41,7 @@ import com.paging.listview.PagingListView;
 import com.smartadserver.android.library.SASBannerView;
 import com.smartadserver.android.library.model.SASAdElement;
 import com.smartadserver.android.library.ui.SASAdView;
+import com.smartadserver.android.library.ui.SASCloseButton;
 import com.squareup.otto.Subscribe;
 
 import java.util.ArrayList;
@@ -58,6 +60,9 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
 
     @InjectView(R.id.fragment_news_banner)
     protected SASBannerView mBanner;
+
+    @InjectView(R.id.fragment_news_banner_closeButton)
+    protected SASCloseButton mBannerCloseButton;
 
     private NewsListAdapter mAdapter;
 
@@ -88,9 +93,19 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         mListView.getListView().setPagingableListener(this);
         mListView.getErrorView().setOnRetryListener(this);
 
-      mBanner.loadAd(71463,"539772",30304,true,"", new SASAdView.AdResponseHandler() {
+      mBanner.loadAd(71463, "539772", 30304, true, "", new SASAdView.AdResponseHandler() {
           @Override
-          public void adLoadingCompleted(SASAdElement sasAdElement) {
+          public void adLoadingCompleted(final SASAdElement sasAdElement) {
+
+              mBannerCloseButton.setOnClickListener(new View.OnClickListener() {
+                  @Override
+                  public void onClick(View v) {
+
+                      mBanner.close();
+                      mBannerCloseButton.setVisibility(View.INVISIBLE);
+                  }
+              });
+
 
           }
 
@@ -99,6 +114,7 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
 
           }
       });
+
 
     }
 

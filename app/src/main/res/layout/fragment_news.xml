@@ -14,5 +14,13 @@
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_gravity="bottom"/>
+
+    <com.smartadserver.android.library.ui.SASCloseButton
+        android:id="@+id/fragment_news_banner_closeButton"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="right|bottom"
+        />
+
 </FrameLayout>
 
