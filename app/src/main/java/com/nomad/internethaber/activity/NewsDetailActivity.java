@@ -8,7 +8,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.nispok.snackbar.Snackbar;
 import com.nispok.snackbar.listeners.ActionClickListener;
@@ -20,6 +19,7 @@ import com.nomad.internethaber.event.NewsMoreFailureResponseEvent;
 import com.nomad.internethaber.event.NewsMoreNoItemResponseEvent;
 import com.nomad.internethaber.event.NewsMoreResponseEvent;
 import com.nomad.internethaber.event.NewsMoreSuccessResponseEvent;
+import com.nomad.internethaber.handler.LoggerAdResponseHandler;
 import com.nomad.internethaber.helper.NavigationHelper;
 import com.nomad.internethaber.model.Category;
 import com.nomad.internethaber.model.Interval;
@@ -27,10 +27,6 @@ import com.nomad.internethaber.model.News;
 import com.nomad.internethaber.task.NewsMoreAsyncTask;
 import com.nomad.internethaber.view.DrawInsetsFrameLayout;
 import com.smartadserver.android.library.SASBannerView;
-import com.smartadserver.android.library.SASInterstitialView;
-import com.smartadserver.android.library.model.SASAdElement;
-import com.smartadserver.android.library.ui.SASAdView;
-import com.smartadserver.android.library.ui.SASCloseButton;
 import com.squareup.otto.Subscribe;
 import com.xgc1986.parallaxPagerTransformer.ParallaxPagerTransformer;
 
@@ -38,7 +34,7 @@ import java.util.ArrayList;
 
 import butterknife.InjectView;
 
-public final class NewsDetailActivity extends BaseActivity implements NewsDetailPagerAdapter.OnPagingListener, ActionClickListener, DrawInsetsFrameLayout.OnInsetsCallback {
+public final class NewsDetailActivity extends BaseActivity implements NewsDetailPagerAdapter.OnPagingListener, ActionClickListener, DrawInsetsFrameLayout.OnInsetsCallback, View.OnClickListener {
 
     @InjectView(R.id.layout_news_detail_pagerview)
     protected ViewPager mViewPager;
@@ -52,11 +48,8 @@ public final class NewsDetailActivity extends BaseActivity implements NewsDetail
     private NewsDetailPagerAdapter mPagerAdapter;
     private Interval mInterval;
 
-    @InjectView(R.id.fragment_news_detail_footer)
-    protected SASBannerView mFooter;
-
-    @InjectView(R.id.fragment_news_detail_footer_closeButton)
-    protected SASCloseButton mFooterCloseButton;
+    @InjectView(R.id.fragment_news_detail_bannerview)
+    protected SASBannerView mBannerView;
 
     private NewsMoreAsyncTask mAsyncTask;
     private ArrayList<News> mList;
@@ -93,29 +86,9 @@ public final class NewsDetailActivity extends BaseActivity implements NewsDetail
         mViewPager.setPageTransformer(true, parallaxPagerTransformer);
 
         mInsetsFrameLayout.setOnInsetsCallback(this);
-       // 539772
-        mFooter.loadAd(71463,"539766",30304,true,"",new SASAdView.AdResponseHandler() {
-            @Override
-            public void adLoadingCompleted(SASAdElement sasAdElement) {
 
-                mFooterCloseButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        mFooter.close();
-                       mFooterCloseButton.setVisibility(View.INVISIBLE);
-                    }
-                });
-
-            }
-
-            @Override
-            public void adLoadingFailed(Exception e) {
-
-            }
-        });
-
-
+        mBannerView.loadAd(71463, "539772", 30304, true, "", new LoggerAdResponseHandler());
+        mBannerView.addCloseButton(this);
     }
 
     @Override
@@ -202,7 +175,9 @@ public final class NewsDetailActivity extends BaseActivity implements NewsDetail
         mToolbar.setPadding(insets.left, insets.top, insets.right, insets.bottom);
     }
 
-
-
+    @Override
+    public void onClick(View v) {
+        mBannerView.close();
+    }
 }
 

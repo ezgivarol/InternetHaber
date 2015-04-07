@@ -1,17 +1,11 @@
 package com.nomad.internethaber.fragment;
 
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Typeface;
-import android.opengl.Visibility;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.nispok.snackbar.Snackbar;
 import com.nispok.snackbar.listeners.ActionClickListener;
@@ -48,21 +42,20 @@ import com.squareup.otto.Subscribe;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import butterknife.InjectView;
 import tr.xip.errorview.RetryListener;
 
-public final class NewsFragment extends BaseFragment implements PagingListView.Pagingable, SwipeRefreshLayout.OnRefreshListener, RetryListener, ActionClickListener {
+public final class NewsFragment extends BaseFragment implements PagingListView.Pagingable, SwipeRefreshLayout.OnRefreshListener, RetryListener, ActionClickListener, View.OnClickListener {
 
+    public String pageId = getClass().getCanonicalName();
 
     @InjectView(R.id.fragment_news_composite_listview)
     protected CompositePagingListView mListView;
 
-    @InjectView(R.id.fragment_news_banner)
-    protected SASBannerView mBanner;
-
-    @InjectView(R.id.fragment_news_banner_closeButton)
-    protected SASCloseButton mBannerCloseButton;
+    @InjectView(R.id.fragment_news_bannerview)
+    protected SASBannerView mBannerView;
 
     private NewsListAdapter mAdapter;
 
@@ -93,27 +86,8 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         mListView.getListView().setPagingableListener(this);
         mListView.getErrorView().setOnRetryListener(this);
 
-      mBanner.loadAd(71463, "539772", 30304, true, "", new SASAdView.AdResponseHandler() {
-          @Override
-          public void adLoadingCompleted(final SASAdElement sasAdElement) {
-
-              mBannerCloseButton.setOnClickListener(new View.OnClickListener() {
-                  @Override
-                  public void onClick(View v) {
-                      mBanner.close();
-                      mBannerCloseButton.setVisibility(View.INVISIBLE);
-                  }
-              });
-
-          }
-
-          @Override
-          public void adLoadingFailed(Exception e) {
-
-          }
-      });
-
-
+        mBannerView.loadAd(71463, "539772", 30304, true, "", new LoggerAdResponseHandler());
+        mBannerView.addCloseButton(this);
     }
 
     @Override
@@ -140,7 +114,6 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         intent.putExtra("list", list);
         intent.putExtra("category", mCategory);
         startActivity(intent);
-
     }
 
     @Platform(device = Platform.Device.TABLET)
@@ -195,7 +168,6 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         ArrayList<News> news = bean.getNews();
 
         mAdapter = new NewsListAdapter(getContext(), news);
-
         mListView.getListView().setAdapter(mAdapter);
         mListView.getListView().setHasMoreItems(true);
     }
@@ -290,6 +262,7 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
 
         onRefresh();
     }
+
     @Override
     public void onActionClicked(Snackbar snackbar) {
         mListView.getListView().setIsLoading(true);
@@ -304,5 +277,10 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         mNewsMoreAsyncTask.setFrom(from);
         mNewsMoreAsyncTask.setTo(to);
         mNewsMoreAsyncTask.execute();
+    }
+
+    @Override
+    public void onClick(View v) {
+        mBannerView.close();
     }
 }
