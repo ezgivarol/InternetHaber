@@ -67,10 +67,10 @@ public final class NewsListAdapter extends PagingBaseAdapter<News>{
         Spanned spannedTitle = Html.fromHtml(title);
         viewHolder.mTitleTextView.setText(spannedTitle);
 
-        String spot = news.getSpot();
+       /** String spot = news.getSpot();
         Spanned spannedSpot = Html.fromHtml(spot);
         viewHolder.mSpotTextView.setText(spannedSpot.subSequence(0,35)+ "...");
-
+*/
         return convertView;
     }
 
@@ -80,8 +80,8 @@ public final class NewsListAdapter extends PagingBaseAdapter<News>{
         @InjectView(R.id.cell_news_title_textview)
         TextView mTitleTextView;
 
-         @InjectView(R.id.cell_news_spot_textview)
-        TextView mSpotTextView;
+        // @InjectView(R.id.cell_news_spot_textview)
+        // TextView mSpotTextView;
 
         @InjectView(R.id.cell_news_thumbnail_imageview)
         ImageView mThumbnailImageView;

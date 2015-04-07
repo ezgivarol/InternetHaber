@@ -14,7 +14,6 @@ import com.nomad.internethaber.event.NavigationItemSelectEvent;
 import com.nomad.internethaber.event.PictureGalleryClickEvent;
 import com.nomad.internethaber.event.VideoGalleryClickEvent;
 import com.nomad.internethaber.fragment.NavigationDrawerFragment;
-import com.nomad.internethaber.fragment.PictureGalleryFragment;
 import com.nomad.internethaber.helper.NavigationHelper;
 import com.nomad.internethaber.view.SubtitledToolbar;
 import com.squareup.otto.Subscribe;
@@ -112,6 +111,9 @@ public final class HomeActivity extends BaseActivity {
     @Subscribe
     public void onPictureGalleryClickedEvent(PictureGalleryClickEvent event) {
         Toast.makeText(getApplicationContext(),"Picture gallery clicked", Toast.LENGTH_SHORT).show();
+
+       Intent i = new Intent(getApplicationContext(),PictureGalleryActivity.class);
+       startActivity(i);
 
     }
     @Subscribe

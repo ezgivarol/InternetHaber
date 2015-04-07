@@ -28,12 +28,5 @@
             android:layout_height="wrap_content"
             app:typeface="roboto_bold"
             style="@style/style_title"/>
-
-        <com.devspark.robototextview.widget.RobotoTextView
-            android:id="@+id/cell_news_spot_textview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:typeface="roboto_regular"
-            style="@style/style_spot"/>
     </LinearLayout>
 </android.support.v7.widget.CardView>

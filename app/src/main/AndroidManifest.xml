@@ -34,6 +34,15 @@
             </intent-filter>
         </activity>
 
+
+        <!-- Picture Gallery Activity ! -->
+        <activity
+            android:name=".activity.PictureGalleryActivity"
+            android:label=""
+            android:theme="@style/NewsDetailTheme">
+        </activity>
+
+
         <!-- Image Activity ! -->
         <activity
             android:name=".activity.ImageActivity"
@@ -50,6 +59,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.HomeActivity"/>
         </activity>
+
+
+
+
 
     </application>
 

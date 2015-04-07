@@ -33,7 +33,7 @@ public class TrueTypeTextView extends TextView {
         private static Typeface sTypeface;
         public static Typeface getInstance(AssetManager manager) {
             if (sTypeface == null) {
-                sTypeface = Typeface.createFromAsset(manager, "fonts/OpenSans-CondBold.ttf");
+                sTypeface = Typeface.createFromAsset(manager, "fonts/OpenSans-CondLight.ttf");
             }
 
             return sTypeface;

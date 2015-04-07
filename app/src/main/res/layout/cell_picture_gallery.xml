@@ -25,30 +25,6 @@
             android:id="@+id/cell_picture_gallery"
             android:layout_width="match_parent"
             android:layout_height="0dp"/>
-
-        <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:layout_gravity="bottom"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/drawable_shadow_bottom"
-            android:padding="16dp"
-            android:orientation="vertical">
-
-            <com.nomad.internethaber.view.TrueTypeTextView
-                android:id="@+id/cell_news_title_textview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                style="@style/style_title_inverse"/>
-
-            <com.devspark.robototextview.widget.RobotoTextView
-                android:id="@+id/cell_news_spot_textview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:typeface="roboto_regular"
-                style="@style/style_spot_inverse"/>
-        </LinearLayout>
+        
     </android.support.v7.widget.CardView>
 </com.balysv.materialripple.MaterialRippleLayout>

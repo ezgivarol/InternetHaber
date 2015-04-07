@@ -47,7 +47,7 @@ public class PictureGalleryActivity extends BaseActivity  {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        mNavigationDrawerFragment.setup(R.id.activity_home_fragment_drawer, mDrawerLayout, mToolbar);
+        mNavigationDrawerFragment.setup(R.id.activity_picture_fragment_drawer, mDrawerLayout, mToolbar);
     }
 
     @Override

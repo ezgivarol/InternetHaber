@@ -17,14 +17,14 @@
         android:layout_below="@+id/activity_toolbar">
 
         <fragment
-            android:name="com.nomad.internethaber.fragment.NewsFragment"
+            android:name="com.nomad.internethaber.fragment.PictureGalleryFragment"
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            tools:layout="@layout/fragment_news"/>
+            tools:layout="@layout/fragment_picture_gallery"/>
 
         <fragment
-            android:id="@+id/activity_home_fragment_drawer"
+            android:id="@+id/activity_picture_fragment_drawer"
             android:name="com.nomad.internethaber.fragment.NavigationDrawerFragment"
             android:layout_width="@dimen/navigation_drawer_width"
             android:layout_height="match_parent"
