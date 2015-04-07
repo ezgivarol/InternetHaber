@@ -1,8 +1,7 @@
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <com.nomad.internethaber.view.CompositePagingListView
         android:id="@+id/fragment_news_composite_listview"
@@ -10,17 +9,10 @@
         android:layout_height="match_parent"/>
 
     <com.smartadserver.android.library.SASBannerView
-        android:id="@+id/fragment_news_banner"
-        android:layout_width="fill_parent"
+        android:id="@+id/fragment_news_bannerview"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_gravity="bottom"/>
-
-    <com.smartadserver.android.library.ui.SASCloseButton
-        android:id="@+id/fragment_news_banner_closeButton"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_gravity="right|bottom"
-        />
 
 </FrameLayout>
 
