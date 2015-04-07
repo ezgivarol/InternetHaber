@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.nomad.internethaber.R;
 import com.nomad.internethaber.model.News;
@@ -60,6 +59,11 @@ public class PictureGalleryAdapter extends PagingBaseAdapter<News> {
             viewHolder = (ViewHolder) convertView.getTag();
 
         News news = getItem(position);
+
+     /**   String title = news.getTitle();
+        Spanned spannedTitle = Html.fromHtml(title);
+        viewHolder.mTitleTextView.setText(spannedTitle);
+*/
 
         String thumbnailUrl = news.getThumbnail();
         mPicasso.load(thumbnailUrl).fit().centerCrop().into(viewHolder.mPictureGalleryImageView);
