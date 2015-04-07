@@ -27,6 +27,8 @@ import com.nomad.internethaber.model.News;
 import com.nomad.internethaber.task.NewsMoreAsyncTask;
 import com.nomad.internethaber.view.DrawInsetsFrameLayout;
 import com.smartadserver.android.library.SASBannerView;
+import com.smartadserver.android.library.model.SASAdElement;
+import com.smartadserver.android.library.ui.SASAdView;
 import com.squareup.otto.Subscribe;
 import com.xgc1986.parallaxPagerTransformer.ParallaxPagerTransformer;
 
@@ -86,6 +88,18 @@ public final class NewsDetailActivity extends BaseActivity implements NewsDetail
         mViewPager.setPageTransformer(true, parallaxPagerTransformer);
 
         mInsetsFrameLayout.setOnInsetsCallback(this);
+        mBannerView.loadAd(71463, "539772", 30304, true, "", new SASAdView.AdResponseHandler() {
+            @Override
+            public void adLoadingCompleted(SASAdElement sasAdElement) {
+
+
+            }
+
+            @Override
+            public void adLoadingFailed(Exception e) {
+
+            }
+        });
 
         mBannerView.loadAd(71463, "539772", 30304, true, "", new LoggerAdResponseHandler());
         mBannerView.addCloseButton(this);
@@ -178,6 +192,6 @@ public final class NewsDetailActivity extends BaseActivity implements NewsDetail
     @Override
     public void onClick(View v) {
         mBannerView.close();
+
     }
 }
-

@@ -51,7 +51,6 @@ public class PictureGalleryFragment extends BaseFragment implements PagingListVi
     @InjectView(R.id.fragment_picture_gallery_composite_listview)
     protected CompositePagingListView mListView;
 
-
     @InjectView(R.id.fragment_picture_banner)
     protected SASBannerView mBanner;
 

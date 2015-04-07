@@ -25,6 +25,7 @@ import com.nomad.internethaber.event.NewsMoreSuccessResponseEvent;
 import com.nomad.internethaber.event.NewsResponseEvent;
 import com.nomad.internethaber.event.NewsSelectEvent;
 import com.nomad.internethaber.event.NewsSuccessResponseEvent;
+import com.nomad.internethaber.handler.LoggerAdResponseHandler;
 import com.nomad.internethaber.helper.NavigationHelper;
 import com.nomad.internethaber.model.Category;
 import com.nomad.internethaber.model.News;
@@ -37,19 +38,15 @@ import com.paging.listview.PagingListView;
 import com.smartadserver.android.library.SASBannerView;
 import com.smartadserver.android.library.model.SASAdElement;
 import com.smartadserver.android.library.ui.SASAdView;
-import com.smartadserver.android.library.ui.SASCloseButton;
 import com.squareup.otto.Subscribe;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 import butterknife.InjectView;
 import tr.xip.errorview.RetryListener;
 
 public final class NewsFragment extends BaseFragment implements PagingListView.Pagingable, SwipeRefreshLayout.OnRefreshListener, RetryListener, ActionClickListener, View.OnClickListener {
-
-    public String pageId = getClass().getCanonicalName();
 
     @InjectView(R.id.fragment_news_composite_listview)
     protected CompositePagingListView mListView;
@@ -86,8 +83,25 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         mListView.getListView().setPagingableListener(this);
         mListView.getErrorView().setOnRetryListener(this);
 
+
         mBannerView.loadAd(71463, "539772", 30304, true, "", new LoggerAdResponseHandler());
         mBannerView.addCloseButton(this);
+      mBannerView.loadAd(71463, "539772", 30304, true, "", new SASAdView.AdResponseHandler() {
+          @Override
+          public void adLoadingCompleted(final SASAdElement sasAdElement) {
+
+
+
+          }
+
+          @Override
+          public void adLoadingFailed(Exception e) {
+
+          }
+      });
+
+
+
     }
 
     @Override
@@ -166,6 +180,8 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
     public void onNewsSuccessResponseEvent(NewsSuccessResponseEvent event) {
         NewsResponseBean bean = event.getBean();
         ArrayList<News> news = bean.getNews();
+
+
 
         mAdapter = new NewsListAdapter(getContext(), news);
         mListView.getListView().setAdapter(mAdapter);

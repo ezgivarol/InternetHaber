@@ -22,7 +22,6 @@
             android:layout_weight="1"
             android:layout_height="match_parent"
             tools:layout="@layout/fragment_news"/>
-
         <fragment
             android:id="@+id/activity_home_fragment_drawer"
             android:name="com.nomad.internethaber.fragment.NavigationDrawerFragment"

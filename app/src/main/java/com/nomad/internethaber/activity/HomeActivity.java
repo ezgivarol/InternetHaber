@@ -14,7 +14,6 @@ import com.nomad.internethaber.event.NavigationItemSelectEvent;
 import com.nomad.internethaber.event.PictureGalleryClickEvent;
 import com.nomad.internethaber.event.VideoGalleryClickEvent;
 import com.nomad.internethaber.fragment.NavigationDrawerFragment;
-import com.nomad.internethaber.helper.NavigationHelper;
 import com.nomad.internethaber.view.SubtitledToolbar;
 import com.squareup.otto.Subscribe;
 
@@ -41,7 +40,10 @@ public final class HomeActivity extends BaseActivity {
         super.onSupportContentChanged();
 
         mToolbar = (SubtitledToolbar) findViewById(R.id.activity_toolbar);
+
         mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.activity_home_fragment_drawer);
+
+
     }
 
     @Override
@@ -52,6 +54,8 @@ public final class HomeActivity extends BaseActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         mNavigationDrawerFragment.setup(R.id.activity_home_fragment_drawer, mDrawerLayout, mToolbar);
+
+
     }
 
     @Override
@@ -75,27 +79,29 @@ public final class HomeActivity extends BaseActivity {
 
     @Subscribe
     public void onNavigationDrawerItemSelected(NavigationItemSelectEvent event) {
-        String subtitle = event.getCategory().getName();
-        NavigationHelper.setSubtitle(subtitle);
+       // String subtitle = event.getCategory().getName();
+     //   NavigationHelper.setSubtitle(subtitle);
 
-        mToolbar.setSubtitle(subtitle);
+       // mToolbar.setSubtitle(subtitle);
         invalidateOptionsMenu();
     }
 
     @Subscribe
     public void onDrawerOpenedEvent(DrawerOpenedEvent event) {
-        mToolbar.setTitle(R.string.categories);
-        mToolbar.setSubtitle("");
+       // mToolbar.setTitle(R.string.categories);
+       // mToolbar.setSubtitle("");
 
         invalidateOptionsMenu();
     }
 
     @Subscribe
     public void onDrawerClosedEvent(DrawerClosedEvent event) {
-        mToolbar.setTitle(R.string.app_name);
+       // mToolbar.setTitle(R.string.app_name);
 
-        CharSequence subtitle = NavigationHelper.getSubtitle();
-        mToolbar.setSubtitle(subtitle);
+       // CharSequence subtitle = NavigationHelper.getSubtitle();
+       // mToolbar.setSubtitle(subtitle);
+
+       // mToolbar.setLogo(R.drawable.image_internet_haber);
 
         invalidateOptionsMenu();
     }

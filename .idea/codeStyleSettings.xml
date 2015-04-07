@@ -43,6 +43,7 @@
             <option name="CONTINUATION_INDENT_SIZE" value="4" />
           </indentOptions>
           <arrangement>
+<<<<<<< Updated upstream
             <rules>
               <section>
                 <rule>
@@ -192,6 +193,9 @@
                 </rule>
               </section>
             </rules>
+=======
+            <rules />
+>>>>>>> Stashed changes
           </arrangement>
         </codeStyleSettings>
       </value>

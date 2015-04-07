@@ -25,7 +25,6 @@ import com.nomad.internethaber.helper.NavigationHelper;
 import com.nomad.internethaber.model.Category;
 import com.nomad.internethaber.task.CategoriesAsyncTask;
 import com.nomad.internethaber.view.GalleryView;
-import com.nomad.internethaber.view.HeaderView;
 import com.squareup.otto.Subscribe;
 
 import java.util.ArrayList;
@@ -85,8 +84,8 @@ public final class NavigationDrawerFragment extends BaseFragment implements Runn
         GalleryView galleryView = new GalleryView(getContext());
         mDrawerList.addFooterView(galleryView);
 
-        HeaderView headerView = new HeaderView(getContext());
-        mDrawerList.addHeaderView(headerView);
+     //   HeaderView headerView = new HeaderView(getContext());
+      //  mDrawerList.addHeaderView(headerView);
 
         NavigationDrawerListAdapter adapter = new NavigationDrawerListAdapter(getContext(), categories);
         mDrawerList.setAdapter(adapter);
@@ -152,7 +151,7 @@ public final class NavigationDrawerFragment extends BaseFragment implements Runn
 
     @Override
     public void run() {
-        mActionBarDrawerToggle.syncState();
+      mActionBarDrawerToggle.syncState();
     }
 
 
