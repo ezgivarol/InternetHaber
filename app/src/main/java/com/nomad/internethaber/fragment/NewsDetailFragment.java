@@ -31,7 +31,6 @@ import com.nomad.internethaber.model.NewsDetail;
 import com.nomad.internethaber.task.NewsDetailAsyncTask;
 import com.nomad.internethaber.view.RectangularedImageView;
 import com.squareup.otto.Subscribe;
-import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import butterknife.InjectView;
