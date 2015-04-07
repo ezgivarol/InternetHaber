@@ -1,36 +1,37 @@
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.nomad.internethaber">
+    package="com.nomad.internethaber" >
 
     <!-- Permissions ! -->
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
-    <uses-permission android:name="com.msevgi.smarthouse.permission.C2D_MESSAGE"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.msevgi.smarthouse.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <permission
         android:name="com.nomad.internethaber.permission.C2D_MESSAGE"
-        android:protectionLevel="signature"/>
+        android:protectionLevel="signature" />
 
     <application
         android:name=".application.InternetHaberApplication"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        tools:replace="android:icon"
-        android:hardwareAccelerated="true">
+        tools:replace="android:icon" >
 
         <!-- Home Activity ! -->
         <activity
             android:name=".activity.HomeActivity"
             android:label="@string/app_name"
-            android:theme="@style/HomeTheme">
+            android:theme="@style/HomeTheme" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
@@ -38,17 +39,23 @@
         <activity
             android:name=".activity.ImageActivity"
             android:label=""
-            android:theme="@style/ImageTheme">
+            android:theme="@style/ImageTheme" >
         </activity>
 
         <!-- News Detail Activity ! -->
         <activity
             android:name=".activity.NewsDetailActivity"
             android:label=""
-            android:theme="@style/NewsDetailTheme">
+            android:theme="@style/NewsDetailTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.HomeActivity"/>
+                android:value=".activity.HomeActivity" />
+        </activity>
+
+        <!-- Photo Gallery Activity ! -->
+        <activity
+            android:name=".activity.PictureGalleryActivity"
+            android:label="" >
         </activity>
 
     </application>
