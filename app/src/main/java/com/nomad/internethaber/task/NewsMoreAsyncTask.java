@@ -3,6 +3,7 @@ package com.nomad.internethaber.task;
 import android.os.AsyncTask;
 
 import com.nomad.internethaber.bean.NewsResponseBean;
+import com.nomad.internethaber.constant.ApplicationConstants;
 import com.nomad.internethaber.event.NewsMoreFailureResponseEvent;
 import com.nomad.internethaber.event.NewsMoreNoItemResponseEvent;
 import com.nomad.internethaber.event.NewsMoreRequestEvent;
@@ -40,7 +41,7 @@ public final class NewsMoreAsyncTask extends AsyncTask<Void, Void, NewsMoreAsync
             mBean = newsRestInterface.get(mCategoryId, mFrom, mTo);
 
             int size = mBean.getNews().size();
-            if (size < 20)
+            if (size < ApplicationConstants.PAGE_SIZE)
                 return State.NO_ITEM;
 
             return State.SUCCESS;
