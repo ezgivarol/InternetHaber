@@ -1,6 +1,9 @@
 package com.nomad.internethaber.activity;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -44,8 +47,8 @@ public final class HomeActivity extends BaseActivity {
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -109,8 +112,8 @@ public final class HomeActivity extends BaseActivity {
 
     @Subscribe
     public void onPictureGalleryClickedEvent(PictureGalleryClickEvent event) {
-        Toast.makeText(getApplicationContext(),"Picture gallery clicked", Toast.LENGTH_SHORT).show();
-        // TODO Open gallery activity
+        Intent intent = new Intent(this, PictureGalleryActivity.class);
+        startActivity(intent);
     }
 
     @Subscribe

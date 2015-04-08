@@ -55,7 +55,8 @@
         <!-- Photo Gallery Activity ! -->
         <activity
             android:name=".activity.PictureGalleryActivity"
-            android:label="" >
+            android:label=""
+            android:theme="@style/GalleryTheme">
         </activity>
 
     </application>

@@ -7,7 +7,7 @@ import android.widget.LinearLayout;
 
 import com.nomad.internethaber.R;
 
-public class HeaderView extends LinearLayout {
+public final class HeaderView extends LinearLayout {
 
     public HeaderView(Context context) {
         super(context);

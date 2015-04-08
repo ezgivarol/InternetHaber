@@ -3,6 +3,6 @@
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/nomad/internethaber/activity/HomeActivity.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/nomad/internethaber/activity/NewsDetailActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/nomad/internethaber/adapter/CategoriesSpinnerAdapter.java" charset="UTF-8" />
   </component>
 </project>
-

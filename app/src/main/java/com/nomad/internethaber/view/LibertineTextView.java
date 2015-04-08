@@ -5,7 +5,7 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-public class LibertineTextView extends TextView {
+public final class LibertineTextView extends TextView {
 
     public LibertineTextView(Context context) {
         super(context);
