@@ -11,7 +11,7 @@ import com.nispok.snackbar.Snackbar;
 import com.nispok.snackbar.listeners.ActionClickListener;
 import com.nomad.internethaber.R;
 import com.nomad.internethaber.activity.NewsDetailActivity;
-import com.nomad.internethaber.adapter.NewsListAdapter;
+import com.nomad.internethaber.adapter.PictureGalleryAdapter;
 import com.nomad.internethaber.annotation.Platform;
 import com.nomad.internethaber.bean.NewsResponseBean;
 import com.nomad.internethaber.event.NavigationItemSelectEvent;
@@ -57,7 +57,7 @@ public class PictureGalleryFragment extends BaseFragment implements PagingListVi
     @InjectView(R.id.fragment_picture_banner_closeButton)
     protected SASCloseButton mBannerCloseButton;
 
-    private NewsListAdapter mAdapter;
+    private PictureGalleryAdapter mAdapter;
 
     private NewsAsyncTask mNewsAsyncTask;
     private NewsMoreAsyncTask mNewsMoreAsyncTask;
@@ -187,7 +187,7 @@ public class PictureGalleryFragment extends BaseFragment implements PagingListVi
         NewsResponseBean bean = event.getBean();
         ArrayList<News> news = bean.getNews();
 
-        mAdapter = new NewsListAdapter(getContext(), news);
+        mAdapter = new PictureGalleryAdapter(getContext(), news);
 
         mListView.getListView().setAdapter(mAdapter);
         mListView.getListView().setHasMoreItems(true);

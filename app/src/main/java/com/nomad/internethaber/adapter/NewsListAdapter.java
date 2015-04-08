@@ -21,7 +21,7 @@ import butterknife.InjectView;
 public final class NewsListAdapter extends PagingBaseAdapter<News>{
     private Picasso mPicasso;
     private Context mContext;
-   // private Context ctx;
+
     public NewsListAdapter(Context context, List<News> items) {
         super(items);
 
@@ -79,9 +79,6 @@ public final class NewsListAdapter extends PagingBaseAdapter<News>{
 
         @InjectView(R.id.cell_news_title_textview)
         TextView mTitleTextView;
-
-        // @InjectView(R.id.cell_news_spot_textview)
-        // TextView mSpotTextView;
 
         @InjectView(R.id.cell_news_thumbnail_imageview)
         ImageView mThumbnailImageView;

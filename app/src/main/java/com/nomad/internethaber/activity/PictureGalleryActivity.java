@@ -43,7 +43,7 @@ public class PictureGalleryActivity extends BaseActivity  {
     @Override
     protected void onStart() {
         super.onStart();
-
+mToolbar.setLogo(R.drawable.test_image_internethaber);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
@@ -80,18 +80,15 @@ public class PictureGalleryActivity extends BaseActivity  {
 
     @Subscribe
     public void onDrawerOpenedEvent(DrawerOpenedEvent event) {
-        mToolbar.setTitle(R.string.categories);
-        mToolbar.setSubtitle("");
-
         invalidateOptionsMenu();
     }
 
     @Subscribe
     public void onDrawerClosedEvent(DrawerClosedEvent event) {
-        mToolbar.setTitle(R.string.app_name);
+//        mToolbar.setTitle(R.string.app_name);
 
-        CharSequence subtitle = NavigationHelper.getSubtitle();
-        mToolbar.setSubtitle(subtitle);
+  //      CharSequence subtitle = NavigationHelper.getSubtitle();
+    //    mToolbar.setSubtitle(subtitle);
 
         invalidateOptionsMenu();
     }
