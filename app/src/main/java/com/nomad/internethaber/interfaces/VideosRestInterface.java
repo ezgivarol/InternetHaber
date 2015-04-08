@@ -1,15 +1,15 @@
 package com.nomad.internethaber.interfaces;
 
 
-import com.nomad.internethaber.bean.VideoGalleryResponseBean;
+import com.nomad.internethaber.bean.VideosResponseBean;
 
 import retrofit.http.GET;
 import retrofit.http.Query;
 
-public interface VideoGalleryRestInterface {
+public interface VideosRestInterface {
 
     @GET("/mobile-api/serviceJson.php?site=internethaber.com&talep=video_galeri_listesi")
-    VideoGalleryResponseBean get(
+    VideosResponseBean get(
             @Query("category_id") String categoryId,
             @Query("from") String from,
             @Query("to") String to

@@ -5,12 +5,12 @@ import com.nomad.internethaber.model.Photo;
 
 import java.util.ArrayList;
 
-public final class VideoGalleryResponseBean {
+public final class VideosResponseBean {
 
     @SerializedName("item")
     private ArrayList<Photo> mPhotos;
 
-    public VideoGalleryResponseBean() {
+    public VideosResponseBean() {
         mPhotos = new ArrayList<>();
     }
 
