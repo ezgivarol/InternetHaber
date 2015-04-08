@@ -43,7 +43,6 @@ public final class HomeActivity extends BaseActivity {
 
         mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.activity_home_fragment_drawer);
 
-
     }
 
     @Override
@@ -54,7 +53,6 @@ public final class HomeActivity extends BaseActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         mToolbar.setLogo(R.drawable.test_image_internethaber);
         mNavigationDrawerFragment.setup(R.id.activity_home_fragment_drawer, mDrawerLayout, mToolbar);
-
 
     }
 
