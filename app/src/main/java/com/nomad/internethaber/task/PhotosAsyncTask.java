@@ -6,6 +6,7 @@ import com.nomad.internethaber.bean.PhotosResponseBean;
 import com.nomad.internethaber.event.NewsFailureResponseEvent;
 import com.nomad.internethaber.event.NewsRequestEvent;
 import com.nomad.internethaber.event.PhotosFailureResponseEvent;
+import com.nomad.internethaber.event.PhotosRequestEvent;
 import com.nomad.internethaber.event.PhotosSuccessResponseEvent;
 import com.nomad.internethaber.interfaces.PhotosRestInterface;
 import com.nomad.internethaber.provider.BusProvider;
@@ -23,7 +24,7 @@ public final class PhotosAsyncTask extends AsyncTask<Void, Void, Boolean> {
     protected void onPreExecute() {
         super.onPreExecute();
 
-        NewsRequestEvent event = new NewsRequestEvent();
+        PhotosRequestEvent event = new PhotosRequestEvent();
         BusProvider.getInstance().post(event);
     }
 

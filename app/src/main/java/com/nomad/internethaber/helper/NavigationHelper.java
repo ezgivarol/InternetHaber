@@ -3,6 +3,7 @@ package com.nomad.internethaber.helper;
 public final class NavigationHelper {
     private static int sDrawerPosition = -1;
     private static int sSelectedNewsPosition = -1;
+    private static int sSelectedCategoryPosition = -1;
     private static CharSequence sTitle;
     private static CharSequence sSubtitle;
 
@@ -16,6 +17,14 @@ public final class NavigationHelper {
 
     public static int getSelectedNewsPosition() {
         return sSelectedNewsPosition;
+    }
+
+    public static int getSelectedCategoryPosition() {
+        return sSelectedCategoryPosition;
+    }
+
+    public static void setSelectedCategoryPosition(int position) {
+        NavigationHelper.sSelectedCategoryPosition = position;
     }
 
     public static void setSelectedNewsPosition(int selectedNewsPosition) {
