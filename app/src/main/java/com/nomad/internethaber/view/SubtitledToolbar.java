@@ -4,8 +4,6 @@ import android.content.Context;
 import android.support.v7.widget.Toolbar;
 import android.util.AttributeSet;
 
-import com.nomad.internethaber.R;
-
 public final class SubtitledToolbar extends Toolbar {
     
     public SubtitledToolbar(Context context) {
@@ -33,6 +31,6 @@ public final class SubtitledToolbar extends Toolbar {
     }
     
     private void init(){
-        setLogo(R.drawable.image_internet_haber);
+       // setLogo(R.drawable.test_image_internethaber);
     }
 }

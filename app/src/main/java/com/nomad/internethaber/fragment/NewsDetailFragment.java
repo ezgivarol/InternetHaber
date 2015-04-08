@@ -142,7 +142,7 @@ public final class NewsDetailFragment extends BaseFragment {
     @Subscribe
     public void onNewsDetailSuccessResponseEvent(NewsDetailSuccessResponseEvent event) {
         float finalRadius = Math.max(mScrollView.getWidth(), mScrollView.getHeight());
-        Animator circularReveal = ViewAnimationUtils.createCircularReveal(mScrollView, 0, 0, 0, finalRadius);
+        Animator circularReveal = ViewAnimationUtils.createCircularReveal(mScrollView, 0, 0,0, finalRadius);
         circularReveal.setInterpolator(new AccelerateDecelerateInterpolator());
         circularReveal.start();
 
@@ -172,8 +172,8 @@ public final class NewsDetailFragment extends BaseFragment {
         Intent intent = new Intent(getContext(), ImageActivity.class);
         intent.putExtra("url", photoUrl);
 
-        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), view, "image");
-        ActivityCompat.startActivity(getActivity(), intent, options.toBundle());
+       ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), view, "image");
+       ActivityCompat.startActivity(getActivity(), intent, options.toBundle());
     }
 
 }

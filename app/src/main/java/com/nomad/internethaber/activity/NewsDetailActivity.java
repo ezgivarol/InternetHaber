@@ -70,7 +70,6 @@ public final class NewsDetailActivity extends BaseActivity implements NewsDetail
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
         mList = (ArrayList<News>) getIntent().getExtras().get("list");
         mCategory = (Category) getIntent().getExtras().get("category");
 

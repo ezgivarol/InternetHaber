@@ -17,15 +17,16 @@
         android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        card_view:cardUseCompatPadding="true"
-        card_view:cardCornerRadius="2dp"
-        card_view:cardElevation="1dp">
+        card_view:cardUseCompatPadding="false"
+        card_view:cardCornerRadius="0dp"
+        card_view:cardElevation="0dp">
 
         <com.nomad.internethaber.view.RectangularedImageView
             android:id="@+id/cell_news_thumbnail_imageview"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             />
+
 
         <LinearLayout
             xmlns:android="http://schemas.android.com/apk/res/android"

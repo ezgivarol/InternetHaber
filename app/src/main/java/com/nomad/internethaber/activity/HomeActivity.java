@@ -52,7 +52,7 @@ public final class HomeActivity extends BaseActivity {
 
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-
+        mToolbar.setLogo(R.drawable.test_image_internethaber);
         mNavigationDrawerFragment.setup(R.id.activity_home_fragment_drawer, mDrawerLayout, mToolbar);
 
 

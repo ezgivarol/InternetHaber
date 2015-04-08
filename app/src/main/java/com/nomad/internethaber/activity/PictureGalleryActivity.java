@@ -37,7 +37,7 @@ public class PictureGalleryActivity extends BaseActivity  {
         super.onSupportContentChanged();
 
         mToolbar = (SubtitledToolbar) findViewById(R.id.activity_toolbar);
-        mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.activity_home_fragment_drawer);
+        mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.activity_picture_fragment_drawer);
     }
 
     @Override
