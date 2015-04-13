@@ -6,7 +6,7 @@ import android.support.v4.view.ViewPager;
 
 import com.nomad.internethaber.R;
 import com.nomad.internethaber.adapter.PhotosDetailPagerAdapter;
-import com.nomad.internethaber.bean.PhotosDetailResponseBean;
+import com.nomad.internethaber.bean.PhotoDetailResponseBean;
 import com.nomad.internethaber.interfaces.PhotosDetailPagerRestInterface;
 import com.nomad.internethaber.model.Photo;
 import com.nomad.internethaber.model.PhotoDetail;
@@ -20,7 +20,7 @@ import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
-public class PhotoGalleryDetailActivity extends BaseActivity implements Callback<PhotosDetailResponseBean> {
+public class PhotoGalleryDetailActivity extends BaseActivity implements Callback<PhotoDetailResponseBean> {
 
     @InjectView(R.id.layout_photo_detail_viewpager)
     protected ViewPager mViewPager;
@@ -45,7 +45,7 @@ public class PhotoGalleryDetailActivity extends BaseActivity implements Callback
     }
 
     @Override
-    public void success(PhotosDetailResponseBean bean, Response response) {
+    public void success(PhotoDetailResponseBean bean, Response response) {
         ArrayList<PhotoDetail> photos = bean.getNews();
         PhotosDetailPagerAdapter adapter = new PhotosDetailPagerAdapter(getSupportFragmentManager());
         adapter.setPhotoList(photos);

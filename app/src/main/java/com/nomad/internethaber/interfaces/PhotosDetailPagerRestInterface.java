@@ -1,6 +1,6 @@
 package com.nomad.internethaber.interfaces;
 
-import com.nomad.internethaber.bean.PhotosDetailResponseBean;
+import com.nomad.internethaber.bean.PhotoDetailResponseBean;
 
 import retrofit.Callback;
 import retrofit.http.GET;
@@ -11,6 +11,6 @@ public interface PhotosDetailPagerRestInterface {
     @GET("/mobile-api/serviceJson.php?site=internethaber.com&talep=foto_galeri_detay")
     void get(
             @Query("id") String newsId,
-            Callback<PhotosDetailResponseBean> callback
+            Callback<PhotoDetailResponseBean> callback
     );
 }
