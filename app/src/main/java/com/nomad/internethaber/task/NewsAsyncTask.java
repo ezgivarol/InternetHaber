@@ -14,6 +14,8 @@ import com.orhanobut.logger.Logger;
 public final class NewsAsyncTask extends AsyncTask<Void, Void, Boolean> {
 
     private NewsResponseBean mBean;
+    private Exception mException;
+
     private String mCategoryId;
     private String mFrom;
     private String mTo;
@@ -34,6 +36,7 @@ public final class NewsAsyncTask extends AsyncTask<Void, Void, Boolean> {
             mBean = newsRestInterface.get(mCategoryId, mFrom, mTo);
             return true;
         } catch (Exception e) {
+            mException = e;
             Logger.e(e);
         }
 
@@ -51,6 +54,7 @@ public final class NewsAsyncTask extends AsyncTask<Void, Void, Boolean> {
             BusProvider.getInstance().post(successEvent);
         } else {
             NewsFailureResponseEvent failureResponseEvent = new NewsFailureResponseEvent();
+            failureResponseEvent.setException(mException);
             BusProvider.getInstance().post(failureResponseEvent);
         }
     }

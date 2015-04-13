@@ -172,6 +172,13 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
     @Platform(device = Platform.Device.BOTH)
     @Subscribe
     public void onNewsFailureSuccessResponseEvent(NewsFailureResponseEvent event) {
+        Exception exception = event.getException();
+
+        mListView.getErrorView().setErrorTitle("Exception");
+
+        String subtitle = exception.getMessage();
+        mListView.getErrorView().setErrorSubtitle(subtitle);
+
         mListView.showEmptyView();
     }
 
