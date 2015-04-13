@@ -29,13 +29,33 @@ public final class CategoriesSpinnerAdapter extends BaseAdapter {
                     .build(),
             new Category
                     .Builder()
-                    .setId("4")
-                    .setName("Politika")
+                    .setId("3")
+                    .setName("Ekonomi")
                     .build(),
             new Category
                     .Builder()
                     .setId("5")
                     .setName("Dünya")
+                    .build(),
+            new Category
+                    .Builder()
+                    .setId("6")
+                    .setName("Spor")
+                    .build(),
+            new Category
+                    .Builder()
+                    .setId("9")
+                    .setName("Kültür ve Sanat")
+                    .build(),
+            new Category
+                    .Builder()
+                    .setId("11")
+                    .setName("Sağlık")
+                    .build(),
+            new Category
+                    .Builder()
+                    .setId("13")
+                    .setName("Yaşam")
                     .build()
     };
 

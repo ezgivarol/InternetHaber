@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.nomad.internethaber.R;
+import com.nomad.internethaber.annotation.Platform;
 import com.nomad.internethaber.event.DrawerClosedEvent;
 import com.nomad.internethaber.event.DrawerOpenedEvent;
 import com.nomad.internethaber.event.NavigationItemSelectEvent;
@@ -110,12 +111,14 @@ public final class HomeActivity extends BaseActivity {
             super.onBackPressed();
     }
 
+    @Platform(device = Platform.Device.BOTH)
     @Subscribe
     public void onPictureGalleryClickedEvent(PictureGalleryClickEvent event) {
-        Intent intent = new Intent(this, PictureGalleryActivity.class);
+        Intent intent = new Intent(this, PhotoGalleryActivity.class);
         startActivity(intent);
     }
 
+    @Platform(device = Platform.Device.BOTH)
     @Subscribe
     public void onVideoGalleryClickedEvent(VideoGalleryClickEvent event) {
         Toast.makeText(getApplicationContext(),"Video gallery clicked", Toast.LENGTH_SHORT).show();

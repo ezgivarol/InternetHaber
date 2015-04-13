@@ -1,5 +1,6 @@
 package com.nomad.internethaber.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.Toolbar;
@@ -32,9 +33,10 @@ import com.squareup.otto.Subscribe;
 import java.util.ArrayList;
 
 import butterknife.InjectView;
+import butterknife.OnItemClick;
 import butterknife.OnItemSelected;
 
-public final class PictureGalleryActivity extends BaseActivity implements PagingGridView.Pagingable, ActionClickListener {
+public final class PhotoGalleryActivity extends BaseActivity implements PagingGridView.Pagingable, ActionClickListener {
 
     @InjectView(R.id.layout_picture_gallery_toolbar)
     protected Toolbar mToolbar;
@@ -68,7 +70,7 @@ public final class PictureGalleryActivity extends BaseActivity implements Paging
     @NonNull
     @Override
     protected int getLayoutResource() {
-        return R.layout.layout_picture_gallery;
+        return R.layout.layout_photo_gallery;
     }
 
     @Override
@@ -186,5 +188,14 @@ public final class PictureGalleryActivity extends BaseActivity implements Paging
     @Override
     public void onActionClicked(Snackbar snackbar) {
 
+    }
+
+    @OnItemClick(R.id.layout_picture_gridview)
+    public void onPictureSelected(int position) {
+        Photo photo = mAdapter.getItem(position);
+
+        Intent intent = new Intent(this, PhotoGalleryDetailActivity.class);
+        intent.putExtra("photo", photo);
+        startActivity(intent);
     }
 }

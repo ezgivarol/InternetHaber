@@ -9,10 +9,10 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.SOURCE)
 public @interface Platform {
 
-    public enum Device {
+    Device device() default Device.BOTH;
+
+    enum Device {
         PHONE, TABLET, BOTH
     }
-
-    Device device() default Device.BOTH;
 
 }

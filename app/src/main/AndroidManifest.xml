@@ -54,10 +54,25 @@
 
         <!-- Photo Gallery Activity ! -->
         <activity
-            android:name=".activity.PictureGalleryActivity"
+            android:name=".activity.PhotoGalleryActivity"
+            android:label=""
+            android:theme="@style/GalleryTheme" >
+        </activity>
+
+        <!-- Photo Gallery Detail Activity ! -->
+        <activity
+            android:name=".activity.PhotoGalleryDetailActivity"
             android:label=""
             android:theme="@style/GalleryTheme">
         </activity>
+
+        <!-- Video Gallery Activity ! -->
+        <activity
+            android:name=".activity.VideoGalleryActivity"
+            android:label=""
+            android:theme="@style/GalleryTheme">
+        </activity>
+
 
     </application>
 

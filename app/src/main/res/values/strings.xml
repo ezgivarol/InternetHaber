@@ -7,7 +7,6 @@
     <string name="categories">Categories</string>
 
     <string name="loading">Loading&#8230;</string>
-    <string name="title_activity_image">Image Activity</string>
 
     <string name="action_settings">Settings</string>
 </resources>
