@@ -53,6 +53,7 @@ public final class NewsDetailActivity extends BaseActivity implements NewsDetail
     @InjectView(R.id.fragment_news_detail_bannerview)
     protected SASBannerView mBannerView;
 
+
     private NewsMoreAsyncTask mAsyncTask;
     private ArrayList<News> mList;
     private Category mCategory;
