@@ -52,7 +52,7 @@ public final class HomeActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.image_internet_haber);
 
         mNavigationDrawerFragment.setup(R.id.activity_home_fragment_drawer, mDrawerLayout, mToolbar);
     }
@@ -82,12 +82,20 @@ public final class HomeActivity extends BaseActivity {
         NavigationHelper.setSubtitle(subtitle);
 
         mToolbar.setSubtitle(subtitle);
+
+        // Removes titles
+        mToolbar.setSubtitle("");
+
         invalidateOptionsMenu();
     }
 
     @Subscribe
     public void onDrawerOpenedEvent(DrawerOpenedEvent event) {
         mToolbar.setTitle(R.string.categories);
+        mToolbar.setSubtitle("");
+
+        // Removes titles
+        mToolbar.setTitle("");
         mToolbar.setSubtitle("");
 
         invalidateOptionsMenu();
@@ -99,6 +107,10 @@ public final class HomeActivity extends BaseActivity {
 
         CharSequence subtitle = NavigationHelper.getSubtitle();
         mToolbar.setSubtitle(subtitle);
+
+        // Removes titles
+        mToolbar.setTitle("");
+        mToolbar.setSubtitle("");
 
         invalidateOptionsMenu();
     }
