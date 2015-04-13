@@ -181,8 +181,6 @@ public final class NewsFragment extends BaseFragment implements PagingListView.P
         NewsResponseBean bean = event.getBean();
         ArrayList<News> news = bean.getNews();
 
-
-
         mAdapter = new NewsListAdapter(getContext(), news);
         mListView.getListView().setAdapter(mAdapter);
         mListView.getListView().setHasMoreItems(true);
