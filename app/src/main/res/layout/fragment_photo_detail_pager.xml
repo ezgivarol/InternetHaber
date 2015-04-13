@@ -3,7 +3,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ImageView
+    <com.nomad.internethaber.view.LoadingImageView
         android:id="@+id/fragment_photo_detail_imageview"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

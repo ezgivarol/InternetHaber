@@ -4,10 +4,10 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.View;
-import android.widget.ImageView;
 
 import com.nomad.internethaber.R;
 import com.nomad.internethaber.model.PhotoDetail;
+import com.nomad.internethaber.view.LoadingImageView;
 import com.squareup.picasso.Picasso;
 
 import butterknife.InjectView;
@@ -15,7 +15,7 @@ import butterknife.InjectView;
 public class PhotoDetailPagerFragment extends BaseFragment {
 
     @InjectView(R.id.fragment_photo_detail_imageview)
-    protected ImageView mImageView;
+    protected LoadingImageView mImageView;
 
     private PhotoDetail mPhotoDetail;
     private Picasso mPicasso;
@@ -43,7 +43,7 @@ public class PhotoDetailPagerFragment extends BaseFragment {
         super.onViewCreated(view, savedInstanceState);
 
         mPicasso = Picasso.with(getContext());
-        mPicasso.load(mPhotoDetail.getPhoto()).centerCrop().fit().into(mImageView);
+        mPicasso.load(mPhotoDetail.getPhoto()).centerCrop().fit().into(mImageView.getImageView());
     }
 
     public void setPhotoDetail(PhotoDetail photoDetail) {
