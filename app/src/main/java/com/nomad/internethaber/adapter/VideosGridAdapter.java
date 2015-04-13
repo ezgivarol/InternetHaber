@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.nomad.internethaber.R;
-import com.nomad.internethaber.model.Photo;
+import com.nomad.internethaber.model.Video;
 import com.paging.gridview.PagingBaseAdapter;
 import com.squareup.picasso.Picasso;
 
@@ -19,11 +19,11 @@ import java.util.List;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public final class VideosGridAdapter extends PagingBaseAdapter<Photo> {
+public final class VideosGridAdapter extends PagingBaseAdapter<Video> {
     private Picasso mPicasso;
     private Context mContext;
 
-    public VideosGridAdapter(Context context, List<Photo> items) {
+    public VideosGridAdapter(Context context, List<Video> items) {
         super(items);
 
         mContext = context;
@@ -36,7 +36,7 @@ public final class VideosGridAdapter extends PagingBaseAdapter<Photo> {
     }
 
     @Override
-    public Photo getItem(int position) {
+    public Video getItem(int position) {
         return items.get(position);
     }
 
@@ -45,7 +45,7 @@ public final class VideosGridAdapter extends PagingBaseAdapter<Photo> {
         return items.get(position).hashCode();
     }
 
-    public List<Photo> getItems() {
+    public List<Video> getItems() {
         return items;
     }
 
@@ -53,18 +53,18 @@ public final class VideosGridAdapter extends PagingBaseAdapter<Photo> {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder;
         if (convertView == null) {
-            convertView = LayoutInflater.from(mContext).inflate(R.layout.cell_photos_extended, parent, false);
+            convertView = LayoutInflater.from(mContext).inflate(R.layout.cell_videos_extended, parent, false);
             viewHolder = new ViewHolder(convertView);
             convertView.setTag(viewHolder);
         } else
             viewHolder = (ViewHolder) convertView.getTag();
 
-        Photo photo = getItem(position);
+        Video video = getItem(position);
 
-        String thumbnailUrl = photo.getThumbnail();
+        String thumbnailUrl = video.getThumbnail();
         mPicasso.load(thumbnailUrl).fit().centerCrop().into(viewHolder.mThumbnailImageView);
 
-        String title = photo.getTitle();
+        String title = video.getTitle();
         Spanned spannedTitle = Html.fromHtml(title);
         viewHolder.mTitleTextView.setText(spannedTitle);
 
@@ -74,10 +74,10 @@ public final class VideosGridAdapter extends PagingBaseAdapter<Photo> {
 
     protected static class ViewHolder {
 
-        @InjectView(R.id.cell_photos_title_textview)
+        @InjectView(R.id.cell_videos_title_textview)
         TextView mTitleTextView;
 
-        @InjectView(R.id.cell_photos_thumbnail_imageview)
+        @InjectView(R.id.cell_videos_thumbnail_imageview)
         ImageView mThumbnailImageView;
 
         protected ViewHolder(View view) {

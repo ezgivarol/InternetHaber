@@ -121,7 +121,7 @@ public final class HomeActivity extends BaseActivity {
     @Platform(device = Platform.Device.BOTH)
     @Subscribe
     public void onVideoGalleryClickedEvent(VideoGalleryClickEvent event) {
-        Toast.makeText(getApplicationContext(),"Video gallery clicked", Toast.LENGTH_SHORT).show();
-        // TODO Open video activity
+        Intent intent = new Intent(this, VideoGalleryActivity.class);
+        startActivity(intent);
     }
 }

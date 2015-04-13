@@ -1,21 +1,21 @@
 package com.nomad.internethaber.bean;
 
 import com.google.gson.annotations.SerializedName;
-import com.nomad.internethaber.model.Photo;
+import com.nomad.internethaber.model.Video;
 
 import java.util.ArrayList;
 
 public final class VideosResponseBean {
 
     @SerializedName("item")
-    private ArrayList<Photo> mPhotos;
+    private ArrayList<Video> mVideos;
 
     public VideosResponseBean() {
-        mPhotos = new ArrayList<>();
+        mVideos = new ArrayList<>();
     }
 
-    public ArrayList<Photo> getPhotos() {
-        return mPhotos;
+    public ArrayList<Video> getVideos() {
+        return mVideos;
     }
 
 }

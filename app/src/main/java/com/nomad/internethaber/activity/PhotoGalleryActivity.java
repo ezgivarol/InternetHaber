@@ -171,7 +171,7 @@ public final class PhotoGalleryActivity extends BaseActivity implements PagingGr
                 .actionColor(R.color.color_home_accent)
                 .actionListener(this)
                 .actionLabel("Retry")
-                .text("Could not get more news")
+                .text("Could not get more photos")
                 .animation(true)
                 .attachToAbsListView(mGridView)
                 .duration(Snackbar.SnackbarDuration.LENGTH_INDEFINITE)
@@ -180,7 +180,7 @@ public final class PhotoGalleryActivity extends BaseActivity implements PagingGr
 
     @Platform(device = Platform.Device.BOTH)
     @Subscribe
-    public void onNewsNoItemResponseEvent(PhotosMoreNoItemResponseEvent event) {
+    public void onPhotosNoItemResponseEvent(PhotosMoreNoItemResponseEvent event) {
         mGridView.setHasMoreItems(false);
         mGridView.setIsLoading(false);
     }
