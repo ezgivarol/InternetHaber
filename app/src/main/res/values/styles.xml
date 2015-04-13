@@ -2,12 +2,17 @@
 
     <style name="style_drawer_arrow" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="spinBars">true</item>
+        <item name="color">@android:color/black</item>
+    </style>
+
+    <style name="style_drawer_arrow_inverse" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
         <item name="color">@android:color/white</item>
     </style>
 
     <style name="style_toolbar" parent="">
         <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
-        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.ActionBar</item>
     </style>
 
     <style name="style_title" parent="">

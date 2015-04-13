@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 
@@ -58,6 +59,7 @@ public final class PhotoGalleryActivity extends BaseActivity implements PagingGr
         super.onCreate(savedInstanceState);
 
         setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mRange = new Range();
 
@@ -71,6 +73,19 @@ public final class PhotoGalleryActivity extends BaseActivity implements PagingGr
     @Override
     protected int getLayoutResource() {
         return R.layout.layout_photo_gallery;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case android.R.id.home:
+                onBackPressed();
+                // TODO Use "NavUtils.navigateUpFromSameTask(this)" and restore states.
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     @Override

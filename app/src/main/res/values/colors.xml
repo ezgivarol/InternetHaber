@@ -1,11 +1,7 @@
 <resources>
-    <color name="color_home_primary">#F44336</color>
-    <color name="color_home_primary_dark">#B71C1C</color>
-    <color name="color_home_accent">#FF5252</color>
-
-    <color name="color_home_fab_normal">#FF8F00</color>
-    <color name="color_home_fab_pressed">#FF6F00</color>
-    <color name="color_home_fab_ripple">#FFFF00</color>
+    <color name="color_home_primary">#FFFFFF</color>
+    <color name="color_home_primary_dark">#000000</color>
+    <color name="color_home_accent">#D50000</color>
 
     <color name="color_drawer_background">#F2F2F2</color>
     <color name="color_window_background">#DEDEDE</color>
@@ -14,7 +10,7 @@
     <color name="color_drawer_pressed">#EEEEEE</color>
     <color name="color_drawer_selected">#E0E0E0</color>
 
-    <color name="color_text_primary">#FFFFFF</color>
+    <color name="color_text_primary">#000000</color>
     <color name="color_text_secondry">#727272</color>
     <color name="color_text_inverse">#CCCCCC</color>
     <color name="color_navigation">#000000</color>

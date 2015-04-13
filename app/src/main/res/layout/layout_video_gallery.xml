@@ -14,7 +14,8 @@
         <Spinner
             android:id="@+id/layout_video_gallery_spinner"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:dropDownVerticalOffset="?attr/actionBarSize"/>
     </android.support.v7.widget.Toolbar>
 
     <com.paging.gridview.PagingGridView

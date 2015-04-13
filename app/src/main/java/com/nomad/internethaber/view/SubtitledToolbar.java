@@ -1,6 +1,7 @@
 package com.nomad.internethaber.view;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v7.widget.Toolbar;
 import android.util.AttributeSet;
 
@@ -32,5 +33,6 @@ public final class SubtitledToolbar extends Toolbar {
     
     private void init(){
         setSubtitleTextAppearance(getContext(), android.support.v7.appcompat.R.style.Base_TextAppearance_AppCompat_Small);
+        setSubtitleTextColor(Color.BLACK);
     }
 }
