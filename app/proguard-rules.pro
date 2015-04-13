@@ -153,6 +153,7 @@
 -dontwarn de.flapdoodle.embed.mongo.tests.**
 -dontwarn android.support.v4.**
 -dontwarn com.squareup.okhttp.**
+-dontwarn com.smartadserver.**
 
 
 -keep class * extends android.support.v4.app.Fragment
@@ -168,4 +169,5 @@
 -keep class com.sun.jna.platform.** { *; }
 -keep class org.xmlpull.v1.XmlPullParser { *; }
 -keep class org.xmlpull.v1.XmlSerializer { *; }
+-keep class com.smartadserver.** { *; }
 ##---------------End: proguard configuration for libries  ----------

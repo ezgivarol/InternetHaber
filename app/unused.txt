@@ -1243,6 +1243,21 @@ com.nineoldandroids.view.ViewPropertyAnimatorPreHC:
     private static final int Y
     private static final int ALPHA
     private static final int TRANSFORM_MASK
+com.nomad.internethaber.view.LibertineTextView$FontProvider:
+    36:36:private LibertineTextView$FontProvider()
+com.orhanobut.logger.Logger:
+    private static final int CHUNK_SIZE
+    private static final int JSON_INDENT
+    private static final int MAX_METHOD_COUNT
+    private static final char TOP_LEFT_CORNER
+    private static final char BOTTOM_LEFT_CORNER
+    private static final char MIDDLE_CORNER
+    private static final char HORIZONTAL_DOUBLE_LINE
+    private static final java.lang.String DOUBLE_DIVIDER
+    private static final java.lang.String SINGLE_DIVIDER
+    private static final java.lang.String TOP_BORDER
+    private static final java.lang.String BOTTOM_BORDER
+    private static final java.lang.String MIDDLE_BORDER
 com.squareup.otto.AnnotatedHandlerFinder:
     161:163:private AnnotatedHandlerFinder()
 com.squareup.picasso.AssetRequestHandler:
@@ -1360,5 +1375,3 @@ io.codetail.widget.RevealLinearLayout:
     42:44:private void setCenter(float,float)
 it.sephiroth.android.library.imagezoom.ImageViewTouch:
     static final float SCROLL_DELTA_THRESHOLD
-timber.log.Timber$DebugTree:
-    private static final int MAX_LOG_LENGTH
