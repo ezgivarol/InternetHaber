@@ -38,8 +38,8 @@ android {
         applicationId "com.nomad.internethaber"
         minSdkVersion 16
         targetSdkVersion 21
-        versionCode 4
-        versionName "0.7"
+        versionCode 5
+        versionName "0.8"
     }
     buildTypes {
         release {
