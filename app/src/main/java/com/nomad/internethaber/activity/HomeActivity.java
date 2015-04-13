@@ -53,6 +53,7 @@ public final class HomeActivity extends BaseActivity {
 
         setSupportActionBar(mToolbar);
         getSupportActionBar().setLogo(R.drawable.image_internet_haber);
+        getSupportActionBar().setTitle("");
 
         mNavigationDrawerFragment.setup(R.id.activity_home_fragment_drawer, mDrawerLayout, mToolbar);
     }
