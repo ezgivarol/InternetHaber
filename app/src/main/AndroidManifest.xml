@@ -1,33 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.nomad.internethaber" >
+    package="com.nomad.internethaber">
 
     <!-- Permissions ! -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-    <uses-permission android:name="com.msevgi.smarthouse.permission.C2D_MESSAGE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.android.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 
-    <permission
-        android:name="com.nomad.internethaber.permission.C2D_MESSAGE"
-        android:protectionLevel="signature" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!--
+      IMPORTANT: Change "com.parse.starter.permission.C2D_MESSAGE" in the lines below
+      to match your app's package name + ".permission.C2D_MESSAGE".
+    -->
+    <permission android:protectionLevel="signature"
+                android:name="com.nomad.internethaber.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.nomad.internethaber.permission.C2D_MESSAGE" />
 
     <application
         android:name=".application.InternetHaberApplication"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        tools:replace="android:icon" >
+        tools:replace="android:icon">
 
         <!-- Home Activity ! -->
         <activity
             android:name=".activity.HomeActivity"
             android:label="@string/app_name"
-            android:theme="@style/HomeTheme" >
+            android:theme="@style/HomeTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -39,14 +51,13 @@
         <activity
             android:name=".activity.ImageActivity"
             android:label=""
-            android:theme="@style/ImageTheme" >
-        </activity>
+            android:theme="@style/ImageTheme" />
 
         <!-- News Detail Activity ! -->
         <activity
             android:name=".activity.NewsDetailActivity"
             android:label=""
-            android:theme="@style/NewsDetailTheme" >
+            android:theme="@style/NewsDetailTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.HomeActivity" />
@@ -56,23 +67,47 @@
         <activity
             android:name=".activity.PhotoGalleryActivity"
             android:label=""
-            android:theme="@style/GalleryTheme" >
-        </activity>
+            android:theme="@style/GalleryTheme" />
 
         <!-- Photo Gallery Detail Activity ! -->
         <activity
             android:name=".activity.PhotoGalleryDetailActivity"
             android:label=""
-            android:theme="@style/GalleryTheme">
-        </activity>
+            android:theme="@style/GalleryTheme" />
 
         <!-- Video Gallery Activity ! -->
         <activity
             android:name=".activity.VideoGalleryActivity"
             android:label=""
-            android:theme="@style/GalleryTheme">
-        </activity>
+            android:theme="@style/GalleryTheme" />
 
+        <service android:name="com.parse.PushService" />
+        <receiver android:name="com.parse.ParseBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.parse.ParsePushBroadcastReceiver"
+                  android:exported="false">
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.parse.GcmBroadcastReceiver"
+                  android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <!--
+                  IMPORTANT: Change "com.parse.starter" to match your app's package name.
+                -->
+                <category android:name="com.nomad.internethaber" />
+            </intent-filter>
+        </receiver>
 
     </application>
 
